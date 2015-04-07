@@ -1,0 +1,26 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2015
+% This document contains a simple document class and framework for rendering
+% The content of the PrayersAfterCommunionText, which is assumed to use
+% sections for each individual prayer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[twoside, twocolumn, 12pt]{report}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\parindent}{0pt}
+
+%\title{The Prayers of Thanksgiving After Holy Communion}
+%\date{}
+\begin{document}
+%\maketitle
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}
+
+\mychapter{0}{The Prayers of Thanksgiving After Holy Communion}
+
+\input{PrayersAfterCommunionText} % Get all of the content
+\end{document}
