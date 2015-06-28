@@ -55,6 +55,10 @@
 		\subsection{The First Antiphon}
 			\subsectionnote{This may be replaced for certain feast days.}
 
+                        % These antiphon scores should be pulled out inte their own files
+                        % like the Amens and "Glory to thee."  I only bothered getting
+                        % those done already because they are used in more than one place
+                        % here.
 			\people \ \\
 				\begin[staffsize=SZWAST_LILYPOND_STAFFSIZE]{lilypond}
 					\score 
@@ -69,6 +73,8 @@
 								\override Staff.TimeSignature #'transparent = ##t
 								\context Voice = "cadenzaghost"
 								{
+								% Leaving \cadenzaOff and forcing manual beaming would have drawn the bars,
+								% but would not have numbered the measures.
 									\cadenzaOn s1 s2 \bar "" s4 \cadenzaOff s1	%11
 									\cadenzaOn s2. s2. \cadenzaOff s1	%10
 									\cadenzaOn s1 s2 \bar "" s4 \cadenzaOff s1	%11

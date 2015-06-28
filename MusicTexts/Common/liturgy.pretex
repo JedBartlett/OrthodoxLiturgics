@@ -20,6 +20,7 @@
 %\pdfpagewidth{\pagewidth}
 %\pdfpageheight{\pageheight}
 
+% Use a darker royal red, instead of 0xff0000.
 \newcommand\myred{red!80!black}
 
 
@@ -28,25 +29,32 @@
 \newtoggle{Lent}
 \newtoggle{Pentecost}
 \newtoggle{Ascension}
+% Preprocessing will replace this with one of the 4 toggles defined above.
 \toggletrue{SZWAST_SEASON}
 
 
 \titleformat{\section}[block]{\center\Large\bfseries}{}{}{}
 \titleformat{\subsection}[block]{\center\bfseries}{1em}{}{}
 \titleformat{\subsubsection}[block]{\center\bfseries}{1em}{}{}
+% Put paragraph titles in the left margin in red.  The paragraph titles are the
+% part callouts ("Priest", "Reader", "People").
 \titleformat{\paragraph}[leftmargin]{\scshape}{1em}{}{\color{\myred}}
 \titlespacing{\paragraph}{4em}{1.5ex minus .1 ex}{1em}
+% Sections are full services.  Start each on a new page.
 \newcommand{\sectionbreak}{\clearpage}
 
 
 \fancyhead{}
 \renewcommand{\headrulewidth}{0pt}
+% Flank the page numbers with decorations.
 \fancyfoot[C]{
 	\tikz[baseline]\node[rotate=90]{\pgfornament[width=1em]{26}};
 	\tikz[baseline]\node{\thepage};
 	\tikz[baseline]\node[rotate=-90]{\pgfornament[width=1em]{26}};}
 
 %	Define page border of each page other than title.
+% This isn't used currently.  It takes a long time to draw the fancy borders.
+% Way too long to do it on each page.
 \newcommand\ornamentcolor{\myred}
 \newcommand{\eachpageornament}{%
 \begin{tikzpicture}[remember picture, overlay]
@@ -98,12 +106,18 @@
 \newcommand\reader{\paragraph{Reader}}
 \newcommand\people{\paragraph{People}}
 
+% Define an italic, centered note format that is used immediately below
+% subsection titles.
 \newcommand\subsectionnote[1]{\begin{center}\small\emph(#1)\end{center}}
 
 
 \widowpenalty=1000
 \clubpenalty=1000
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now define a whole series of common liturgical snippets.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand\thrice{\emph{(3x)}}
 \newcommand\twelve{\emph{(12x)}}
@@ -153,6 +167,10 @@ O come, let us worship and fall down before the Very Christ our King and our God
 
 
 
+% Using \nolinebreak\\ to break each line prevents lines being skipped when
+% a psalm line ends at the right margin, where a natural line break would be
+% followed by the forced one.  This prevents any natural line breaks from 
+% happenning immediately before a forced one.
 \newcommand\psalm[1]{
 \switch[#1 =]
 	\case{16}
@@ -512,7 +530,11 @@ O come, let us worship and fall down before the Very Christ our King and our God
 \endswitch}
 
 
-
+% We need to ensure a line break before music.
+% If I remember correctly, this is to keep the paragraph heading ("People") which
+% is in the left margin at the top of the first staff, rather than at the bottom.
+% I really wanted it vertically centered with the top staff, aligned with the lyrics
+% but couldn't get that.
 \newcommand\lilyamen {\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{amen.ly}}
 
 \newcommand\lilyglory{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{glory_to_thee.ly}}
