@@ -4,13 +4,13 @@
     <papersize>a4</papersize>
     <fontsize>18</fontsize>
     <orientation>1</orientation>
-    <total-edit-time>7952</total-edit-time>
+    <total-edit-time>9594</total-edit-time>
   </lilycontrol>
   <movement-number>1</movement-number>
   <movement>
     <edit-info>
       <staffno>1</staffno>
-      <measureno>1</measureno>
+      <measureno>7</measureno>
       <cursorposition>0</cursorposition>
       <tonalcenter>0</tonalcenter>
       <zoom>75</zoom>
@@ -65,7 +65,7 @@
           <hasfakechords>0</hasfakechords>
           <verses>
             <verse></verse>
-            <verse>God_ is the Lord and hath app- eared un- to us. Bless- ed is He  that com- eth in the Name of the Lord - 
+            <verse>God_ is the Lord and hath app- eared un-to us. Bless- ed is He  that com- eth in the Name of the Lord - 
 \override LyricText.font-name = #"Times"
 </verse>
           </verses>
@@ -110,9 +110,7 @@
           </measure>
           <measure>
             <chord show="true" id="id10">
-              <duration base="quarter">
-                <dots>1</dots>
-              </duration>
+              <duration base="quarter"></duration>
               <notes>
                 <note id="id11">
                   <middle-c-offset>4</middle-c-offset>
@@ -120,11 +118,10 @@
               </notes>
             </chord>
             <chord show="true" id="id12">
-              <duration base="eighth"></duration>
+              <duration base="quarter"></duration>
               <notes>
                 <note id="id13">
-                  <middle-c-offset>5</middle-c-offset>
-                  <accidental name="flat" show="true"></accidental>
+                  <middle-c-offset>3</middle-c-offset>
                 </note>
               </notes>
             </chord>
@@ -132,7 +129,7 @@
               <duration base="quarter"></duration>
               <notes>
                 <note id="id15">
-                  <middle-c-offset>6</middle-c-offset>
+                  <middle-c-offset>4</middle-c-offset>
                 </note>
               </notes>
             </chord>
@@ -141,7 +138,7 @@
               <notes>
                 <note id="id17">
                   <middle-c-offset>5</middle-c-offset>
-                  <accidental name="flat" show="false"></accidental>
+                  <accidental name="flat" show="true"></accidental>
                 </note>
               </notes>
             </chord>
@@ -152,7 +149,7 @@
               <slur-begin>1</slur-begin>
               <notes>
                 <note id="id19">
-                  <middle-c-offset>4</middle-c-offset>
+                  <middle-c-offset>6</middle-c-offset>
                 </note>
               </notes>
             </chord>
@@ -168,6 +165,7 @@
             </chord>
             <chord show="true" id="id22">
               <duration base="quarter"></duration>
+              <slur-begin>1</slur-begin>
               <notes>
                 <note id="id23">
                   <middle-c-offset>4</middle-c-offset>
@@ -176,6 +174,7 @@
             </chord>
             <chord show="true" id="id24">
               <duration base="quarter"></duration>
+              <slur-end>1</slur-end>
               <notes>
                 <note id="id25">
                   <middle-c-offset>3</middle-c-offset>

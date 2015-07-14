@@ -17,8 +17,8 @@ AutoEndMovementBarline = \bar "|."
 
 MvmntIVoiceI = {
          e'4( g') aes' g'\AutoBarline
-         g'4. aes'8 b'4 aes'\AutoBarline
-         g'( aes') g' f'\AutoBarline
+         g' f' g' aes'\AutoBarline
+         b'( aes') g'( f')\AutoBarline
          e'2 e'4( f')\AutoBarline
 %5
          e' d' e'( f'\AutoBarline
@@ -32,7 +32,7 @@ MvmntIVoiceILyricsVerseI = \lyricmode {
  
 }
 MvmntIVoiceILyricsVerseII = \lyricmode { 
-God_ is the Lord and hath app- eared un- to us. Bless- ed is He  that com- eth in the Name of the Lord - 
+God_ is the Lord and hath app- eared un-to us. Bless- ed is He  that com- eth in the Name of the Lord - 
 \override LyricText.font-name = #"Times"
  
 }
@@ -45,8 +45,8 @@ MvmntIVoiceIVerseIContext = \context Lyrics = MvmntIVoiceIVerseI \lyricsto Voice
 
 
 
-%Movement 1
-\header{DenemoLayoutName = "Movement 1"}
+%Default Score Layout
+\header{DenemoLayoutName = "Default Score Layout"}
 
 \header {
 tagline = \markup {"/home/jedidiah/projects/OrthodoxLiturgics/MusicTexts/4_Orthros/GodIsTheLord/GodIsTheLord_Tone6.denemo" on \simple #(strftime "%x" (localtime (current-time)))}
