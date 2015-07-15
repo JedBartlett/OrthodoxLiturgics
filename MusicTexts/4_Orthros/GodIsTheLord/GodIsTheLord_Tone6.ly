@@ -17,14 +17,14 @@ AutoEndMovementBarline = \bar "|."
 
 MvmntIVoiceI = {
          e'4( g') aes' g'\AutoBarline
-         g' f' g' aes'\AutoBarline
+         g'4. f'8 g'4 aes'\AutoBarline
          b'( aes') g'( f')\AutoBarline
          e'2 e'4( f')\AutoBarline
 %5
          e' d' e'( f'\AutoBarline
          g') aes' b'( aes')\AutoBarline
          g'2 e'4 e'\AutoBarline
-         g'( f'8 g') f'( e') d'4 f' e'2. \AutoEndMovementBarline
+         g'( f'8 g') f'( e') d'4 f'( e'2.) \AutoEndMovementBarline
 }
 
 
@@ -32,7 +32,7 @@ MvmntIVoiceILyricsVerseI = \lyricmode {
  
 }
 MvmntIVoiceILyricsVerseII = \lyricmode { 
-God_ is the Lord and hath app- eared un-to us. Bless- ed is He  that com- eth in the Name of the Lord - 
+God_ is the Lord and hath app- eared un-to us. Bless- ed is He  that com- eth in the Name of the Lord
 \override LyricText.font-name = #"Times"
  
 }
