@@ -535,9 +535,35 @@ O come, let us worship and fall down before the Very Christ our King and our God
 % is in the left margin at the top of the first staff, rather than at the bottom.
 % I really wanted it vertically centered with the top staff, aligned with the lyrics
 % but couldn't get that.
-\newcommand\lilyamen {\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{amen.ly}}
+\newcommand\lilyalleluia{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{alleluia.ly}}
+
+\newcommand\lilyantiphonone{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{bless_the_lord_greek.ly}}
+
+\newcommand\lilyantiphontwo{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{praise_the_lord_greek.ly}}
+
+\newcommand\lilyamen{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{amen.ly}}
+
+\newcommand\lilybeatitudes{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{beatitudes.ly}}
+
+\newcommand\lilyblessedbethename{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{blessed_be_the_name_flat.ly}}
+
+\newcommand\lilydismissal{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{dismissal_obikhod.ly}}
+
+\newcommand\lilyentrance{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{entrance.ly}}
 
 \newcommand\lilyglory{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{glory_to_thee.ly}}
+
+\newcommand\lilykontakkatherine{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{kontak_katherine_obikhod.ly}}
+
+\newcommand\lilysundaytheotokion{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{steadfast_protectress.ly}}
+
+\newcommand\lilytrisagiona{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{trisagion_byzantine_a.ly}}
+
+\newcommand\lilytrisagionb{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{trisagion_byzantine_b.ly}}
+
+\newcommand\lilytroparkatherine{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{tropar_katherine_obikhod.ly}}
+
+\newcommand\lilytrulymeet{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{truly_meet_obikhod.ly}}
 
 
 \newcommand\hourheavenlyking{\iftoggle{Pentecost}{Glory to Thee, our God, glory to Thee!

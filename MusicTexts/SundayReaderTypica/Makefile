@@ -29,6 +29,13 @@ seasons = pentecost pascha lent ascension
 #            choir members.
 formats = tablet booklet letter
 
+
+included_music_dir = ../Common
+
+included_music_files = alleluia.ly amen.ly beatitudes.ly bless_the_lord_greek.ly blessed_be_the_name_flat.ly dismissal_obikhod.ly entrance.ly glory_to_thee.ly kontak_katherine_obikhod.ly praise_the_lord_greek.ly steadfast_protectress.ly trisagion_byzantine_a.ly trisagion_byzantine_b.ly tropar_katherine_obikhod.ly
+
+included_music = $(foreach file, $(included_music_files),$(included_music_dir)/$(file))
+
 # Targets:
 #   There will be 12 primary targets in this makefile, one document for each
 # combination of season and format.  Secondary targets are provided for making
@@ -39,7 +46,7 @@ formats = tablet booklet letter
 
 # This command will be run from in a working directory.  One extra ../ is needed
 # to address the Common directory with the .ly files.
-lily_command = lilypond-book --pdf --include=../../Common --loglevel=ERROR
+lily_command = lilypond-book --pdf --include=../$(included_music_dir) --loglevel=ERROR --lily-loglevel=ERROR
 
 # The current command to generate the booklets.
 #   This is a final processing step for the booklet format that has no
@@ -99,38 +106,38 @@ $(foreach format, $(formats), $(eval $(call format_specific_rules,$(format))))
 define both_specific_rules
 # This rule generates a working directory of the form "out.<season>-<format>".
 out.$(1)-$(2)/exists.txt:
-	(cd out.$(1)-$(2) || mkdir out.$(1)-$(2)) && touch out.$(1)-$(2)/exists.txt
+	@(cd out.$(1)-$(2) || mkdir out.$(1)-$(2)) && touch out.$(1)-$(2)/exists.txt
 
 # This creates a Lytex (lilypond-book source) file from the pretex file.  It
 # uses the sed commands above to replace the placeholder texts with actual
 # values and writes the resulting lytex document into the working directory.
 out.$(1)-$(2)/$(file_base).lytex: out.$(1)-$(2)/exists.txt $(file_base).pretex
-	cat $(file_base).pretex | $(sed_$(2)) | $(sed_$(1)) > out.$(1)-$(2)/$(file_base).lytex
+	@cat $(file_base).pretex | $(sed_$(2)) | $(sed_$(1)) > out.$(1)-$(2)/$(file_base).lytex
 
 # This rule runs the file of common liturgy snippets through the same sed
 # commands so they can be formatted for the desired season and format.
-out.$(1)-$(2)/liturgy.lytex: out.$(1)-$(2)/exists.txt
-	cat ../Common/liturgy.pretex | $(sed_$(2)) | $(sed_$(1)) > out.$(1)-$(2)/liturgy.lytex
+out.$(1)-$(2)/liturgy.lytex: out.$(1)-$(2)/exists.txt $(included_music_dir)/liturgy.pretex
+	@cat $(included_music_dir)/liturgy.pretex | $(sed_$(2)) | $(sed_$(1)) > out.$(1)-$(2)/liturgy.lytex
 
 # This runs lilypond-book on the generated lytex file in the working directory.
-out.$(1)-$(2)/$(file_base).tex: out.$(1)-$(2)/$(file_base).lytex out.$(1)-$(2)/liturgy.lytex
-	cd out.$(1)-$(2) && $(lily_command) $(file_base).lytex
+out.$(1)-$(2)/$(file_base).tex: out.$(1)-$(2)/$(file_base).lytex out.$(1)-$(2)/liturgy.lytex $(included_music)
+	@cd out.$(1)-$(2) && $(lily_command) $(file_base).lytex
 
 # This generates the pdf from the output of lilypond.  Run it twice to get all
 # the cross-references and table of contents correct.
 out.$(1)-$(2)/$(file_base).pdf: out.$(1)-$(2)/$(file_base).tex
-	cd out.$(1)-$(2) && pdflatex -interaction=batchmode $(file_base)
-	cd out.$(1)-$(2) && pdflatex -interaction=batchmode $(file_base)
+	@cd out.$(1)-$(2) && pdflatex -interaction errorstopmode $(file_base)
+	@cd out.$(1)-$(2) && pdflatex -interaction errorstopmode $(file_base)
 
 # This rule puts the final pdf in the original directory, out of the working
 # directory.  For non-booklet formats just copy the output from pdflatex.  For
 # booklet targets, run it through pdfjam.
 $(file_base)-$(1)-$(2).pdf: out.$(1)-$(2)/$(file_base).pdf
 ifeq ($(2),booklet)
-	cp out.$(1)-$(2)/$(file_base).pdf out.$(1)-$(2)/$(file_base)-$(1).pdf
-	$(booklet_command) out.$(1)-$(2)/$(file_base)-$(1).pdf
+	@cp out.$(1)-$(2)/$(file_base).pdf out.$(1)-$(2)/$(file_base)-$(1).pdf
+	@$(booklet_command) out.$(1)-$(2)/$(file_base)-$(1).pdf
 else
-	cp out.$(1)-$(2)/$(file_base).pdf ./$(file_base)-$(1)-$(2).pdf
+	@cp out.$(1)-$(2)/$(file_base).pdf ./$(file_base)-$(1)-$(2).pdf
 endif
 
 # This created the actual "<season>-<format>" targets that cause the final PDFs
@@ -157,5 +164,5 @@ $(foreach season, $(seasons), $(eval $(call seasons_template,$(season))))
 
 # clean deletes all working directories and all final PDFs.
 clean:
-	rm -rf out.*
-	rm SundayReaderTypica*.pdf
+	@rm -rf out.*
+	@rm SundayReaderTypica*.pdf
