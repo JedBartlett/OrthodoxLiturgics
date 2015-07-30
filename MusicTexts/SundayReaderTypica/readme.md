@@ -32,10 +32,15 @@ basic LaTeX installation.
   (for the toggles the choose texts for the seasonal variations)
 * boolexpr
   (for the switch statement in the psalm command)
-* pgfornament
-  (for the fancy border on the cover page and ornaments flanking the page numbers)
 * calc
   (for easy arithmatic on measurement units when setting up page geometry)
+
+These are all easily added using the standard repositories in ubuntu
+(and derivatives, kubuntu etc..) with apt-get:
+    sudo apt-get install texlive-full
+
+* pgfornament
+  (for the fancy border on the cover page and ornaments flanking the page numbers)
 
 ### pgfornament
 
@@ -44,7 +49,7 @@ LaTeX package is not bundled with texlive.  It will likely need to be installed
 manually.
 
 All I had to do in Linux was copy the pgfornament folder from the archive to
-/usr/share/texmp/tex/latex then run `texhash /usr/share/texmf` all as root.  The
+/usr/share/texmf/tex/latex then run `texhash /usr/share/texmf` all as root.  The
 directions for a MikTex installation in Windows looks similarly simple.
 
 ## Building
