@@ -57,7 +57,7 @@ LordHaveMercyTwoLyrics = \context Lyrics = LordHaveMercy \lyricsto SopranoTwo \L
          % Cheating with the time signurature here to remove auto measures
         { \once \override Staff.TimeSignature #'stencil = ##f  \time 6/4 }
         \new Voice = "SopranoTwo"  { \voiceOne \LordHaveMercyTwoSoprano } 
-        \new Voice = "MelodyTwo"  { \voiceTwo \LordHaveMercyTwoSoprano } 
+        \new Voice = "MelodyTwo"  { \voiceTwo \LordHaveMercyTwoAlto } 
       \new Lyrics = Lyrics \LordHaveMercyTwoLyrics
       %Start of Bass
       \new Staff = "LordHaveMercyOneMen"  <<
