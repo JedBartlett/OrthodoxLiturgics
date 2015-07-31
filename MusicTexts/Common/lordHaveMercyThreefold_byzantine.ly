@@ -21,10 +21,10 @@ English = \lyricmode {
 Lord, have mer _ -- cy; Lord have _ mer -- _ cy; Lord, have mer -- cy 
 }
 Arabic = \lyricmode { 
-Ya Rab Er -- _ ham, Y -- a Rab Er -- _ ham, Ya Rab Er -- ham 
+Ya rub bur -- _ ham, Ya rub _ bur -- _ ham, Ya rub bur -- ham 
 }
 Greek = \lyricmode { 
-Ky-__rie El -- e i -- son,  Ky -- rie E -- le i -- son,  Kyrie El -- ei -- son 
+Ky-__rie El -- e -- i -- son,  Ky -- rie E -- le -- i -- son,  Kyr-ie El -- e-i- son 
 }
 
 
