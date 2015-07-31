@@ -4,7 +4,7 @@
 }
 \markup{ \vspace #1 }
 \markup{\smallCaps{Priest:}\override #'(line-width . 90)
-        \wordwrap{Blessed is our God always;now and ever, and unto ages of ages.}
+        \wordwrap{Blessed is our God always, now and ever, and unto ages of ages.}
 }
 
 \markup{\smallCaps{Chanter:}}
@@ -27,7 +27,7 @@
 \markup { \vspace #1 }
 \markup{\smallCaps{Reader:}\override #'(line-width . 90)
         \column{
-          \wordwrap{Glory to the Father, and to the Son, and to theHoly Spirit;
+          \wordwrap{Glory to the Father, and to the Son, and to the Holy Spirit,
           now and ever and unto ages of ages. Amen.}
           
           \vspace #1 \wordwrap{
@@ -39,13 +39,13 @@
           Lord have mercy (3x)}
           
           \vspace #1 \wordwrap{
-          Glory to the Father, and to the Son, and to the Holy Spirit;
-          both now and ever, and unto ages of ages. Amen.}
+          Glory to the Father, and to the Son, and to the Holy Spirit,
+          now and ever, and unto ages of ages. Amen.}
           
           \vspace #1 \wordwrap{
           Our Father, who art in heaven, hallowed be thy Name;
-          thy kingdom come;
-          thy will be done on earth, as it is in heaven.
+          Thy kingdom come;
+          Thy will be done on earth, as it is in heaven.
           Give us this day our daily bread; and forgive us our trespasses,
           as we forgive those who tresspass against us;
           and lead us not into temptation,
@@ -56,7 +56,7 @@
 \markup{\smallCaps{Priest:}\override #'(line-width . 90)
         \column{
           \wordwrap{For thine is the kingdom, and the power, and the glory,
-          of the Father, and of the Son, and of the Holy Spirit;
+          of the Father, and of the Son, and of the Holy Spirit,
           now and ever and unto ages of ages.}
         }
 }
@@ -85,7 +85,7 @@
             having in Thine aid a weapon of peace and a trophy invincible.}
           
           \vspace #1 \wordwrap{\italic{
-            Both now and ever, and unto ages of ages. Amen.}}
+            Now and ever, and unto ages of ages. Amen.}}
           
           \vspace #1 \wordwrap{
             O Champion dread,
@@ -108,7 +108,7 @@
 \markup{\fill-line{\center-align {\underline{EKTENIA}}}}
 \markup{\smallCaps{Priest:}\override #'(line-width . 90)
         \wordwrap{Have mercy upon us,
-                  O God according to thy great goodness,
+                  O God, according to thy great goodness,
                   we pray thee: hearken and have mercy.
         }
 }
@@ -118,7 +118,7 @@
 
 \markup{ \vspace #1 }
 \markup{\smallCaps{Priest:}\override #'(line-width . 90)
-        \wordwrap{Again we pray for our Metropolitan (Archbishop or Bishop)}
+        \wordwrap{Again we pray for our Metropolitan (Archbishop or Bishop).}
 }
 \markup{ \vspace #1 }
 \markup{\smallCaps{ Chanter:} Lord have mercy 3x (as above)}
@@ -132,8 +132,8 @@
 
 \markup{ \vspace #1 }
 \markup{\smallCaps{Priest:}\override #'(line-width . 90)
-        \wordwrap{For thou art a merciful God and lovest mankind,
-                  and unto thee we ascribe glory:
+        \wordwrap{For Thou art a merciful God and lovest mankind,
+                  and unto Thee we ascribe glory:
                   to the Father, and to the Son, and to the Holy Spirit;
                   now and ever, and unto ages of ages.
         }
@@ -151,7 +151,7 @@
 \include "./amen_kazan.ly"
 
 \markup{\smallCaps{Reader:} \override #'(line-width . 90)
-        \wordwrap{Glory to God in the highest, and on earth, peace,  good will toward men. (3x)}
+        \wordwrap{Glory to God in the highest, and on earth, peace,  goodwill toward men. (3x)}
 }
 \markup{ \vspace #1 }
 \markup{\smallCaps{Reader:} \override #'(line-width . 90)

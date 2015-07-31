@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2015
+% This document, when compiled, produces the 6 psalms that are read at the
+% beginning of Orthros (Matins), including the re-itteration of a phrase
+% from the psalm after the psalm is completed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[twoside, twocolumn, 12pt]{report}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+%\maketitle
+\newcommand{\mychapter}[2]{
+	\setcounter{chapter}{#1}
+	\setcounter{section}{0}
+	\chapter*{#2}
+	\addcontentsline{toc}{chapter}{#2}
+}
+\mychapter{0}{The Six Psalms for Orthros / Matins}
+\texttt{\scriptsize The Orthros service begins with reflection and sobriety.
+	As such, it is Antiochian practice to deliberately not cross
+	oneself,
+	intone the GNE, or make any movements from the beginning of the service,
+	until the last psalm is read.}
+
+\section*{Psalm 3}
+\input{Psalm003.txt}
+
+\mbox{}\\
+%This line from the Psalm is repeated
+I laid me down and slept; I awoke, for the Lord will help me.
+
+\section*{Psalm 37}
+\input{Psalm037.txt}
+
+\mbox{}\\
+%This line from the Psalm is repeated
+Forsake me not, O Lord my God, depart not from me.
+Be attentive unto my help, O Lord of my salvation.
+
+\section*{Psalm 62}
+\input{Psalm062.txt}
+
+\mbox{}\\
+%This line from the Psalm is repeated
+At the dawn I meditated on Thee.
+For Thou art become my helper;
+in the shelter of Thy wings will I rejoice.
+My soul hath cleaved after Thee;
+Thy right hand hath been quick to help me.
+
+\mbox{}\\
+Glory to the Father, and to the Son,and to the Holy Spirit.
+	Now and ever, and unto ages of ages. Amen.
+
+\mbox{}\\
+(Alleluia \texttt{3$\times$} Glory to Thee, O God.) \texttt{3$\times$} 
+
+Lord, have mercy. \texttt{3$\times$}
+
+\mbox{}\\
+Glory to the Father, and to the Son, and to the Holy Spirit.
+
+\texttt{\scriptsize Switch readers here, if desired.}
+
+Now and ever, and unto ages of ages. Amen.
+
+\section*{Psalm 87}
+\input{Psalm087.txt}
+
+\mbox{}\\
+%This line from the Psalm is repeated
+O Lord God of my salvation, by day have I cried and by night before Thee.
+Let my prayer come before Thee, bow down Thine ear unto my supplication.
+
+\section*{Psalm 102}
+\input{Psalm102.txt}
+
+\mbox{}\\
+%This line from the Psalm is repeated
+In every place of His dominion, bless the Lord, O my soul.
+
+\section*{Psalm 142}
+\input{Psalm142.txt}
+
+\mbox{}\\
+%This line from the Psalm is repeated
+O Lord, give ear unto my supplication and enter not into judgment with Thy servant. \texttt{2$\times$}
+
+\mbox{}\\
+Thy good Spirit shall lead me in the land of uprightness.
+
+\mbox{}\\
+\texttt{\scriptsize The time of reflection is completed,
+	so the conclusion is intoned.}
+
+\emph{Glory to the Father, and to the Son,and to the Holy Spirit.
+	Now and ever, and unto ages of ages. Amen.}
+
+\mbox{}\\
+\emph{(Alleluia \texttt{3$\times$} Glory to Thee, O God.) \texttt{3$\times$}}
+	
+\emph{O our God and our Hope, glory to Thee!}
+\end{document}
