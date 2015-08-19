@@ -32,7 +32,20 @@ formats = tablet booklet letter
 
 included_music_dir = ../Common
 
-included_music_files = alleluia.ly amen.ly beatitudes.ly bless_the_lord_greek.ly blessed_be_the_name_flat.ly dismissal_obikhod.ly entrance.ly glory_to_thee.ly kontak_katherine_obikhod.ly praise_the_lord_greek.ly steadfast_protectress.ly trisagion_byzantine_a.ly trisagion_byzantine_b.ly tropar_katherine_obikhod.ly
+included_music_files = alleluia.ly \
+                       amen.ly \
+                       beatitudes.ly \
+                       bless_the_lord_greek.ly \
+                       blessed_be_the_name_flat.ly \
+                       dismissal_obikhod.ly \
+                       entrance.ly \
+                       glory_to_thee.ly \
+                       kontak_katherine_obikhod.ly \
+                       praise_the_lord_greek.ly \
+                       steadfast_protectress.ly \
+                       trisagion_byzantine_a.ly \
+                       trisagion_byzantine_b.ly \
+                       tropar_katherine_obikhod.ly
 
 included_music = $(foreach file, $(included_music_files),$(included_music_dir)/$(file))
 
@@ -46,7 +59,10 @@ included_music = $(foreach file, $(included_music_files),$(included_music_dir)/$
 
 # This command will be run from in a working directory.  One extra ../ is needed
 # to address the Common directory with the .ly files.
-lily_command = lilypond-book --pdf --include=../$(included_music_dir) --loglevel=ERROR --lily-loglevel=ERROR
+lily_command = lilypond-book \
+                 --pdf \
+                 --include=../$(included_music_dir) \
+                 --lily-loglevel=ERROR
 
 # The current command to generate the booklets.
 #   This is a final processing step for the booklet format that has no
@@ -55,7 +71,12 @@ lily_command = lilypond-book --pdf --include=../$(included_music_dir) --loglevel
 # convenience wrapper scripts around the LaTeX pdfpages package.  We should be
 # able to replace this with direct usage of pdfpages to get cross-platform
 # building.
-booklet_command = pdfjam --suffix booklet --landscape --booklet=true --keepinfo=true --paper letterpaper
+booklet_command = pdfjam \
+                    --suffix booklet \
+                    --landscape \
+                    --booklet=true \
+                    --keepinfo=true \
+                    --paper letterpaper
 
 # These commands engage sed (a predominately Linux program) to replace specific
 # placeholders in the pretex files with dimensions.  The dimensions are
@@ -64,9 +85,24 @@ booklet_command = pdfjam --suffix booklet --landscape --booklet=true --keepinfo=
 # them.
 #   In a CMake adaptation, I envision using CMake's "configure" counterpart to
 # do these text replacements.
-sed_tablet  = sed 's/SZWAST_TEXT_PT/10pt/g' | sed 's/SZWAST_PAPER_WIDTH/5in/g' | sed 's/SZWAST_PAPER_HEIGHT/7in/g' | sed 's/SZWAST_LILYPOND_STAFFSIZE/15/g' | sed 's/SZWAST_MARGIN_WIDTH/0.25in/g'
-sed_booklet = sed 's/SZWAST_TEXT_PT/10pt/g' | sed 's/SZWAST_PAPER_WIDTH/5.5in/g' | sed 's/SZWAST_PAPER_HEIGHT/8.5in/g' | sed 's/SZWAST_LILYPOND_STAFFSIZE/15/g' | sed 's/SZWAST_MARGIN_WIDTH/0.75in/g'
-sed_letter  = sed 's/SZWAST_TEXT_PT/14pt/g' | sed 's/SZWAST_PAPER_WIDTH/8.5in/g' | sed 's/SZWAST_PAPER_HEIGHT/11in/g' | sed 's/SZWAST_LILYPOND_STAFFSIZE/20/g' | sed 's/SZWAST_LILYPOND_LINEWIDTH/5.2\in/g' | sed 's/SZWAST_MARGIN_WIDTH/1in/g'
+sed_tablet  = sed 's/SZWAST_TEXT_PT/10pt/g' \
+            | sed 's/SZWAST_PAPER_WIDTH/5in/g' \
+            | sed 's/SZWAST_PAPER_HEIGHT/7in/g' \
+            | sed 's/SZWAST_LILYPOND_STAFFSIZE/15/g' \
+            | sed 's/SZWAST_MARGIN_WIDTH/0.25in/g'
+
+sed_booklet = sed 's/SZWAST_TEXT_PT/10pt/g' \
+            | sed 's/SZWAST_PAPER_WIDTH/5.5in/g' \
+            | sed 's/SZWAST_PAPER_HEIGHT/8.5in/g' \
+            | sed 's/SZWAST_LILYPOND_STAFFSIZE/15/g' \
+            | sed 's/SZWAST_MARGIN_WIDTH/0.75in/g'
+
+sed_letter  = sed 's/SZWAST_TEXT_PT/14pt/g' \
+            | sed 's/SZWAST_PAPER_WIDTH/8.5in/g' \
+            | sed 's/SZWAST_PAPER_HEIGHT/11in/g' \
+            | sed 's/SZWAST_LILYPOND_STAFFSIZE/20/g' \
+            | sed 's/SZWAST_LILYPOND_LINEWIDTH/5.2\in/g' \
+            | sed 's/SZWAST_MARGIN_WIDTH/1in/g'
 
 # Similar to the format sed commands above, these replace the season definition
 # placeholder in the pretex file with the season name.  This sets the value of a

@@ -116,6 +116,45 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now define the title and inner pages.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\liturgytitle[1]{
+	\newlength{\titlemargin}
+	\setlength{\titlemargin}{SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH}
+	\newgeometry{left=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH,right=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH,top=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH,bottom=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH+0.25in,footskip=0.25in}
+	%\maketitle
+	\thispagestyle{empty}
+	\vspace*{\fill}
+	\begin{center}
+		\Huge{#1\iftoggle{Pascha}{\\(Paschal)}{\iftoggle{Lent}{\\(Lenten)}{\iftoggle{Ascension}{\\(Ascension Sunday)}{}}}}
+	\end{center}
+	\vspace*{\fill}
+	\vspace*{1in}
+	\eachpageornament
+	\setcounter{secnumdepth}{0}
+
+	\pagebreak
+}
+
+	
+\newcommand\graphicalinnerpage[3]{
+	\vspace*{\fill}
+	\begin{center}
+		\Large{#1}
+
+		\includegraphics[width=\textwidth]{#2}	% By the time Latex will actually be processing this, it will be in an out.* subdirectory.
+
+		\Large{#3}
+	\end{center}
+	\vspace*{\fill}
+	\thispagestyle{empty}
+
+	\restoregeometry
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Now define a whole series of common liturgical snippets.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -169,7 +208,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 
 % Using \nolinebreak\\ to break each line prevents lines being skipped when
 % a psalm line ends at the right margin, where a natural line break would be
-% followed by the forced one.  This prevents any natural line breaks from 
+% followed by the forced one.  This prevents any natural line breaks from
 % happenning immediately before a forced one.
 \newcommand\psalm[1]{
 \switch[#1 =]

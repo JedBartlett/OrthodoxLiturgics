@@ -15,34 +15,9 @@
 
 \begin{document}
 
-	\newlength{\titlemargin}
-	\setlength{\titlemargin}{SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH}
-	\newgeometry{left=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH,right=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH,top=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH,bottom=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH+0.25in,footskip=0.25in}
-	%\maketitle
-	\thispagestyle{empty}
-	\vspace*{\fill}
-	\begin{center}
-		\Huge{The Sunday Reader's Service of the \textsc{Typica}\iftoggle{Pascha}{\\(Paschal)}{\iftoggle{Lent}{\\(Lenten)}{\iftoggle{Ascension}{\\(Ascension Sunday)}{}}}}
-	\end{center}
-	\vspace*{\fill}
-	\vspace*{1in}
-	\eachpageornament
-	\setcounter{secnumdepth}{0}
-
-	\pagebreak
-
-	\vspace*{\fill}
-	\begin{center}
-		\Large{Saint Katherine Orthodox Church}
-
-		\includegraphics[width=\textwidth]{../Katherine1}	% By the time Latex will actually be processing this, it will be in an out.* subdirectory.
-
-		\Large{Moscow, Idaho}
-	\end{center}
-	\vspace*{\fill}
-	\thispagestyle{empty}
-
-	\restoregeometry
+	\liturgytitle{The Sunday Reader's Service of the \textsc{Typica}}
+	
+	\graphicalinnerpage{Saint Katherine Orthodox Church}{../Katherine1}{Moscow, Idaho}
 
 	\section{The Sunday Reader's Service of Typica}
 
