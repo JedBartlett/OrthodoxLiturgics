@@ -24,7 +24,7 @@ Arabic = \lyricmode {
 Ya rub bur -- _ ham, Ya rub _ bur -- _ ham, Ya rub bur -- ham 
 }
 Greek = \lyricmode { 
-Ky-__rie El -- e -- i -- son,  Ky -- rie E -- le -- i -- son,  Kyr-ie El -- e-i- son 
+Kyri-e El -- e -- i -- son,  Kyri -- e E -- le -- i -- son,  Kyri-e El -- e-i- son 
 }
 
 
