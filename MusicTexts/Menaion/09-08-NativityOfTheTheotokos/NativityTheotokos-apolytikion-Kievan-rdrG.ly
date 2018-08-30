@@ -9,6 +9,7 @@
   copyright = "This arrangement is free to distrubute for Liturgical use"
   tagline = "Arranged using https://oca.org/liturgics/learning-the-tones"
 }
+#(set-default-paper-size "letter")
 
 recite = \once \override LyricText.self-alignment-X = #-1
 
@@ -35,7 +36,7 @@ verseOne = \lyricmode {
   hath pro -- claimed \recite "joy to the" who -- le un -- i -- verse;
   for from thee did \recite "shine forth the Sun of just" -- ice, Christ our God,
   \recite "annulling the curse, and bestow" -- ing the ble -- ssing,
-  \recite "abolishing death and grant" ing us -- _ li -- ife ev -- er -- la -- _ -- _ -- sting.
+  \recite "abolishing death and grant" ing us -- _ li -- ife ev -- er -- la -- sting.
 }
 
 soprano = \relative g' {
@@ -51,7 +52,7 @@ soprano = \relative g' {
   %% Phrase D
   g\breve g4 fis2 g2 a2 \bar "|"
   %% Final
-  a\breve a4 g4 fis g a4. a8 g4 fis2 e4 d4 e1 \bar "||"
+  a\breve a4 g4 fis g a4. a8 g4 fis2 (e4 d4) e1 \bar "||"
 }
 
 alto = \relative c' {
@@ -124,6 +125,7 @@ bass = \relative c {
       \new Voice = "bass" { \voiceTwo \bass }
     >>
   >>
+
   \layout {
     \context {
       \Staff

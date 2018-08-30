@@ -10,6 +10,8 @@
   tagline = "Arranged using https://oca.org/liturgics/learning-the-tones"
 }
 
+#(set-default-paper-size "letter")
+
 % http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
 recite = \once \override LyricText.self-alignment-X = #-1
 
@@ -31,14 +33,14 @@ global = {
 % lines will consist of A, B, C, D, E, F, D, E and Final Cadence.
 
 verseOne = \lyricmode {
-  \recite "By thy holy" nativity, O pu -- re one,
+  \recite "By thy holy" nativity, O pu -- re one, \break
   Jo -- a -- chim \recite "and Anna were delivered from the" reproach of bar -- ren -- ness;
   a -- nd Ad -- am \recite "and Eve were delivered from the" corrup -- tion of death;
   \recite "thy people" do cel -- e -- brate it,
   \recite "having been saved from" the stain of in -- i -- qu -- ity,
   cry -- ing un -- to thee:
   \recite "The barren doth give birth to the Theoto" kos,
-      wh -- o nour -- ish -- eth our li -- \skip 1 \skip 1 fe.
+      wh -- o nour -- ish -- eth our li -- fe.
 }
 
 soprano = \relative g' {
@@ -58,7 +60,7 @@ soprano = \relative g' {
   %% Phrase F
   g4 g g4 a2 g2 \bar "|"
   %% Final
-  a\breve a4 g4 fis g a4 a g4 fis2 e4 d4 e1 \bar "||"
+  a\breve a4 g4 fis g a4 a g4 fis2 (e4 d4) e1 \bar "||"
 }
 
 alto = \relative c' {
@@ -118,7 +120,7 @@ bass = \relative c {
   %% Phrase F
   g4 g g4 d2 g2
   %% Final
-  d\breve d4 d4 d g fis4 fis g4 d2 a4 b4 e1
+  d\breve d4 d4 d g fis4 fis g4 d2 (a4 b4) e1
 }
 
 \score {
