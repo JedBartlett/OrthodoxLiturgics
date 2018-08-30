@@ -33,10 +33,10 @@ global = {
 verseOne = \lyricmode {
   % http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
   \recite "Thy nativity, O" The -- o -- to -- kos,
-  hath pro -- \recite "claimed joy to the" whole u -- ni -- verse;
+  hath pro -- \recite "claimed joy to the" whole __ u -- ni -- verse;
   for from thee did \recite "shine forth the Sun of jus" -- tice, Christ our God,
   \recite "annulling the curse, and bestowing" the bless -- ing,
-  \recite "abolishing death and granting" us life ev -- er -- last -- ing.
+  \recite "abolishing death and granting" us life __ ev -- er -- last -- ing.
 }
 
 soprano = \relative g' {
