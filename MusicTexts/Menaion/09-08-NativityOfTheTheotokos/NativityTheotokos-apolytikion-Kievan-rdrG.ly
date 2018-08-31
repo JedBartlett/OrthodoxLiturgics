@@ -9,6 +9,9 @@
   copyright = "This arrangement is free to distrubute for Liturgical use"
   tagline = "Arranged using https://oca.org/liturgics/learning-the-tones"
 }
+
+% Provide an easy way to group a bunch of text together on a breve
+% http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
 #(set-default-paper-size "letter")
 
 recite = \once \override LyricText.self-alignment-X = #-1
@@ -17,7 +20,6 @@ recite = \once \override LyricText.self-alignment-X = #-1
 global = {
   \time 1/1 % Not used, Time_signature_engraver is removed from layout
   \key g \major
-  %\tempo 4=400
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
@@ -31,7 +33,6 @@ global = {
 % lines will consist of A, B, C, D, E, F, D, E and Final Cadence.
 
 verseOne = \lyricmode {
-  % http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
   \recite "Thy nativity, O" The -- o -- to -- kos,
   hath pro -- \recite "claimed joy to the" whole __ u -- ni -- verse;
   for from thee did \recite "shine forth the Sun of jus" -- tice, Christ our God,
