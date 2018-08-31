@@ -12,6 +12,7 @@
 
 #(set-default-paper-size "letter")
 
+% Provide an easy way to group a bunch of text together on a breve
 % http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
 recite = \once \override LyricText.self-alignment-X = #-1
 
@@ -19,7 +20,6 @@ recite = \once \override LyricText.self-alignment-X = #-1
 global = {
   \time 1/1 % Not used, Time_signature_engraver is removed from layout
   \key g \major
-  %\tempo 4=400
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
