@@ -3,6 +3,11 @@ MusicTexts/SundayReaderTypica/out.pentecost-booklet/
 MusicTexts/SundayReaderTypica/out.pentecost-letter/
 MusicTexts/SundayReaderTypica/out.pentecost-tablet/
 
+## Music and container files
+*.zip
+*.midi
+*.mp3
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
