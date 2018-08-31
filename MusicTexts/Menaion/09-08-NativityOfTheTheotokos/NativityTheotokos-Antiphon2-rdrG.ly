@@ -30,13 +30,13 @@ verseOne = \lyricmode {
   The Lord hath sworn in truth un -- to Da -- vid;
     and He will not an -- nul it.
     Of the fruit of thy loins
-    will I set upon thy throne.
+    will I set up -- on thy throne.
   \refrain
-  There will I make to spring forth a horn for David.
+  There will I make to spring forth a horn for Dav -- id.
     I have pre -- pared a lamp for My Christ. 
   \refrain
   For the Lord hath el -- ect -- ed Zion;
-    He hath cho -- sen her to be a ha -- bi -- ta -- tion for Himself. 
+    He hath cho -- sen her to be a ha -- bi -- ta -- tion for Him -- self. 
   \refrain
 }
 
@@ -51,15 +51,15 @@ soprano = \relative g' {
   g4 g a b b b a b c2. b4 r4 \bar "|"
   g4 b b b g a2 g2 r4 \bar "|"
   g4 a b( a) b c2 b2 r4 \bar "|"
-  g4 a b g( a2) a2 g2 r4 \bar "||"
+  g4 a b g a2 a2 g2 r4 \bar "||"
   \sopref % Refrain
   % Verse 2
-  g4 g a b b b b b a b c2( b2) r4 \bar "|"
+  g4 g a b b b b b a b c2 b2 r4 \bar "|"
   g4 g a b g a2 a4 a4 g2 r4 \bar "||"
   \sopref % Refrain
   % Verse 3
   g4 a b b b a b c2( b2) r4 \bar "|"
-  g4 a b b b b b b b g a2 a4 a a( g2) r4 \bar "||"
+  g4 a b b b b b b b g a2 a4 a a g2 r4 \bar "||"
   \sopref % Refrain
 }
 
