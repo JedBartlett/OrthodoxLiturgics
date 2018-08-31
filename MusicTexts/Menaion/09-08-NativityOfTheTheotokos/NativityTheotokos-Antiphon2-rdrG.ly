@@ -42,8 +42,7 @@ verseOne = \lyricmode {
 
 soprefmost = {
   b4 b b a b c2( b2) r4 \bar "|"
-  b4 g a2 a4 a a g2. r4 \bar "|"
-  b4 c2. c4 b4( c b a) g2 a2 b1( a) g
+  b4 g a2 a4 a a g2( a4) b4 c2. c4 b4( c b a) g2 a2 b1( a) g
 }
 sopref = { \soprefmost \bar "||" }
 soprano = \relative g' {
@@ -56,7 +55,7 @@ soprano = \relative g' {
   \sopref % Refrain
   % Verse 2
   g4 g a b b b b b a b c2( b2) r4 \bar "|"
-  g4 g a b g a a2 a2 g2 r4 \bar "||"
+  g4 g a b g a2 a4 a4 g2 r4 \bar "||"
   \sopref % Refrain
   % Verse 3
   g4 a b b b a b c2( b2) r4 \bar "|"
