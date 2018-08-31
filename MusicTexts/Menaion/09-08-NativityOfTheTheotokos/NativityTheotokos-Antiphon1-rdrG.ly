@@ -22,7 +22,7 @@ global = {
 }
 
 refrain = \lyricmode {
-  Through the in -- ter -- cessions of the The -- o -- to -- kos, O Sav -- ior, save us
+  Through the in -- ter -- ce -- ssions of the The -- o -- to -- kos, __ O __ Sav -- ior, save __ us.
 }
 verseOne = \lyricmode {
   % The verses can be broken up further than they are in the Liturgy variable text
@@ -43,7 +43,7 @@ verseOne = \lyricmode {
   \refrain
 }
 
-soprefmost = { g g g a b2 b4 b4 a b c2 b4( c) b( a) g2 a2 b1( a) g1 }
+soprefmost = { g4 g g a b4 b4 b4 b4 a b c2 b4( c) b( a) g2 a2 b1( a) g1 }
 sopref = { \soprefmost \bar "||" }
 soprano = \relative g' {
   \global
@@ -53,19 +53,19 @@ soprano = \relative g' {
   \sopref % Refrain
   % Verse 2
   g4 g a b a b c2. c4 b2 r4 \bar "|"
-  g a b b b g a2 a4 a g2. r4 \bar "||"
+  g4 a b b b g a2 a4 a g2. r4 \bar "||"
   \sopref % Refrain
   % Verse 3
-  g g a b b c2. c4 c b2 r4 \bar "|"
-  g a2 a4 a g2. r4 \bar "||"
-  \sopref % Refrain
+  g4 g a b b c2. c4 c b2 r4 \bar "|"
+  g4 a2 a4 a g2. \bar "||"
+  \sopref \allowPageTurn % Refrain
   % Verse 4
-  g g g a b b b b b a b c2. b4 r4 \bar "|"
-  g a b b b b b b g a2. g4 r4 \bar "||"
+  g4 g g a b b b b b a b c2. b4 r4 \bar "|"
+  g4 a b b b b b b g a2. g4 \bar "||" \allowPageTurn
   \sopref % Refrain
-  % GNE
-  g g g a b\breve b4 a2 b2 c2. b4 r4 \bar "|"
-  g g a b\breve g2 a2. a4 a g2 r4 \bar "||"
+  \allowPageTurn % GNE
+  g4 g g a b\breve b4 a4 b4 c2. b4 r4 \bar "|"
+  g4 g a b\breve g2 a2. a4 a g2 r4 \bar "||"
   \soprefmost \bar "|." % Refrain
 }
 
