@@ -69,19 +69,83 @@ soprano = \relative g' {
   \soprefmost \bar "|." % Refrain
 }
 
-alto = \relative c' {
+altrefmost = { g4 g g g g g g g g g g2 g2 g g g2 g1( d) d1 }
+altref = { \altrefmost \bar "||" }
+alto = \relative g' {
   \global
-
+  % Verse 1
+  g4 g g g g g2. g4 r4 \bar "|"
+  g4 g g fis2. d2 \bar "||"
+  \altref % Refrain
+  % Verse 2
+  g4 g g g g g g2. g4 g2 r4 \bar "|"
+  g4 g g g g g g2 g4 g d2. r4 \bar "||"
+  \altref % Refrain
+  % Verse 3
+  g4 g g g g g2. g4 g g2 r4 \bar "|"
+  g4 fis2 fis4 fis d2. \bar "||"
+  \altref% Refrain
+  % Verse 4
+  g4 g g g g g g g g g g g2. d4 r4 \bar "|"
+  g4 g g g g g g g g fis2. d4 \bar "||"
+  \altref % Refrain
+  % GNE
+  g4 g g g g\breve g4 g4 g4 g2. g4 r4 \bar "|"
+  g4 g g g\breve g4 fis2 fis4 fis d2 r4 \bar "||"
+  \altref \bar "|." % Refrain
 }
 
-tenor = \relative a {
+tenrefmost = { b4 c d d d d d d c d e2 d4( e) d( c) b2 c2 d1( c) b1 }
+tenref = { \tenrefmost \bar "||" }
+tenor = \relative c' {
   \global
-
+  % Verse 1
+  b4 c d d d e2 e4 d4 r4 \bar "|"
+  d4 d b c2. b2 \bar "||"
+  \tenref % Refrain
+  % Verse 2
+  b4 b c d c d e2. e4 d2 r4 \bar "|"
+  b4 c d d d b c2 c4 c b2. r4 \bar "||"
+  \tenref % Refrain
+  % Verse 3
+  b4 b c d d e2. c4 e d2 r4 \bar "|"
+  b4 c2 c4 c b2. \bar "||"
+  \tenref % Refrain
+  % Verse 4
+  b4 c d d d d d d d b c e2. d4 r4 \bar "|"
+  b4 c d d d d d d b c2. b4 \bar "||"
+  \tenref % Refrain
+  % GNE
+  b4 b b c d\breve d4 c4 d4 e2. d4 r4 \bar "|"
+  b4 c d d\breve b4 c2 c4 c b2 r4 \bar "||"
+  \tenref \bar "|." % Refrain
 }
 
+
+basrefmost = { g4 g g g g g g g g g c,2 g'2 g g e2 d1( d) g1 }
+basref = { \basrefmost \bar "||" }
 bass = \relative c {
   \global
-
+  % Verse 1
+  g'4 g g g g c,2 e4 g4 r4 \bar "|"
+  g4 g g d2. g2 \bar "||"
+  \basref % Refrain
+  % Verse 2
+  g4 g g g g g c,2. e4 g2 r4 \bar "|"
+  g4 g g g g g c,2 c4 e g2. r4 \bar "||"
+  \basref % Refrain
+  % Verse 3
+  g4 g g g g c,2. c4 e g2 r4 \bar "|"
+  g4 d2 d4 d g2. \bar "||"
+  \basref % Refrain
+  % Verse 4
+  g4 g g g g g g g g g g c,2( e4) g4 r4 \bar "|"
+  g4 g g g g g g g g d2. g4 \bar "||"
+  \basref % Refrain
+  % GNE
+  g4 g g g g\breve g4 g4 g4 c,2( e4) g4 r4 \bar "|"
+  g4 g g g\breve e4 d2 d4 d g2 r4 \bar "||"
+  \basref \bar "|." % Refrain
 }
 
 \score {
