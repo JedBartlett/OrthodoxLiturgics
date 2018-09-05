@@ -1,10 +1,10 @@
 \version "2.18.2"
 
 \header {
-  title = "Nativity of The Theotokos"
+  title = "Nativity of the Theotokos"
   subtitle = "Antiphon"
   subsubtitle = "First"
-  copyright = "This arrangement is free to distrubute for Liturgical use"
+  copyright = "This arrangement is free to distribute for Liturgical use"
   tagline = "Arranged using https://oca.org/liturgics/learning-the-tones"
 }
 
