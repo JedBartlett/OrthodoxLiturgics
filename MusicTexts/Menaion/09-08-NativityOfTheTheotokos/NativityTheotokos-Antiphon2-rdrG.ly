@@ -62,18 +62,72 @@ soprano = \relative g' {
   \sopref % Refrain
 }
 
-alto = \relative c' {
-  \global
 
+altref = {
+  g2 g4 g g g g2( g2) r4 \bar "|"
+  g4 g fis2 fis4 fis fis d2( fis4) g4 g2. g4 g4( g g g) g2 g2 g1( d) d \bar "||" 
+}
+alto = \relative g' {
+  \global
+  % Verse 1
+  g4 g g g g g g g g2. g4 r4 \bar "|"
+  g4 g g g g fis2 d2 r4 \bar "|"
+  g4 g g( g) g g2 g2 r4 \bar "|"
+  g4 g g g g2 fis2 d2 r4 \bar "||"
+  \altref % Refrain
+  % Verse 2
+  g4 g g g g g g g g g g2 g2 r4 \bar "|"
+  g4 g g g g fis2 fis4 fis4 d2 r4 \bar "||"
+  \altref % Refrain
+  % Verse 3
+  g4 g g g g g g g2( g2) r4 \bar "|"
+  g4 g g g g g g g g g fis2 fis4 fis fis d2 r4 \bar "||"
+  \altref % Refrain
 }
 
+tenref = {
+  d2 d4 d d b c2( b2) r4 \bar "|"
+  d4 d c2 c4 c c b2. d4 e2. e4 d4( e d c) b2 c2 d1( c) b \bar "||" 
+}
 tenor = \relative a {
   \global
-
+  % Verse 1
+  b4 b c d d d d d e2. d4 r4 \bar "|"
+  b4 d d d b c2 b2 r4 \bar "|"
+  b4 c d2 d4 e2 d2 r4 \bar "|"
+  b4 c d b c2 c2 b2 r4 \bar "||"
+  \tenref % Refrain
+  % Verse 2
+  b4 b c d d d d d d d e2 b2 r4 \bar "|"
+  b4 b c d b c2 c4 c4 b2 r4 \bar "||"
+  \tenref % Refrain
+  % Verse 3
+  b4 c d d d d d e2( d2) r4 \bar "|"
+  d4 d d d d d d d d b c2 c4 c c b2 r4 \bar "||"
+  \tenref % Refrain
 }
 
-bass = \relative c {
+
+basref = {
+  g2 g4 g g g c,4( e4 g2) r4 \bar "|"
+  g4 g d2 d4 d d4 g2( e4) d4 c2. e4 g1 g2 e2 d1( d) g \bar "||" 
+}
+bass = \relative g {
   \global
+  % Verse 1
+  g4 g g g g g g g c,2( e4) g4 r4 \bar "|"
+  g4 g g g g d2 g2 r4 \bar "|"
+  g4 g g2 g4 c,4( e) g2 r4 \bar "|"
+  g4 g g g d2 d2 g2 r4 \bar "||"
+  \basref% Refrain
+  % Verse 2
+  g4 g g g g g g g g g c,( e) g2 r4 \bar "|"
+  g4 g g g e4 d2 d4 d4 g2 r4 \bar "||"
+  \basref % Refrain
+  % Verse 3
+  g4 g g g g g g c,( e4 g2) r4 \bar "|"
+  g4 g g g g g g g g e d2 d4 d d g2 r4 \bar "||"
+  \basref % Refrain
 
 }
 
