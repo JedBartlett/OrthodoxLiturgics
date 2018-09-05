@@ -22,7 +22,7 @@ global = {
 }
 
 refrain = \lyricmode {
-  Save us, O Son of God,
+  Save us, O Son of God, __
     Who art won -- drous in the Saints;
     who sing to Thee. __ Al -- le -- lu -- ia.
 }
@@ -35,31 +35,30 @@ verseOne = \lyricmode {
   There will I make to spring forth a horn for Dav -- id.
     I have pre -- pared a lamp for my Christ. 
   \refrain
-  For the Lord hath e -- lect -- ed Zion;
+  For the Lord hath e -- lect -- ed Zion; __
     He hath cho -- sen her to be a hab -- i -- ta -- tion for Him -- self. 
   \refrain
 }
 
-soprefmost = {
-  b4 b b a b c2( b2) r4 \bar "|"
-  b4 g a2 a4 a a g2( a4) b4 c2. c4 b4( c b a) g2 a2 b1( a) g
+sopref = {
+  b2 b4 b a b c2( b2) r4 \bar "|" \allowPageTurn
+  b4 g a2 a4 a a g2( a4) b4 c2. c4 b4( c b a) g2 a2 b1( a) g \bar "||" \allowPageTurn
 }
-sopref = { \soprefmost \bar "||" }
 soprano = \relative g' {
   \global
   % Verse 1
   g4 g a b b b a b c2. b4 r4 \bar "|"
   g4 b b b g a2 g2 r4 \bar "|"
   g4 a b( a) b c2 b2 r4 \bar "|"
-  g4 a b g a2 a2 g2 r4 \bar "||"
+  g4 a b g a2 a2 g2 r4 \bar "||" \allowPageTurn
   \sopref % Refrain
   % Verse 2
   g4 g a b b b b b a b c2 b2 r4 \bar "|"
-  g4 g a b g a2 a4 a4 g2 r4 \bar "||"
+  g4 g a b g a2 a4 a4 g2 r4 \bar "||" \allowPageTurn
   \sopref % Refrain
   % Verse 3
   g4 a b b b a b c2( b2) r4 \bar "|"
-  g4 a b b b b b b b g a2 a4 a a g2 r4 \bar "||"
+  g4 a b b b b b b b g a2 a4 a a g2 r4 \bar "||" \allowPageTurn
   \sopref % Refrain
 }
 
