@@ -22,7 +22,7 @@ global = {
 }
 
 refrain = \lyricmode {
-  Through the in -- ter -- ce -- ssions of the The -- o -- to -- kos, __ O __ Sav -- ior, save __ us.
+  Through the in -- ter -- ces -- sions of the The -- o -- to -- kos, __ O __ Sav -- ior, save __ us.
 }
 verseOne = \lyricmode {
   % The verses can be broken up further than they are in the Liturgy variable text
@@ -39,7 +39,7 @@ verseOne = \lyricmode {
     God shall help her right ear -- ly in the morn -- ing.
   \refrain
   Glo -- ry to the \recite "Father and to the Son and to" the Ho -- ly Spi -- rit,
-    both now and \recite "ever, and unto ages" of a -- ges. A -- men.
+    both now and \recite "ever, and unto ages" of ag -- es. A -- men.
   \refrain
 }
 
@@ -65,7 +65,7 @@ soprano = \relative g' {
   \sopref % Refrain
   \allowPageTurn % GNE
   g4 g g a b\breve b4 a4 b4 c2. b4 r4 \bar "|"
-  g4 g a b\breve g2 a2. a4 a g2 r4 \bar "||"
+  g4 g a b\breve g4 a2 a4 a g2 r4 \bar "||"
   \soprefmost \bar "|." % Refrain
 }
 
