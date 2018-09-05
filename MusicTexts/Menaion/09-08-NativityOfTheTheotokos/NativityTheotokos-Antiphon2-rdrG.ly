@@ -1,10 +1,10 @@
 \version "2.18.2"
 
 \header {
-  title = "Nativity of The Theotokos"
+  title = "Nativity of the Theotokos"
   subtitle = "Antiphon"
   subsubtitle = "Second"
-  copyright = "This arrangement is free to distrubute for Liturgical use"
+  copyright = "This arrangement is free to distribute for Liturgical use"
   tagline = "Arranged using https://oca.org/liturgics/learning-the-tones"
 }
 
@@ -24,7 +24,7 @@ global = {
 refrain = \lyricmode {
   Save us, O Son of God,
     Who art won -- drous in the Saints;
-    who sing to Thee__. Al -- le -- lu -- ia.
+    who sing to Thee. __ Al -- le -- lu -- ia.
 }
 verseOne = \lyricmode {
   The Lord hath sworn in truth un -- to Da -- vid;
@@ -33,10 +33,10 @@ verseOne = \lyricmode {
     will I set up -- on thy throne.
   \refrain
   There will I make to spring forth a horn for Dav -- id.
-    I have pre -- pared a lamp for My Christ. 
+    I have pre -- pared a lamp for my Christ. 
   \refrain
-  For the Lord hath el -- ect -- ed Zion;
-    He hath cho -- sen her to be a ha -- bi -- ta -- tion for Him -- self. 
+  For the Lord hath e -- lect -- ed Zion;
+    He hath cho -- sen her to be a hab -- i -- ta -- tion for Him -- self. 
   \refrain
 }
 
