@@ -27,18 +27,18 @@ refrain = \lyricmode {
 verseOne = \lyricmode {
   % The verses can be broken up further than they are in the Liturgy variable text
   % http://ww1.antiochian.org/sites/default/files/nativity_of_theotokos_series.pdf
-  Re -- mem -- ber, O Lord, Dav -- id and all his meek -- ness.
+  Re -- mem -- ber, O Lord, Da -- vid and all his meek -- ness.
   \refrain
   Lo, we have heard it at Eph -- ra -- tha.
     We have found it in the plains of the wood.
   \refrain
-  Glo-- ri -- ous things are spo -- ken of thee,
+  Glo -- ri -- ous things are spo -- ken of thee,
     O ci -- ty of God.
   \refrain
-  God is in the midst of her; she shall not be sha -- ken;
+  God is in the midst of her; she shall not be shak -- en;
     God shall help her right ear -- ly in the morn -- ing.
   \refrain
-  Glo -- ry to the \recite "Father and to the Son and to" the Ho -- ly Spi -- rit,
+  Glo -- ry to the \recite "Father and to the Son and to" the Ho -- ly Spir -- it,
     both now and \recite "ever, and unto ages" of ag -- es. A -- men.
   \refrain
 }
@@ -100,7 +100,7 @@ tenref = { \tenrefmost \bar "||" }
 tenor = \relative c' {
   \global
   % Verse 1
-  b4 c d d d e2 e4 d4 r4 \bar "|"
+  b4 c d d d e2. d4 r4 \bar "|"
   d4 d b c2. b2 \bar "||"
   \tenref % Refrain
   % Verse 2
