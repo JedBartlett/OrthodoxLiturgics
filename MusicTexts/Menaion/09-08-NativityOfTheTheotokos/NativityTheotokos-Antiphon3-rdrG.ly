@@ -34,7 +34,7 @@ soprano = \relative g' {
   g4 g a b b a b c2 c4 b4 r4 \bar "|"
   g4 a b b b b b g a2 a4 a g2 \bar "||"
   g4 a b g c2. b2 r4 \bar "|"
-  g4 a b g a2. a4 g2 \bar "|."
+  g4 a b g a2 a2 g2 \bar "|."
 }
 
 alto = \relative g' {
@@ -42,7 +42,7 @@ alto = \relative g' {
   % Verse 1
   g4 g g g g g g g2 g4 g4 r4
   g4 g g g  g g g g fis2 fis d2
-  g4 g g g fis2. g2 r4
+  g4 g g g g2. g2 r4
   g4 g g g d1 d2
 }
 
@@ -52,7 +52,7 @@ tenor = \relative c' {
   b4 b d d d d d e2 e4 d4 r4
   b4 d d d d d d b c2 c4 c b2
   b4 d d d e2 c4 d2 r4
-  b4 d d d c2. c4 b2
+  b4 d d d c2 c2 b2
 }
 
 bass = \relative c {
@@ -60,8 +60,8 @@ bass = \relative c {
   % Verse 1
   g'4 g g g g g g c,2 e4 g4 r4
   g4 g g g g g g g d2 d4 d g2
-  g4 g g g c,2 e4 g2 r4
-  g4 g g g d2. fis4 g2
+  g4 g g g c,2. g'2 r4
+  g4 g g g d2 fis2 g2
 }
 
 \score {
