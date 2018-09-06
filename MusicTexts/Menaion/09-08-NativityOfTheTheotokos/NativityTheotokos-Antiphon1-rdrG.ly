@@ -53,7 +53,7 @@ soprano = \relative g' {
   \sopref % Refrain
   % Verse 2
   g4 g a b a b c2. c4 b2 r4 \bar "|"
-  g4 a b b b g a2 a4 a g2. r4 \bar "||"
+  g4 a b b b g a2 a4 a g2. \bar "||"
   \sopref % Refrain
   % Verse 3
   g4 g a b b c2. c4 c b2 r4 \bar "|"
@@ -79,7 +79,7 @@ alto = \relative g' {
   \altref % Refrain
   % Verse 2
   g4 g g g g g g2. g4 g2 r4 \bar "|"
-  g4 g g g g g g2 g4 g d2. r4 \bar "||"
+  g4 g g g g g g2 g4 g d2. \bar "||"
   \altref % Refrain
   % Verse 3
   g4 g g g g g2. g4 g g2 r4 \bar "|"
@@ -105,7 +105,7 @@ tenor = \relative c' {
   \tenref % Refrain
   % Verse 2
   b4 b c d c d e2. e4 d2 r4 \bar "|"
-  b4 c d d d b c2 c4 c b2. r4 \bar "||"
+  b4 c d d d b c2 c4 c b2. \bar "||"
   \tenref % Refrain
   % Verse 3
   b4 b c d d e2. c4 e d2 r4 \bar "|"
@@ -132,7 +132,7 @@ bass = \relative c {
   \basref % Refrain
   % Verse 2
   g4 g g g g g c,2. e4 g2 r4 \bar "|"
-  g4 g g g g g c,2 c4 e g2. r4 \bar "||"
+  g4 g g g g g c,2 c4 e g2. \bar "||"
   \basref % Refrain
   % Verse 3
   g4 g g g g c,2. c4 e g2 r4 \bar "|"
