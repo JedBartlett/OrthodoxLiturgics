@@ -32,11 +32,11 @@ verseOne = \lyricmode {
     Of the fruit of thy loins
     will I set up -- on thy throne.
   \refrain
-  There will I make to spring forth a horn for Dav -- id.
-    I have pre -- pared a lamp for my Christ. 
+  There will I make to spring forth a horn for Da -- vid.
+    I have pre -- pared a lamp for my Christ.
   \refrain
   For the Lord hath e -- lect -- ed Zion; __
-    He hath cho -- sen her to be a hab -- i -- ta -- tion for Him -- self. 
+    He hath cho -- sen her to be a hab -- i -- ta -- tion for Him -- self.
   \refrain
 }
 
@@ -65,7 +65,7 @@ soprano = \relative g' {
 
 altref = {
   g2 g4 g g g g2( g2) r4 \bar "|"
-  g4 g fis2 fis4 fis fis d2( fis4) g4 g2. g4 g4( g g g) g2 g2 g1( d) d \bar "||" 
+  g4 g fis2 fis4 fis fis d2( fis4) g4 g2. g4 g4( g g g) g2 g2 g1( d) d \bar "||"
 }
 alto = \relative g' {
   \global
@@ -87,7 +87,7 @@ alto = \relative g' {
 
 tenref = {
   d2 d4 d d b c2( b2) r4 \bar "|"
-  d4 d c2 c4 c c b2. d4 e2. e4 d4( e d c) b2 c2 d1( c) b \bar "||" 
+  d4 d c2 c4 c c b2. d4 e2. e4 d4( e d c) b2 c2 d1( c) b \bar "||"
 }
 tenor = \relative a {
   \global
@@ -98,7 +98,7 @@ tenor = \relative a {
   b4 c d b c2 c2 b2 r4 \bar "||"
   \tenref % Refrain
   % Verse 2
-  b4 b c d d d d d d d e2 b2 r4 \bar "|"
+  b4 b c d d d d d d d e2 d2 r4 \bar "|"
   b4 b c d b c2 c4 c4 b2 r4 \bar "||"
   \tenref % Refrain
   % Verse 3
@@ -110,7 +110,7 @@ tenor = \relative a {
 
 basref = {
   g2 g4 g g g c,4( e4 g2) r4 \bar "|"
-  g4 g d2 d4 d d4 g2( e4) d4 c2. e4 g1 g2 e2 d1( d) g \bar "||" 
+  g4 g d2 d4 d d4 g2( e4) d4 c2. e4 g1 g2 e2 d1( d) g \bar "||"
 }
 bass = \relative g {
   \global
