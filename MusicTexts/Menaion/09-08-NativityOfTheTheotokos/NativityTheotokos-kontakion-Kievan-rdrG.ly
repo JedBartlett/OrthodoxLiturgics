@@ -5,8 +5,7 @@
   subtitle = "Kontakion"
   subsubtitle = "Tone 4"
   composer = "Kievan"
-  arranger = "Rdr. George"
-  copyright = "This arrangement is free to distrubute for Liturgical use"
+  copyright = "This arrangement is free to distribute for Liturgical use"
   tagline = "Arranged using https://oca.org/liturgics/learning-the-tones"
 }
 
@@ -29,7 +28,7 @@ global = {
 % The first three phrases, A, B, and C are used only once,
 % at the beginning of a sticheron, then D, E, and F are sung in rotation up to
 % the last line of the text for the Final Cadence.
-% If a sticheron is divided into 9 textual phrases, the musical 
+% If a sticheron is divided into 9 textual phrases, the musical
 % lines will consist of A, B, C, D, E, F, D, E and Final Cadence.
 
 verseOne = \lyricmode {
