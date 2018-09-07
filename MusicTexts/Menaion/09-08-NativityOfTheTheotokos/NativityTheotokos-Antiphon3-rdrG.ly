@@ -23,16 +23,16 @@ global = {
 
 verseOne = \lyricmode {
   Here will I dwell, for I have cho -- sen her.
-  The Most High hath hall -- ow -- ed His tab -- er -- na -- cle.
+  The Most High hath hal -- lowed His tab -- er -- nac -- le.
   Ho -- ly is Thy tem -- ple,
-  won -- der -- ful in righ -- teous -- ness.
+  won -- der -- ful in right -- eous -- ness.
 }
 
 soprano = \relative g' {
   \global
   % Verse 1
   g4 g a b b a b c2 c4 b4 r4 \bar "|"
-  g4 a b b b b b g a2 a4 a g2 \bar "||"
+  g4 a b b b b g a2 a4 a g2 \bar "||"
   g4 a b g c2. b2 r4 \bar "|"
   g4 a b g a2 a2 g2 \bar "|."
 }
@@ -41,17 +41,17 @@ alto = \relative g' {
   \global
   % Verse 1
   g4 g g g g g g g2 g4 g4 r4
-  g4 g g g  g g g g fis2 fis d2
+  g4 g g g g g g fis2 fis4 fis4 d2
   g4 g g g g2. g2 r4
-  g4 g g g d1 d2
+  g4 g g g d2 d d
 }
 
 tenor = \relative c' {
   \global
   % Verse 1
   b4 b d d d d d e2 e4 d4 r4
-  b4 d d d d d d b c2 c4 c b2
-  b4 d d d e2 c4 d2 r4
+  b4 d d d d d b c2 c4 c b2
+  b4 d d d e2( c4) d2 r4
   b4 d d d c2 c2 b2
 }
 
@@ -59,7 +59,7 @@ bass = \relative c {
   \global
   % Verse 1
   g'4 g g g g g g c,2 e4 g4 r4
-  g4 g g g g g g g d2 d4 d g2
+  g4 g g g g g g d2 d4 d g2
   g4 g g g c,2. g'2 r4
   g4 g g g d2 fis2 g2
 }
