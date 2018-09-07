@@ -30,8 +30,8 @@ global = {
 
 verseOne = \lyricmode {
 Mag -- ni -- fy, \recite "O my soul, the Vir" -- gin Ma -- ry,
-born of a bar __ -- ren womb.
-\recite "Verily, virginity," O __ The -- o -- to -- kos,
+born of a bar -- ren womb.
+\recite "Verily, virginity," O The -- o -- to -- kos,
 \recite "is impossible for" a moth -- er,
 as __ birth -- \recite "giving is impossi" -- ble for vir -- gins.
 \recite "Yet in thee hath the dispensation" of both been ac -- com -- plished.
@@ -43,13 +43,12 @@ soprano = \relative g' {
   \global
   %% Phrase A
   a4 b4 c2 % Intonation
-    b\breve b4 c2.( b4) a2 \bar "|" \break
+    b\breve b4 c2.( b4) a2 \bar "|"
   %% Phrase B
-  b4( c) d % Intonation
-    b4 % Prep
-    c2( d4) c b2) \bar "|" \break % Cadence
+  b4 c d % Intonation
+    c2( d4) c b2) \bar "|" % Cadence
   %% Phrase C
-  c\breve c4( b2) a4 c4 b2( a2) g2 \bar "|"
+  c\breve c4 b2 a4( c4) b2( a2) g2 \bar "|"
   %% Phrase A'
   b\breve b4 c2.( b4) a2 \bar "|"
   %% Phrase B
@@ -82,7 +81,6 @@ bass = \relative a {
     g'\breve g4 c,2.( g'4) a2 \bar "|"
   %% Phrase B
   g4 g g % Intonation
-    g4 % Prep
     c,2( b4) c4 g'2 \bar "|" % Cadence
   %% Phrase C
   c,\breve c4 g'2 e4 c4 d2( d2) g2 \bar "|"
