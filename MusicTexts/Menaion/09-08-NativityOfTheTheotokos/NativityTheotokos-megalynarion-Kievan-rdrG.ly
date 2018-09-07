@@ -30,12 +30,12 @@ global = {
 
 verseOne = \lyricmode {
 Mag -- ni -- fy, \recite "O my soul, the Vir" -- gin Ma -- ry,
-born of a bar __ -- ren womb. __
-\recite "Verily, virgini" -- ty, O The -- o -- to -- kos,
+born of a bar __ -- ren womb.
+\recite "Verily, virginity," O __ The -- o -- to -- kos,
 \recite "is impossible for" a moth -- er,
-as birth -- \recite "giving is impossi" -- ble for __ vir -- gins.
+as __ birth -- \recite "giving is impossi" -- ble for vir -- gins.
 \recite "Yet in thee hath the dispensation" of both been ac -- com -- plished.
-Where -- \recite "fore, all we families of" the earth
+\recite "Wherefore, all we families of the" earth
   do cease -- less -- ly bless  __ thee.
 }
 
@@ -45,10 +45,11 @@ soprano = \relative g' {
   a4 b4 c2 % Intonation
     b\breve b4 c2.( b4) a2 \bar "|" \break
   %% Phrase B
-  b4 c4 d4 % Intonation
-    c4 b4 c2( d4 c4 b2) \bar "|"
+  b4( c) d % Intonation
+    b4 % Prep
+    c2( d4) c b2) \bar "|" \break % Cadence
   %% Phrase C
-  c\breve c4 b2 a4 c4 b2( a2) g2 \bar "|"
+  c\breve c4( b2) a4 c4 b2( a2) g2 \bar "|"
   %% Phrase A'
   b\breve b4 c2.( b4) a2 \bar "|"
   %% Phrase B
@@ -57,7 +58,7 @@ soprano = \relative g' {
   %% Phrase C
   c\breve c4 b2 a4 c4 b2( a2) g2 \bar "|"
   %% Final
-  b4 c\breve c4 b4 c4 c4 d4 b4 c2( b2) a1 \bar "|."
+  c\breve c4 b4 c2 d4 b4 c2( b2) a1 \bar "|."
 }
 
 alto = \relative c' {
@@ -81,18 +82,19 @@ bass = \relative a {
     g'\breve g4 c,2.( g'4) a2 \bar "|"
   %% Phrase B
   g4 g g % Intonation
-    c,4 g'4 c,2( b4 c4 g'2) \bar "|"
+    g4 % Prep
+    c,2( b4) c4 g'2 \bar "|" % Cadence
   %% Phrase C
   c,\breve c4 g'2 e4 c4 d2( d2) g2 \bar "|"
   %% Phrase A'
   g\breve g4 c,2.( g'4) a2 \bar "|"
   %% Phrase B
   g4( g) g4 % Intonation
-    c,\breve c4 g'4( c,2) b4( c4) g'2 \bar "|"
+    c,\breve c4 g'4 c,2( b4 c4) g'2 \bar "|"
   %% Phrase C
   c,\breve c4 g'2 e4 c4 d2( d2) g2 \bar "|"
   %% Final
-  g4 c,\breve c4 g'4 c,4 c g'4 g c,2( g2) a1 \bar "|."
+  c,\breve c4 g'4 c,2 g'4 g c,2( g2) a1 \bar "|."
 }
 
 \score {
