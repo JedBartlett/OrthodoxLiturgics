@@ -95,7 +95,7 @@ tenor = \relative a {
   d\breve d4 e2.( d4) c2
   %% Phrase B
   d4( e4) f4 % Intonation
-    e\breve d4 d4 e2( f4 e4) d2
+    e\breve e4 d4 e2( f4 e4) d2
   %% Phrase C
   e\breve e4 d2 c4 e4 d2( c2) b2
   %% Final
@@ -110,7 +110,7 @@ bass = \relative a {
   g4 g g % Intonation
     c,2( b4) c4 g'2 % Cadence
   %% Phrase C
-  c,\breve c4 g'2 e4 c4 d2( d2) g2
+  c,\breve c4 g'2 e4( c4) d2( d2) g2
   %% Phrase A'
   g\breve g4 c,2.( g'4) a2
   %% Phrase B
