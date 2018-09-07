@@ -46,7 +46,7 @@ soprano = \relative g' {
     b\breve b4 c2.( b4) a2 \bar "|"
   %% Phrase B
   b4 c d % Intonation
-    c2( d4) c b2) \bar "|" % Cadence
+    c2( d4) c b2 \bar "|" % Cadence
   %% Phrase C
   c\breve c4 b2 a4( c4) b2( a2) g2 \bar "|"
   %% Phrase A'
@@ -62,37 +62,64 @@ soprano = \relative g' {
 
 alto = \relative c' {
   \global
+  %% Phrase A
+  e4 g g2 % Intonation
+    g\breve g4 g2.( g4) e2
+  %% Phrase B
+  g4 g g % Intonation
+    g2( g4) g g2 % Cadence
+  %% Phrase C
+  g\breve g4 g2 g4( g4) g2( fis2) d2
+  %% Phrase A'
+  g\breve g4 g2.( g4) e2
+  %% Phrase B
+  g4( g4) g4 % Intonation
+    g\breve g4 g4 g2( g4 g4) g2
+  %% Phrase C
+  g\breve g4 g2 g4 g4 g2( fis2) d2
+  %% Final
+  g\breve g4 g4 g2 g4 g4 g2( g2) e1
 }
 
 tenor = \relative a {
   \global
   %% Phrase A
+  c4 d e2 % Intonation
+    d\breve d4 e2.( d4) c2
   %% Phrase B
+  d4 e f % Intonation
+    e2( f4) e d2 % Cadence
   %% Phrase C
+  e\breve e4 d2 c4( e4) d2( c2) b2
   %% Phrase A'
+  d\breve d4 e2.( d4) c2
   %% Phrase B
+  d4( e4) f4 % Intonation
+    e\breve d4 d4 e2( f4 e4) d2
   %% Phrase C
+  e\breve e4 d2 c4 e4 d2( c2) b2
   %% Final
+  e\breve e4 d4 e2 f4 d4 e2( d2) c1
 }
 
 bass = \relative a {
   %% Phrase A
   a4 g4 c,2 % Intonation
-    g'\breve g4 c,2.( g'4) a2 \bar "|"
+    g'\breve g4 c,2.( g'4) a2
   %% Phrase B
   g4 g g % Intonation
-    c,2( b4) c4 g'2 \bar "|" % Cadence
+    c,2( b4) c4 g'2 % Cadence
   %% Phrase C
-  c,\breve c4 g'2 e4 c4 d2( d2) g2 \bar "|"
+  c,\breve c4 g'2 e4 c4 d2( d2) g2
   %% Phrase A'
-  g\breve g4 c,2.( g'4) a2 \bar "|"
+  g\breve g4 c,2.( g'4) a2
   %% Phrase B
   g4( g) g4 % Intonation
-    c,\breve c4 g'4 c,2( b4 c4) g'2 \bar "|"
+    c,\breve c4 g'4 c,2( b4 c4) g'2
   %% Phrase C
-  c,\breve c4 g'2 e4 c4 d2( d2) g2 \bar "|"
+  c,\breve c4 g'2 e4 c4 d2( d2) g2
   %% Final
-  c,\breve c4 g'4 c,2 g'4 g c,2( g2) a1 \bar "|."
+  c,\breve c4 g'4 c,2 g'4 g c,2( g2) a1
 }
 
 \score {
