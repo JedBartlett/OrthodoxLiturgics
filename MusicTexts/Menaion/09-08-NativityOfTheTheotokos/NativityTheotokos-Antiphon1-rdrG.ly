@@ -79,7 +79,7 @@ alto = \relative g' {
   \altref % Refrain
   % Verse 2
   g4 g g g g g g2. g4 g2 r4 \bar "|"
-  g4 g g g g g g2 g4 g d2. \bar "||"
+  g4 g g g g g fis2 fis4 fis d2. \bar "||"
   \altref % Refrain
   % Verse 3
   g4 g g g g g2. g4 g g2 r4 \bar "|"
