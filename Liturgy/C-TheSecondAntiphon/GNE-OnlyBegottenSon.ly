@@ -22,20 +22,20 @@ global = {
 }
 
 verseOne = \lyricmode {
-  Glo -- \recite "ry to the Father and to the Son and to the" Ho -- ly Spi -- rit,
-  \recite "Both now and ever and unto a" ges of a -- ges. A -- men.
-  On -- ly -- be -- got -- ten Son and Im -- mor -- tal Word of God,
-  who for our sal -- va -- tion willed to be in -- car -- nate
-  of the Ho -- ly The -- o -- to -- kos and Ev -- er -- Vir -- gin Ma -- ry,
+  \recite "Glory to the Father and to the Son and to the" Ho -- ly Spir -- it,
+  \recite "Both now and ever and unto ag" es of ag -- es. A -- men.
+  On -- ly- -- be -- got -- ten Son and Im -- mor -- tal Word of __ God,
+  Who for our sal -- va -- tion willed to be in -- car -- nate
+  of the Ho -- ly The -- o -- to -- kos and Ev -- er- -- Vir -- gin Ma -- ry,
   who with -- out change be -- came man and was cru -- ci -- fied,
-  who is One of the Ho -- ly Tri -- ni -- ty;
-  glo -- ri -- fied with the Fa -- ther and the Ho -- ly Spi -- rit,
-  O Christ, our God, tramp -- ling down death by death, save us.
+  who is One of the Ho -- ly Trin -- i -- ty;
+  glo -- ri -- fied with the Fa -- ther and the Ho -- ly Spir -- it,
+  O Christ, our God, tram -- pling down death by death, save __ us.
 }
 
 soprano = \relative g' {
-\global
-  g4 a\breve a4 g a2 a \bar "|"
+  \global
+  a\breve a4 g a2 a \bar "|"
   a\breve a4 g a2 g4 f g2 \bar "||"
   f4 f f g2 g4 g g g f g a( g) f( g) a2
   g4 g g a bes2 a4 a a a g a2( g) f
@@ -49,7 +49,7 @@ soprano = \relative g' {
 }
 
 alto = \relative g' {
-  d4 f\breve f4 f f2 f
+  f\breve f4 f f2 f
   f\breve f4 e f2 e4 d e2
   d4 d d e2 e4 e e e d e f( e) d( e) f2
   d4 d d f f2 f4 f f f e f2( e) d
@@ -63,7 +63,7 @@ alto = \relative g' {
 }
 
 tenor = \relative c' {
-  bes4 c\breve c4 c c2 c
+  c\breve c4 c c2 c
   c\breve c4 c c2 c4 a c2
   a4 a a c2 c4 c c c a c c2 a4( c) c2
   bes4 bes bes c d2 c4 c c c c c1 a2
@@ -78,7 +78,7 @@ tenor = \relative c' {
 
 
 bass = \relative a {
-  g4 f\breve f4 c f2 f
+  f\breve f4 c f2 f
   f\breve f4 c f2 c4 d c2
   d4 d d c2 c4 c c c d c f( c) d( c) f2
   g4 g g f bes,2 f'4 f f f c f2( c) d2
@@ -88,7 +88,7 @@ bass = \relative a {
   f2 f4 f f c f( c d2) c
   d4 d c2( d4) c f( c d c) f2
   g4 g f bes,2 f'4 f c f2 c d
-  g2( f bes,2. f'4 c2 d) <f f,>1
+  g2( f bes,2. f'4 c2 d) <g g,>1
 }
 
 \score {

@@ -183,7 +183,7 @@
 					f2 f4 f f c f( c d2) c
 					d4 d c2( d4) c f( c d c) f2
 					g4 g f bes,2 f'4 f c f2 c d
-					g2( f bes,2. f'4 c2 d) <f f,>1
+					g2( f bes,2. f'4 c2 d) <g g,>1
 				}
 			}
 		>>
