@@ -1,9 +1,11 @@
 \version "2.18.2"
 
 \header {
-  title = "Nativity of the Theotokos"
-  subtitle = "Antiphon"
-  subsubtitle = "First"
+  title = "Title"
+  subtitle = "Subtitle"
+  subsubtitle = "Subsubtitle"
+  composer = "Style or composer"
+  arranger = "If you want"
   copyright = "This arrangement is free to distribute for Liturgical use"
   tagline = "Arranged using https://oca.org/liturgics/learning-the-tones"
 }
@@ -22,24 +24,28 @@ global = {
 }
 
 verseOne = \lyricmode {
-
+  Wel -- come
 }
 
 soprano = \relative g' {
-
+  \global % Leave these here for key to display
+  b2 b
 }
 
 alto = \relative g' {
-
+  \global % Leave these here for key to display
+  g2 g
 }
 
 tenor = \relative c' {
-
+  \global % Leave these here for key to display
+  c2 c
 }
 
 
 bass = \relative c {
-
+  \global % Leave these here for key to display
+  g2 g
 }
 
 \score {
