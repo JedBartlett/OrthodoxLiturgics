@@ -47,7 +47,7 @@ soprano = \relative g' {
   %% Phrase A
   fis\breve fis4 a4 g (fis) g2 \bar "|"
   %% Phrase B
-  a\breve a4 g a4 a4 g2 \bar "|"
+  a\breve a4 g a2 a2 g2 \bar "|"
   %% Phrase C
   g4 (a4) b2 b4 a % Intonation, either whole thing, or just b2 a4
   g\breve g4 a2 a4 a g2 \bar "|"
@@ -68,7 +68,7 @@ alto = \relative c' {
   %% Phrase A
   d\breve d4 d4 d2 d2
   %% Phrase B
-  fis\breve fis4 g fis4 fis4 d2
+  fis\breve fis4 g fis2 fis2 d2
   %% Phrase C
   d2 g2 g4 d % Intonation, either whole thing, or just b2 a4
   d\breve d4 fis2 fis4 fis d2
@@ -89,7 +89,7 @@ tenor = \relative a {
   %% Phrase A
   a\breve a4 c b (a) b2
   %% Phrase B
-  c\breve c4 b4 c4 c4 b2
+  c\breve c4 b4 c2 c2 b2
   %% Phrase C
   b4 (c) d2 d4 c % Intonation, either whole thing, or just b2 a4
   b\breve b4 c2 c4 c b2
@@ -110,7 +110,7 @@ bass = \relative c {
   %% Phrase A
   d\breve d4 d g (d) g2
   %% Phrase B
-  d\breve d4 d4 d4 d4 g2
+  d\breve d4 d4 d2 d2 g2
   %% Phrase C
   g2 g g4 fis % Intonation, either whole thing, or just b2 a4
   g\breve g4 d2 d4 d g2
