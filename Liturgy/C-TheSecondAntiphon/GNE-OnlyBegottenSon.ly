@@ -1,12 +1,12 @@
 \version "2.18.2"
 
 \header {
-  title = "Nativity of the Theotokos"
-  subtitle = "Antiphon"
-  subsubtitle = "First"
-  copyright = "This arrangement is free to distribute for Liturgical use"
-  tagline = "Arranged using https://oca.org/liturgics/learning-the-tones"
+  title = "GNE & Only Begotten Son"
+  tagline = "This arrangement is free to distribute for Liturgical use"
 }
+\paper {
+  page-count = #1
+ }
 
 #(set-default-paper-size "letter")
 
@@ -17,29 +17,78 @@ recite = \once \override LyricText.self-alignment-X = #-1
 \defineBarLine "invisible" #'("" "" "")
 global = {
   \time 1/1 % Not used, Time_signature_engraver is removed from layout
-  \key g \major
+  \key f \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
 verseOne = \lyricmode {
-
+  Glo -- \recite "ry to the Father and to the Son and to the" Ho -- ly Spi -- rit,
+  \recite "Both now and ever and unto a" ges of a -- ges. A -- men.
+  On -- ly -- be -- got -- ten Son and Im -- mor -- tal Word of God,
+  who for our sal -- va -- tion willed to be in -- car -- nate
+  of the Ho -- ly The -- o -- to -- kos and Ev -- er -- Vir -- gin Ma -- ry,
+  who with -- out change be -- came man and was cru -- ci -- fied,
+  who is One of the Ho -- ly Tri -- ni -- ty;
+  glo -- ri -- fied with the Fa -- ther and the Ho -- ly Spi -- rit,
+  O Christ, our God, tramp -- ling down death by death, save us.
 }
 
 soprano = \relative g' {
-
+\global
+  g4 a\breve a4 g a2 a \bar "|"
+  a\breve a4 g a2 g4 f g2 \bar "||"
+  f4 f f g2 g4 g g g f g a( g) f( g) a2
+  g4 g g a bes2 a4 a a a g a2( g) f
+  f4 g a2 a4 a a a a a a a a g a( g f2) g
+  f4 f f g2 g4 g g f g a( g) f( g) a2
+  g4 a bes2 a4 a a g a2 g f
+  a2\< a4 a\! a g a( g f2) g
+  f4 f g2( f4) g a( g f g) a2
+  g4 g a bes2 a4 a g a2 g f
+  g2( a bes2. a4 g2 f) g1\fermata
 }
 
 alto = \relative g' {
-
+  d4 f\breve f4 f f2 f
+  f\breve f4 e f2 e4 d e2
+  d4 d d e2 e4 e e e d e f( e) d( e) f2
+  d4 d d f f2 f4 f f f e f2( e) d
+  d4 e f2 f4 f f f f f f f f e f( e d2) e
+  d4 d d e2 e4 e e d e f( e) d( e) f2
+  d4 f f2 f4 f f e f2 e d
+  f2 f4 f f e f( e d2) e
+  d4 d e2( d4) e f( e d e) f2
+  d4 d f f2 f4 f e f2 e d
+  d2( f f1 e2 d) d1
 }
 
 tenor = \relative c' {
-
+  bes4 c\breve c4 c c2 c
+  c\breve c4 c c2 c4 a c2
+  a4 a a c2 c4 c c c a c c2 a4( c) c2
+  bes4 bes bes c d2 c4 c c c c c1 a2
+  a4 c c2 c4 c c c c c c c c c c2( a) c
+  a4 a a c2 c4 c c a c c2 a4( c) c2
+  bes4 c d2 c4 c c c c2 c a
+  c2 c4 c c c c2( a) c
+  a4 a c2( a4) c c2( a4 c) c2
+  bes4 bes c d2 c4 c c c2 c a
+  bes2( c d2. c2. a2) bes1
 }
 
 
-bass = \relative c {
-
+bass = \relative a {
+  g4 f\breve f4 c f2 f
+  f\breve f4 c f2 c4 d c2
+  d4 d d c2 c4 c c c d c f( c) d( c) f2
+  g4 g g f bes,2 f'4 f f f c f2( c) d2
+  d4 c f2 f4 f f f f f f f f c f( c d2) c
+  d4 d d c2 c4 c c d c f( c) d( c) f2
+  g4 f bes,2 f'4 f f c f2 c d
+  f2 f4 f f c f( c d2) c
+  d4 d c2( d4) c f( c d c) f2
+  g4 g f bes,2 f'4 f c f2 c d
+  g2( f bes,2. f'4 c2 d) <f f,>1
 }
 
 \score {
