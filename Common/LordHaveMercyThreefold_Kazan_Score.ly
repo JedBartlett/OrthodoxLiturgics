@@ -2,6 +2,16 @@
 \header {
   title = "Matins"
 }
+
+\markup{ \vspace #1 }
+\markup{\smallCaps{Priest:}\override #'(line-width . 90)
+        \wordwrap{\italic{O Heavenly King, the Comfortor, the spirit of Truth.
+        Who art everywhere present and fillest all things,
+        treasury of Blessings and giver of Life,
+        come and abide in us, and cleanse us from every impurity,
+        and save our souls, O Good One.}}
+}
+
 \markup{ \vspace #1 }
 \markup{\smallCaps{Priest:}\override #'(line-width . 90)
         \wordwrap{Blessed is our God always, now and ever, and unto ages of ages.}
@@ -9,15 +19,6 @@
 
 \markup{\smallCaps{Chanter:}}
 \include "./amen_kazan.ly"
-
-\markup{ \vspace #1 }
-\markup{\smallCaps{Priest:}\override #'(line-width . 90)
-        \wordwrap{O Heavenly King, the Comfortor, the spirit of Truth.
-        Who art everywhere present and fillest all things,
-        treasury of Blessings and giver of Life,
-        come and abide in us, and cleanse us from every impurity,
-        and save our souls, O Good One.}
-}
 
 \markup { \vspace #2 }
 
