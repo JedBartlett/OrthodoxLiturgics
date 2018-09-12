@@ -1,8 +1,28 @@
-\documentclass[12pt]{article}
+\documentclass[titlepage,10pt]{extarticle}
 \usepackage{lyluatex}
 \begin{document}
+\title{Hello}
+\maketitle
 \section{The first}
+\begin{lilypond}
+  music = \relative {
+  c d e
+  }
+  \score {
+  \new ChoirStaff \with {
+  instrumentName = "2 Fl."
+  } <<
+  \new Staff \transpose c c' \music
+  \new Staff {
+  \clef bass
+  \music
+  }
+  >>
+}
+\end{lilypond}
 \subsection{The Second}
+\lilypondfile{DemoMusic}
+
 Hello world!
 $Hello world!$ %math mode
 \end{document}

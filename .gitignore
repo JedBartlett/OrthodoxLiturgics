@@ -27,7 +27,7 @@ tmp/
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
-# *.pdf
+
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -44,6 +44,8 @@ tmp/
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+tmp/
+tmp-ly/
 
 ## Auxiliary and intermediate files from other packages:
 
