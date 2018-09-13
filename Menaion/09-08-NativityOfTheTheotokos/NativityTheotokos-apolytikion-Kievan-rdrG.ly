@@ -16,11 +16,10 @@
 
 recite = \once \override LyricText.self-alignment-X = #-1
 
-\defineBarLine "invisible" #'("" "" "")
 global = {
   \time 1/1 % Not used, Time_signature_engraver is removed from layout
   \key g \major
-  \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
+  \set Timing.defaultBarType = "" % Only put bar lines where I say
 }
 
 % http://media.oca.org/chanting-tutorial/Tutorial-Kievan-Tone4-Explanation.pdf
