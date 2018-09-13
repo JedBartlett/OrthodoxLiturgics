@@ -46,7 +46,7 @@ soprano = \relative g' {
   \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark "5 - Help us, save us.."
   c2( g4) a bes( g) f2 \bar "||"
-  % To Thee O Lord
+  % To Thee O Lord, uses anacrusis / pickup bar
   \partial 4 c'4 g( a bes) g f2. \bar "||"
   % The last measure ended after 3 beats but we are in 4/4; this resets our measure position
   \set Timing.measurePosition = #(ly:make-moment 0)
