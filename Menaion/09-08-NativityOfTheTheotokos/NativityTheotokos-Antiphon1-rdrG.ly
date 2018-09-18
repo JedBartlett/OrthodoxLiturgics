@@ -14,11 +14,10 @@
 % http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
 recite = \once \override LyricText.self-alignment-X = #-1
 
-\defineBarLine "invisible" #'("" "" "")
 global = {
   \time 1/1 % Not used, Time_signature_engraver is removed from layout
   \key g \major
-  \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
+  \set Timing.defaultBarType = "" % Only put bar lines where I say
 }
 
 refrain = \lyricmode {

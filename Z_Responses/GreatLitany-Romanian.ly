@@ -13,27 +13,26 @@
 % http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
 %recite = \once \override LyricText.self-alignment-X = #-1
 
-%\defineBarLine "invisible" #'("" "" "")
 global = {
   \time 4/4 % Not used, Time_signature_engraver is removed from layout
   \key f \major
-  %\set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
+  %\set Timing.defaultBarType = "" % Only put bar lines where I say
 }
 
 verseOne = \lyricmode {
-  A -- men
-  Lord, have mer -- cy
-  Lord, have mer -- cy
-  Lord, have mer -- cy
-  Lord, have mer -- cy
-  Lord, have mer -- cy
-  To Thee O Lord
-  A -- men
+  A -- men.
+  Lord, __ have mer -- cy.
+  Lord, __ have mer -- cy.
+  Lord, __ have mer -- cy.
+  Lord, __ have mer -- cy.
+  Lord, __ have mer -- cy.
+  To Thee, __ O Lord.
+  A -- men.
 }
 
 soprano = \relative g' {
   \global
-  a4 a2.
+  a2 a2
   \repeat volta 3 {
     \mark "1"
     a2( g4) f g( a) f2 \bar "||"
@@ -48,29 +47,31 @@ soprano = \relative g' {
   \mark "5 - Help us, save us.."
   c2( g4) a bes( g) f2 \bar "||"
   % To Thee O Lord, uses anacrusis / pickup bar
-  \partial 4 c'4 g( a bes) g f2.\bar "||"
+  \partial 4 c'4 g( a bes) g f2. \bar "||"
+  % The last measure ended after 3 beats but we are in 4/4; this resets our measure position
+  \set Timing.measurePosition = #(ly:make-moment 0)
   % Amen
-  a4 a2. \bar "|."
+  a2 a2 \bar "|."
 }
 
 alto = \relative g' {
   \global
-  f4 f2.
+  f2 f2
   f2. f4 e2 c2
   f2. f4 f2 f2
   a4( f g) a f2 a
   f2( g4) a g2 f
   % Help us save us
-  f2. f4 f e c2
+  f2. f4 f( e) c2
   % To Thee O Lord
   f4 g( f g) e c2.
   % Amen
-  f4 f2.
+  f2 f2
 }
 
 tenor = \relative c' {
   \global
-  c4 c2.
+  c2 c2
   c2( bes4) a c2 a2
   c2( bes4) c d2 c2
   c2. c4 bes2 c
@@ -80,13 +81,13 @@ tenor = \relative c' {
   % To Thee O Lord
   a4 d2. c4 a2.
   % Amen
-  c4 c2.
+  c2 c2
 }
 
 bass = \relative c {
   \global
-  f4 f2.
-  f2. f4 c2 f2
+  f2 f2
+  f2. f4 c2 <f f,>2
   f2. f4 bes2 f2
   f2. f4 bes2 f2
   bes4( a g) f e2 f
@@ -95,7 +96,7 @@ bass = \relative c {
   % To Thee O Lord
   f4 bes4( a g) <c c,> f,2.
   % Amen
-  f4 f2.
+  f2 f2
 }
 
 \score {
