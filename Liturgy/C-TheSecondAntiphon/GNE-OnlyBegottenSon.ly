@@ -23,12 +23,12 @@ global = {
 
 verseOne = \lyricmode {
   \recite "Glory to the Father and to the Son and to the" Ho -- ly Spir -- it,
-  \recite "Both now and ever and unto ag" es of ag -- es. A -- men.
+  \recite "Both now and ever and unto ag" -- es of ag -- es. A -- men.
   On -- ly- -- be -- got -- ten Son and Im -- mor -- tal Word of __ God,
   Who for our sal -- va -- tion willed to be in -- car -- nate
   of the Ho -- ly The -- o -- to -- kos and Ev -- er- -- Vir -- gin Ma -- ry,
-  who with -- out change be -- came man and was cru -- ci -- fied,
-  who is One of the Ho -- ly Trin -- i -- ty;
+  Who with -- out change be -- came man and was cru -- ci -- fied,
+  Who is One of the Ho -- ly Trin -- i -- ty;
   glo -- ri -- fied with the Fa -- ther and the Ho -- ly Spir -- it,
   O Christ, our God, tram -- pling down death by death, save __ us.
 }
@@ -49,6 +49,7 @@ soprano = \relative g' {
 }
 
 alto = \relative g' {
+  \global
   f\breve f4 f f2 f
   f\breve f4 e f2 e4 d e2
   d4 d d e2 e4 e e e d e f( e) d( e) f2
@@ -63,6 +64,7 @@ alto = \relative g' {
 }
 
 tenor = \relative c' {
+  \global
   c\breve c4 c c2 c
   c\breve c4 c c2 c4 a c2
   a4 a a c2 c4 c c c a c c2 a4( c) c2
@@ -78,6 +80,7 @@ tenor = \relative c' {
 
 
 bass = \relative a {
+  \global
   f\breve f4 c f2 f
   f\breve f4 c f2 c4 d c2
   d4 d d c2 c4 c c c d c f( c) d( c) f2
