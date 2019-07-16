@@ -2,23 +2,24 @@
 \usepackage{lyluatex}
 \begin{document}
 \title{Hello}
+\author{} %Good to set an author
 \maketitle
 \section{The first}
 \begin{lilypond}
   music = \relative {
-  c d e
+    c d e
   }
   \score {
-  \new ChoirStaff \with {
-  instrumentName = "2 Fl."
-  } <<
-  \new Staff \transpose c c' \music
-  \new Staff {
-  \clef bass
-  \music
+    \new ChoirStaff \with {
+      instrumentName = "2 Fl."
+    } <<
+    \new Staff \transpose c c' \music
+    \new Staff {
+      \clef bass
+       \music
+    }
+    >>
   }
-  >>
-}
 \end{lilypond}
 \subsection{The Second}
 \lilypondfile{DemoMusic}
