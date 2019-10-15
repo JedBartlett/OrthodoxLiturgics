@@ -1,7 +1,5 @@
 \version "2.18.2"
 
-#(set-default-paper-size "letter")
-
 % Provide an easy way to group a bunch of text together on a breve
 % http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
 recite = \once \override LyricText.self-alignment-X = #-1
