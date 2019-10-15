@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2019
+% Great Vespers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside, letterpaper, 12pt]{report}
+\usepackage[margin=1.5cm]{geometry}
+% Remove indentation of first line in paragraph
+\setlength{\parindent}{0pt}
+
+\usepackage{multicol}
+\setlength\columnsep{20pt}
+
+% Allow use of lilypond imports directly into the document
+\usepackage{lyluatex}
+
+% Used to make the various speaker sections in the document.
+% suggestion taken from:
+% https://tex.stackexchange.com/questions/41373
+\usepackage{enumitem}
+\newlist{priest}{enumerate}{1}
+\raggedright
+\setlist[priest]{%
+    label=Priest:,
+    leftmargin=1.6cm,
+    labelwidth=1.4cm,
+    align=left
+}
+\newlist{deacon}{enumerate}{1}
+\raggedright
+\setlist[deacon]{%
+    label=Deacon:,
+    leftmargin=1.6cm,
+    labelwidth=1.4cm,
+    align=left
+}
+\newlist{reader}{enumerate}{1}
+\raggedright
+\setlist[reader]{%
+    label=Reader:,
+    leftmargin=1.6cm,
+    labelwidth=1.4cm,
+    align=left
+}
+\newcommand{\instruction}[1]{%
+  \texttt{\scriptsize{#1}}%
+}
+
+\newcommand{\centeredsection}[1]{%
+  \section*{\centering{}#1}%
+}
+
+
+\begin{document}
+%\maketitle
+
+\title{Great Vespers}
+\author{St. Katherine Orthodox Church}
+\date{}% Remove date
+\maketitle
+
+
+\begin{priest}
+\item Blessed is our God, always, now and ever, and unto ages of ages.
+\end{priest}
+
+\begin{reader}
+\item Amen.\\
+    Come, let us worship and fall down before God our King.\\
+    Come, let us worship and fall down before Christ, our King and our God.\\
+    Come, let us worship and fall down before Christ Himself, our King and our God.\\
+\end{reader}
+
+\centeredsection{Psalm 103}
+\begin{multicols}{2}
+\input{Psalms/Psalm103.txt}
+
+The sun knoweth his going down.
+Thou appointedst the darkness, and there was the night.
+How magnified are Thy works, O Lord! In wisdom hast Thou made them all.
+\end{multicols}
+
+\lilypondfile{./Common/Alleluia-GloryToThee/Alleluia3x-GloryToTheex3x3OOurGod-Music.ly}
+
+\centeredsection{The Great Litany}
+\instruction{Repeat the responses, alternating between them, for each petition.}
+\begin{deacon}
+\item In peace, let us pray to the Lord.
+\end{deacon}
+\lilypondfile{./Z_Responses/Hannon-LordHaveMercy-A.ly}
+
+\begin{deacon}
+\item For the peace from above, and for the salvation of our souls,
+    let us pray to the Lord.
+\end{deacon}
+\lilypondfile{./Z_Responses/Hannon-LordHaveMercy-B.ly}
+
+\begin{deacon}
+\item For the peace of the whole world, for the good estate of the Holy Churches of God,
+    and for the union of all men, let us pray to the Lord.
+\item For this Holy House, and for those who with faith, reverence, and fear of God,
+    enter therein, let us pray to the Lord.
+\item For our father and Metropolitan N., (for our Archbishop N. or Bishop N.),
+    for the venerable Priesthood, the Diaconate in Christ,
+    for all the clergy and the people, let us pray to the Lord.
+\item  For the President of the United States, for all civil authorities,
+    and for our Armed Forces everywhere, let us pray to the Lord.
+\item For this city, and for every city and land, and for the faithful who dwell
+    therein, let us pray to the Lord.
+\item For healthful seasons, for abundance of the fruits of the earth,
+    and for peaceful times, let us pray to the Lord.
+\item For travelers by sea, by land, and by air; for the sick and the suffering;
+    for captives and their salvation, let us pray to the Lord.
+\item For our deliverance from all tribulation, wrath, danger, and necessity,
+    let us pray to the Lord.
+\item  Help us; save us; have mercy on us; and keep us, O God, by Thy grace
+\item Calling to remembrance our all-holy, immaculate, most blessed and glorious Lady
+    Theotokos and ever-virgin Mary, with all the Saints: let us commend ourselves and
+    each other, and all our life unto Christ our God.
+\end{deacon}
+
+\lilypondfile{./Z_Responses/Hannon-ToTheeOLord.ly}
+
+\begin{priest}
+\item For unto Thee are due all glory, honor, and worship: to the Father,
+    and to the Son, and to the Holy Spirit; now and ever and unto ages of ages.
+\end{priest}
+
+\lilypondfile{./Z_Responses/Hannon-Amen.ly}
+
+\centeredsection{Psalm 140 - Lord I Have Cried}
+\instruction{Chanted in the tone of the week. Insert Stanzas as prescribed.}
+
+\vbox{}
+\instruction{A doxastocon may be prescribed after the last stanza and
+``Glory to the Father, Son and Holy Spirit''}
+
+\vbox{}
+\instruction{Finish with the Theotokion prescribed after ``Both now and ever..'',
+which is generally the Thotokion of the Resurrection in the tone of the week.
+}
+\cleardoublepage
+
+\centeredsection{The Holy Entrance}
+
+\instruction{When the clergy reach the center of the solea,
+the first part of the great censing begins. After the first part of the great
+censing is completed, this next dialogue occurs QUIETLY.)}
+
+\vbox{}
+{
+\footnotesize
+Deacon: Bless, father, the Holy Entrance.
+
+Priest: Blessed is the entrance to Thy Holy Place, always, now and ever, and unto ages of ages. Amen.
+}
+
+\vbox{}
+\instruction{After the choir has finished, the following is said ALOUD.)}
+
+\begin{deacon}
+\item Wisdom! Let us attend!
+\end{deacon}
+
+\lilypondfile{./1-Vespers/Gladsome_Light/Joyous_Light_Byz.ly}
+
+\end{document}
+
+
