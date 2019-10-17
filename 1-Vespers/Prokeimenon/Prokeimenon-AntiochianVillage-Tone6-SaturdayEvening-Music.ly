@@ -11,7 +11,7 @@ global = {
 
 melodyRef = \relative g' {
   \global % Leave these here for key to display
-  r2. \parenthesize g4 e4.( f8 g4) g aes2 g4 aes b aes g g g8( aes g4) f e2
+  r2. \parenthesize g4 e4.( f8 g4) g aes2 g4 aes b aes g g g8( aes g4) f e4( e4) \bar "|."
 }
 \addlyrics{The Lord __ is King, and hath clothed Him -- self with maj -- es -- ty}
 
@@ -38,7 +38,7 @@ melodyRef = \relative g' {
 
 melodyFinal = \relative g' {
   \global % Leave these here for key to display
-  r2. \parenthesize g4 e4.( f8 g4) aes8( b) b2 g4 g b aes g g g8( aes g f) e4 \parenthesize f2( g4 aes2 f1)
+  r2. \parenthesize g4 e4.( f8 g4) aes8( b) b2 g4 g b aes g g g8( aes g f) e4 \parenthesize f2( g4 aes2 f1) \bar "|."
 }
 \addlyrics{The Lord __ is King, and hath clothed Him -- self with maj -- es -- ty __}
 

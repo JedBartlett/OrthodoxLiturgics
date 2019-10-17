@@ -12,7 +12,7 @@ global = {
 }
 
 lyricText = \lyricmode {
-  Lord Have Mer -- cy
+  Lord, have mer -- cy
 }
 
 melody = \relative c' {
