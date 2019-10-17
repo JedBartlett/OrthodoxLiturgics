@@ -4,14 +4,16 @@
 % Byzantine Chant Tone 6
 % Antiochian Village version
 % Adapted by Rassem El Massih
+\defineBarLine "invisible" #'("" "" "")
 global = {
   \time 4/4
   \key c \major
+  \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
 melodyRef = \relative g' {
   \global % Leave these here for key to display
-  r2. \parenthesize g4 e4.( f8 g4) g aes2 g4 aes b aes g g g8( aes g4) f e4( e4) \bar "|."
+  \partial 4 \parenthesize g4 \bar "|" e4.( f8 g4) g \bar "|" aes2 g4 aes \bar "|" b aes g g \bar "|" g8( aes g4) f e2 \bar "|."
 }
 \addlyrics{The Lord __ is King, and hath clothed Him -- self with maj -- es -- ty}
 
@@ -38,7 +40,7 @@ melodyRef = \relative g' {
 
 melodyFinal = \relative g' {
   \global % Leave these here for key to display
-  r2. \parenthesize g4 e4.( f8 g4) aes8( b) b2 g4 g b aes g g g8( aes g f) e4 \parenthesize f2( g4 aes2 f1) \bar "|."
+  \partial 4 \parenthesize g4 \bar "|" e4.( f8 g4) aes8( b) \bar "|" b2  g4 g \bar "|" b aes g g \bar "|" g8( aes g f) e4 \parenthesize f2( \bar "|" g4 aes2 \parenthesize g1) \bar "|."
 }
 \addlyrics{The Lord __ is King, and hath clothed Him -- self with maj -- es -- ty __}
 

@@ -12,20 +12,16 @@ global = {
 }
 
 lyricText = \lyricmode {
-  Lord, have mer -- cy
+  Grant this, O Lord
 }
 
 melody = \relative c' {
   \global % Leave these here for key to display
-
-  % Glory to Thee
-  f4. g8 e4( c4) d2 \bar "|."
+  c4.( d8) f4 e4 d2 \bar "|."
 }
 
 ison = \relative c' {
   \global % Leave these here for key to display
-
-  % Glory to Thee
   c1 d2 \bar "|."
 }
 

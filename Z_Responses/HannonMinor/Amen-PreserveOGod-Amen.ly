@@ -12,69 +12,32 @@ global = {
 }
 
 lyricText = \lyricmode {
-  % Note that inserted text in the melody will go ABOVE the lyrics
-  Glo -- ry \recite ""
+  A -- men
+  Pre -- serve \recite ""% Positioned text in melody goes here
 
-  a -- ges, A -- men
-
-  Al -- le -- lu -- i -- a
-  Al -- le -- lu -- i -- a
-  Al -- le -- lu -- i -- a
-
-  Glo -- ry to Thee, O God
-  Glo -- ry to Thee, O God % Second time for second variant of the repeat.
-
-  O our God and our Hope,
-  glo -- ry to Thee!
+  of a -- ges, A -- men
 }
 
 melody = \relative c' {
   \global % Leave these here for key to display
   \textLengthOn
   % Note that inserted text here ABOVE the lyrics noted above
-  c4 d d\breve_\markup{\column{
-    \line{to the Father, and to the Son,}
-    \line {and to the Holy Spirit;}
-    \line{both now and ever, and unto ages of}
-  }}\bar "|"
-  % Ages Amen
-  f4( g) \bar "|" e c \bar "|" d2 \bar ".|:" \break
-
-  % Aleluia 3 times
-  \repeat volta 3 { c4 d f e d \bar "|"
-                    d e f g g \bar "|"
-                    f g a g f \bar "|"}
-     \alternative {% Glory to Thee, O God - Same 1st 2 times, different last time
-          { e f g f2 e4 d2 \bar ":|." }
-          { e4 f g f2 e4 d2 \bar "|" }
-     }
-
-  % O Our God and our Hope,
-  d4 e f( g) a g f2 \bar "|"
-
-  % Glory to Thee
-  e4( c) f e d2 \bar "|."
+  c4 d2 \bar "||"
+  c4 d \parenthesize d\breve_\markup{\hspace #2 \column{
+      \line{O God, the holy Orthodox faith and}
+      \line{all Orthodox Christians, unto ages}
+    }
+  }\bar "|"
+  % of Ages Amen
+  d4 f( g) \bar "|" e c \bar "|" d2 \bar "|." \break
 }
 
 ison = \relative c' {
   \global % Leave these here for key to display
+  c4 d2
   c4 d s\breve \bar "|"
-  % Ages Amen
-  d2 \bar "|" c4 c4 \bar "|" d2 \bar ".|:"
-
-  % Aleluia 3 times
-  \repeat volta 3 { c4 d d\breve \bar "|"
-                    s1 s4 \bar "|" }
-     \alternative {% Glory to Thee, O God - Same 1st 2 times, different last time
-          { s1 s1  \bar ":|." }
-          { c1 s4 s4 d2 \bar "|" }
-     }
-
-  % O Our God and our Hope,
-  d4 d1 s4 s2 \bar "|"
-
-  % Glory to Thee
-  c1 d2 \bar "|."
+  % of Ages Amen
+  s4 s2 \bar "|" c4 c4 \bar "|" d2 \bar "|."
 }
 
 \score {

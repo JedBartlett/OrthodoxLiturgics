@@ -12,19 +12,17 @@ global = {
 }
 
 lyricText = \lyricmode {
-  To Thee, O Lord
+  Fa -- ther, bless!
 }
 
 melody = \relative c' {
   \global % Leave these here for key to display
-  c4 f2 \bar "|"
-  e2  d2 \bar "|."
+  f4 e d2 \bar "|."
 }
 
 ison = \relative c' {
   \global % Leave these here for key to display
-
-  c4 c1 d2 \bar "|."
+  c2 d2 \bar "|."
 }
 
 \score {
