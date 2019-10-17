@@ -7,7 +7,7 @@
 \usepackage[margin=1.5cm]{geometry}
 % Remove indentation of first line in paragraph
 \setlength{\parindent}{0pt}
-
+\usepackage{needspace}
 \usepackage{multicol}
 \setlength\columnsep{20pt}
 
@@ -47,6 +47,7 @@
 }
 
 \newcommand{\centeredsection}[1]{%
+  \needspace{10\baselineskip}%
   \section*{\centering{}#1}%
 }
 
@@ -162,9 +163,8 @@ Priest: Blessed is the entrance to Thy Holy Place, always, now and ever, and unt
 \item Wisdom! Let us attend!
 \end{deacon}
 
-\lilypondfile{./1-Vespers/Gladsome_Light/Joyous_Light_Byz.ly}
+\lilypondfile{./1-Vespers/Gladsome_Light/JoyousLightByz-Music.ly}
 
-\clearpage
 \centeredsection{Prokeimenon in the Tone of the Day}
 
 \instruction{Tone 6 shown here is for Saturday Evening}
