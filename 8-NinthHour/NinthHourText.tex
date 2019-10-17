@@ -4,6 +4,11 @@
 % and depending on the day provided as an argument,
 % inserts the appropriate psalms for the day.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand{\centeredsection}[1]{%
+  \needspace{10\baselineskip}%
+  \subsection*{\centering{}#1}%
+}
+
 \newcommand{\NinthHourContent}[1]{
 \texttt{#1}
 % TODO - Pull in the proper content based on the day of week argument
@@ -90,7 +95,7 @@ O come, let us worship and fall down before Christ, our King and our God.
 O come, let us worship and fall down before the Very Christ, our King and our 
 God. 
 
-\section*{Psalm 83} 
+\centeredsection{Psalm 83} 
 How beloved are Thy dwellings, O Lord of hosts;
 my soul longeth and fainteth for the 
 courts of the Lord. 
@@ -118,7 +123,7 @@ God will give grace and glory; the Lord will not
 withhold good things from them that walk in innocence. 
 O Lord God of hosts, blessed is the man that hopeth in Thee. 
 
-\section*{Psalm 84}
+\centeredsection{Psalm 84}
 Thou hast been gracious, O Lord, unto Thy land;
 Thou hast turned back the captivity of 
 Jacob. 
@@ -144,7 +149,7 @@ and righteousness hath looked down from heaven.
 Yea, for the Lord will give goodness, and our land shall yield her fruit. 
 Righteousness shall go before Him and shall set His footsteps in the way. 
 
-\section*{PSALM 85}
+\centeredsection{PSALM 85}
 Bow down Thine ear, O Lord, and hearken unto me, for poor and needy am I. 
 Preserve my soul, for I am holy;
 save Thy servant, O my God, that hopeth in Thee. 
@@ -193,7 +198,7 @@ Alleluia. Alleluia. Alleluia. Glory to thee, O God. (3x)
 \mbox{}\\
 Lord have mercy. (3x)
 
-\section*{Apolytikion}
+\centeredsection{Apolytikion}
 Glory to the Father and to the Son and to the Holy Spirit.
 
 \mbox{}\\ 
@@ -203,7 +208,7 @@ finished well the contest and guarded the faith:
 Beseech, we pray, since ye have boldness 
 before the Savior who is good, that he may save our souls.
  
-\section*{Theotokion}
+\centeredsection{Theotokion}
 Both now and ever and unto ages of ages. Amen.
 
 \mbox{}\\
@@ -218,7 +223,7 @@ Deliver us not up utterly, for thy holy name’s sake,
 neither disannul thou thy covenant, 
 and cause not thy mercy to depart from us, for Abraham’s sake, thy beloved, and for Isaac’s sake, thy servant, and for Israel’s, thy holy one. 
 
-\section*{Trisagion}
+\centeredsection{Trisagion}
 Holy God, Holy Mighty, Holy Immortal: have mercy on us. (3x)
 
 \mbox{}\\
@@ -257,7 +262,7 @@ Amen.
 \mbox{}\\
 \texttt{Only one of the following:}
 
-\section*{A -- Kontakion}
+\centeredsection{A -- Kontakion}
 \texttt{Outside of Lent}
 
 Unto thee, O Lord, the Author of creation, the universe doth offer the God-bearing 
@@ -266,7 +271,7 @@ preserve in peace profound thy Church, O most merciful One.
 
 
 
-\section*{B -- Kontakion}
+\centeredsection{B -- Kontakion}
 \texttt{During Lent}
 
 When the thief beheld the Author of life hanging upon the cross, he said:
@@ -287,7 +292,7 @@ but my inward parts are inflamed as I behold thy crucifixion, which thou suffere
 men, O my Son and My God.
 
 
-\section*{Prayer of the Hours}
+\centeredsection{Prayer of the Hours}
 Lord have mercy. (40x)
 
 \mbox{}\\
@@ -344,7 +349,10 @@ the abode of all those who rejoice. For Thou art, in verity, the true Joy and
 Exultation of those who love thee, O Christ our God, and unto thee we ascribe 
 glory, together with thine unoriginate Father and thine all-holy and good and 
 life-giving Spirit, now and ever, and unto ages of ages. Amen. 
+}
 
+\newcommand{\NinthHourClosingContent}{
+% This is omitted when Vespers follows immediately.
 \mbox{}\\
 \emph {Priest: Glory to thee, O Christ our God and our Hope, glory to thee.}
 

@@ -12,23 +12,20 @@ global = {
 }
 
 lyricText = \lyricmode {
-  Lord \recite "have mercy. Lord, have mercy, Lord, have mercy."% Positioned text in melody goes here
+  Lord \recite "have mercy, Lord have mercy, Lord have mercy."% Positioned text in melody goes here
   Fa -- ther, bless.
 }
 
 melody = \relative c' {
   \global % Leave these here for key to display
   \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
   c4 \parenthesize d\breve \bar "|"
-  % of Ages Amen
   f4 e \bar "|" d2 \bar "|."
 }
 
 ison = \relative c' {
   \global % Leave these here for key to display
   c4 s\breve \bar "|"
-  % of Ages Amen
   c4 c4 \bar "|" d2 \bar "|."
 }
 
