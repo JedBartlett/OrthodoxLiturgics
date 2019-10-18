@@ -4,56 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[twoside, letterpaper, 12pt]{report}
-\usepackage[margin=1.5cm]{geometry}
-% Remove indentation of first line in paragraph
-\setlength{\parindent}{0pt}
-\usepackage{needspace}
-\usepackage{multicol}
-\setlength\columnsep{15pt}
-
-% Allow use of lilypond imports directly into the document
-\usepackage{lyluatex}
-
-% Used to make the various speaker sections in the document.
-% suggestion taken from:
-% https://tex.stackexchange.com/questions/41373
-\usepackage{enumitem}
-\newlist{priest}{enumerate}{1}
-\raggedright
-\setlist[priest]{%
-    label=Priest:,
-    leftmargin=1.6cm,
-    labelwidth=1.4cm,
-    align=left
-}
-\newlist{deacon}{enumerate}{1}
-\raggedright
-\setlist[deacon]{%
-    label=Deacon:,
-    leftmargin=1.6cm,
-    labelwidth=1.4cm,
-    align=left
-}
-\newlist{reader}{enumerate}{1}
-\raggedright
-\setlist[reader]{%
-    label=Reader:,
-    leftmargin=1.6cm,
-    labelwidth=1.4cm,
-    align=left
-}
-\newcommand{\instruction}[1]{%
-  \texttt{\scriptsize{#1}}%
-}
-
-\newcommand{\centeredsection}[1]{%
-  \needspace{10\baselineskip}%
-  \section*{\centering{}#1}%
-}
-
-\newenvironment{maybetwocolumns}
-{\ifdim \textwidth > 7in \begin{multicols}{2}\fi}
-{\ifdim \textwidth > 7in \end{multicols}{2}\fi}
+\usepackage{orthodoxservicebook}
 
 \begin{document}
 %\maketitle
@@ -70,10 +21,8 @@ Preceded by Ninth Hour}
 \cleardoublepage
 \chapter*{Ninth Hour}
 
-\begin{maybetwocolumns}
 \input{./8-NinthHour/NinthHourText} % Get all of the content
 \NinthHourContent{Saturday}
-\end{maybetwocolumns}
 
 \cleardoublepage
 \chapter*{Great Vespers}
@@ -351,35 +300,7 @@ have seen Thy salvation, which Thou hast prepared before the face of all people,
 the Gentiles and the glory of Thy people Israel.
 
 \centeredsection{The Trisagion Prayers}
-\instruction{Recited together as a congregation}
-
-Holy God, Holy Mighty, Holy Immortal: have mercy on us. (THRICE)
-
-\vbox{}
-\emph{Glory to the Father, and to the Son, and to the Holy Spirit; both now and ever, and
-unto ages of ages. Amen.}
-
-\vbox{}
-All-holy Trinity, have mercy on us. Lord, cleanse us from our sins. Master, pardon
-our iniquities. Holy God, visit and heal our infirmities for Thy Name’s sake.
-
-\vbox{}
-Lord, have mercy. (THRICE)
-
-\vbox{}
-\emph{Glory to the Father, and to the Son, and to the Holy Spirit; both now and ever, and
-unto ages of ages. Amen.}
-
-\vbox{}
-Our Father, Who art in Heaven, hallowed be Thy Name. Thy kingdom come; Thy
-will be done on earth as it is in Heaven. Give us this day our daily bread; and forgive
-us our trespasses, as we forgive those who trespass against us, and lead us not into
-temptation, but deliver us from evil
-
-\begin{priest}
-\item For Thine is the kingdom, and the power, and the glory:
-    of the Father, and of the Son, and of the Holy Spirit; now and ever, and unto ages of ages.
-\end{priest}
+\input{Common/TrisagionPrayerRecited-NeedsAmen.tex}
 \lilypondfile{./Z_Responses/HannonMinor/Amen.ly}
 
 

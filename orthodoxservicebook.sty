@@ -1,0 +1,95 @@
+\ProvidesPackage{orthodoxservicebook}
+
+\RequirePackage[margin=1.5cm]{geometry}
+% Remove indentation of first line in paragraph
+\setlength{\parindent}{0pt}
+
+% Allow use of lilypond imports directly into the document
+\RequirePackage{lyluatex}
+
+% Used to make the various speaker sections in the document.
+% suggestion taken from:
+% https://tex.stackexchange.com/questions/41373
+\RequirePackage{enumitem}
+% Priest lines environment
+\newlist{priest}{enumerate}{1}
+\raggedright
+\setlist[priest]{%
+    label=Priest:,
+    leftmargin=1.6cm,
+    labelwidth=1.4cm,
+    align=left,
+    font=\itshape
+}
+% Quick Priest Line
+\newcommand{\priestline}[1]{%
+  \begin{priest}
+    \item{#1}
+  \end{priest}
+}
+% Deacon lines environment
+\newlist{deacon}{enumerate}{1}
+\raggedright
+\setlist[deacon]{%
+    label=Deacon:,
+    leftmargin=1.6cm,
+    labelwidth=1.4cm,
+    align=left,
+    font=\itshape
+}
+% Quick Deacon Line
+\newcommand{\deaconline}[1]{%
+  \begin{deacon}
+    \item{#1}
+  \end{deacon}
+}
+% Reader lines environment
+\newlist{reader}{enumerate}{1}
+\raggedright
+\setlist[reader]{%
+    label=Reader:,
+    leftmargin=1.6cm,
+    labelwidth=1.4cm,
+    align=left
+}
+% Quick Reader Line
+\newcommand{\readerline}[1]{%
+  \begin{reader}
+    \item{#1}
+  \end{reader}
+}
+
+% Create a command for inserting instructions that have a visually
+% different style to help the reader understand that these are not part
+% of the content to be said aloud.
+\newcommand{\instruction}[1]{%
+  \texttt{\scriptsize{#1}}%
+}
+
+% Specify a common type of header for all liturgical sections,
+\newcommand{\squashedcenteredsection}[1]{%
+  \section*{\centering{}#1}%
+}
+% and encourage page breaks before these sections.
+\RequirePackage{needspace}
+\newcommand{\centeredsection}[1]{%
+  \needspace{10\baselineskip}%
+  \squashedcenteredsection{#1}%
+}
+
+
+% Allow content to be in one column on narrower page layouts,
+% but use two columns for letter/A4 pages
+% Optimal line length for printed material seems to be 50-75 chars.
+% See discussions online like this one for links to research on the topic:
+% https://graphicdesign.stackexchange.com/questions/13724/recommended-column-width-for-text-reading-digital-vs-printed
+%
+% This environent is usually used for large recited blocks of text
+% such as Psalms, which because of their length, are less easily memorized
+% and thus requires active reading during the service, and shorter line-length
+% is used to assist the reader.
+\RequirePackage{multicol}
+\setlength\columnsep{15pt}
+\newenvironment{maybetwocolumns}
+{\ifdim \textwidth > 7in \begin{multicols}{2}\fi}
+{\ifdim \textwidth > 7in \end{multicols}\fi}
