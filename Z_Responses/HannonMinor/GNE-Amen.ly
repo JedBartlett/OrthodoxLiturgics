@@ -6,57 +6,49 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 1/1 % Not used, Time_signature_engraver is removed from layout
-  \key g \major
+  \time 2/4 % Not used, Time_signature_engraver is removed from layout
+  \key d \aeolian
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-verseOne = \lyricmode {
-  Wel -- come
+lyricText = \lyricmode {
+  Glo -- ry \recite ""% Positioned text in melody goes here
+  of a -- ges.
+  A -- men
 }
 
-soprano = \relative g' {
+melody = \relative c' {
   \global % Leave these here for key to display
-  b2 b
+  \textLengthOn
+  % Note that inserted text here ABOVE the lyrics noted above
+  c4 d \parenthesize d\breve_\markup {\column{
+      \line{to the Father, and to the Son, and to the}
+      \line{Holy Spirit; both now and ever, and unto ages}
+  }}\bar "|"
+  % of Ages Amen
+  d4 f( g) \bar "|" e c \bar "|" d2 \bar "|."
 }
 
-alto = \relative g' {
+ison = \relative c' {
   \global % Leave these here for key to display
-  g2 g
-}
-
-tenor = \relative c' {
-  \global % Leave these here for key to display
-  c2 c
-}
-
-
-bass = \relative c {
-  \global % Leave these here for key to display
-  g2 g
+  c4 d s\breve \bar "|"
+  % of Ages Amen
+  s4 s2 \bar "|" c4 c4 \bar "|" d2 \bar "|."
 }
 
 \score {
   \new ChoirStaff <<
     \new Staff \with {
       midiInstrument = "choir aahs"
-      instrumentName = \markup \center-column { S A }
+      instrumentName = \markup \center-column { M I }
     } <<
-      \new Voice = "soprano" { \voiceOne \soprano }
-      \new Voice = "alto" { \voiceTwo \alto }
+      \new Voice = "melody" { \voiceOne \melody }
+      \new Voice = "ison" { \voiceTwo \ison }
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \verseOne
+    } \lyricsto "melody" \lyricText
 
-    \new Staff \with {
-      midiInstrument = "choir aahs"
-      instrumentName = \markup \center-column { T B }
-    } <<
-      \clef bass
-      \new Voice = "tenor" { \voiceOne \tenor }
-      \new Voice = "bass" { \voiceTwo \bass }
-    >>
   >>
   \layout {
     \context {

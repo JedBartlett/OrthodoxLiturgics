@@ -6,57 +6,38 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 1/1 % Not used, Time_signature_engraver is removed from layout
-  \key g \major
+  \time 2/4 % Not used, Time_signature_engraver is removed from layout
+  \key d \aeolian
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-verseOne = \lyricmode {
-  Wel -- come
+lyricText = \lyricmode {
+  And to thy spi -- rit.
 }
 
-soprano = \relative g' {
+melody = \relative c' {
   \global % Leave these here for key to display
-  b2 b
+  f4 e c f( e) d2 \bar "|."
 }
 
-alto = \relative g' {
+ison = \relative c' {
   \global % Leave these here for key to display
-  g2 g
-}
-
-tenor = \relative c' {
-  \global % Leave these here for key to display
-  c2 c
-}
-
-
-bass = \relative c {
-  \global % Leave these here for key to display
-  g2 g
+  c1 s4 d2
 }
 
 \score {
   \new ChoirStaff <<
     \new Staff \with {
       midiInstrument = "choir aahs"
-      instrumentName = \markup \center-column { S A }
+      instrumentName = \markup \center-column { M I }
     } <<
-      \new Voice = "soprano" { \voiceOne \soprano }
-      \new Voice = "alto" { \voiceTwo \alto }
+      \new Voice = "melody" { \voiceOne \melody }
+      \new Voice = "ison" { \voiceTwo \ison }
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \verseOne
+    } \lyricsto "melody" \lyricText
 
-    \new Staff \with {
-      midiInstrument = "choir aahs"
-      instrumentName = \markup \center-column { T B }
-    } <<
-      \clef bass
-      \new Voice = "tenor" { \voiceOne \tenor }
-      \new Voice = "bass" { \voiceTwo \bass }
-    >>
   >>
   \layout {
     \context {
