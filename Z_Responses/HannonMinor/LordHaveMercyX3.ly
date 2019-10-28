@@ -9,9 +9,14 @@ global = {
   \key d \aeolian
 }
 
-lyricText = \lyricmode {
-  Lord, have mer -- cy, Lord, have mer -- cy, Lord, have mer -- cy.
-}
+English = \lyricmode {Lord, have  mer -- cy,  Lord, have mer -- cy,   Lord, have mer -- cy. }
+Arabic  = \lyricmode {Ya    rub   bur -- ham, Ya    rub   bur -- ham, Ya    rub   bur -- ham }
+Greek   = \lyricmode {Kyrie El -- ei --  son, Kyrie El -- ei --  son, Kyrie El -- ei --  son }
+
+EnglishLyrics = \context Lyrics = MelodyAndIsonEnglish \lyricsto melody \English
+ArabicLyrics  = \context Lyrics = MelodyAndIsonArabic \lyricsto melody \Arabic
+GreekLyrics   = \context Lyrics = MelodyAndIsonGreek \lyricsto melody \Greek
+
 
 melody = \relative c' {
   \global % Leave these here for key to display
@@ -32,9 +37,7 @@ ison = \relative c' {
       \new Voice = "melody" { \voiceOne \melody }
       \new Voice = "ison" { \voiceTwo \ison }
     >>
-    \new Lyrics \with {
-      \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "melody" \lyricText
+    \new Lyrics = melody \EnglishLyrics \ArabicLyrics \GreekLyrics
 
   >>
   \layout {
