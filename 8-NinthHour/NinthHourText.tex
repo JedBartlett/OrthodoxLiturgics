@@ -15,45 +15,38 @@
 \instruction{#1 - Plain Reading}
 % TODO - Pull in the proper content based on the day of week argument
 
-\priestline{Glory to Thee, O God (3X)}
+\priestline{Glory to Thee, O God \instruction{(x3)}}
 
 \priestline{Blessed is our God always, now and ever, and unto ages of ages.}
 
 \readerline{Amen.}
 
 \instruction{Exclude from Pascha to Pentecost}
-\priestline{Glory to Thee, our God. Glory to Thee. O heavenly King, Comforter,
-  the Spirit of truth, who art everywhere present and fill all things,
-  the Treasury of good things and Giver of life;
-  Come and abide in us and cleanse us from every stain and save our souls,
-  O good One.}
+\begin{priest}
+\item Glory to Thee, our God. Glory to Thee.
+\item \input{./Common/OheavenlyKing.tex}
+\end{priest}
 
 \instruction{From Pascha to Ascension - CHANT
 \emph{``Christ is risen from the dead, trampling down death by death,
 and upon those in the tombs, bestowing life.''}
 (3x), and then SKIP the first line
-\emph{``Holy God, Holy Mighty, Holy Immortal: have mercy on us. (3x)''}}
+\emph{``Holy God, Holy Mighty, Holy Immortal: have mercy on us. (x3)''}}
 
 \centeredsection{The Trisagion Prayers}
 \input{Common/TrisagionPrayerRecited-NeedsAmen.tex}
 
-\vbox{}
-Amen.
+\begin{reader}
+\item Amen.
+\item Lord, have mercy. \instruction{(x12)}
+\item Glory to the Father, and to the Son, and to the Holy Spirit;
+  both now and ever, 
+  and unto ages of ages. Amen.
 
-\vbox{}
-Lord, have mercy. (12x)
-
-\vbox{}
-Glory to the Father, and to the Son, and to the Holy Spirit;
-both now and ever, 
-and unto ages of ages. Amen.
-
-\vbox{}
-O come, let us worship and fall down before God our King. 
-O come, let us worship and fall down before Christ, our King and our God. 
-O come, let us worship and fall down before the Very Christ, our King and our 
-God. 
-
+\item O come, let us worship and fall down before God our King.\\
+  O come, let us worship and fall down before Christ, our King and our God.\\
+  O come, let us worship and fall down before the Very Christ, our King and our God.
+\end{reader}
 \begin{maybetwocolumns}
 \squashedcenteredsection{Psalm 83} 
 \input{./Psalms/Psalm083-unknwntrans.txt}
@@ -74,8 +67,8 @@ for Thou, O Lord, hast holpen me and comforted me.
 \begin{reader}
   \item Glory to the Father, and to the Son, and to the Holy Spirit;
     both now and ever, and unto ages of ages. Amen.
-  \item Alleluia. Alleluia. Alleluia. Glory to Thee, O God. (3x)
-  \item Lord have mercy. (3x)
+  \item Alleluia. Alleluia. Alleluia. Glory to Thee, O God. \instruction{(x3)}
+  \item Lord have mercy. \instruction{(x3)}
   \item Glory to the Father and to the Son and to the Holy Spirit.
 \end{reader}
 
@@ -86,8 +79,9 @@ venerable and righteous ones, who have
 finished well the contest and guarded the faith:
 Beseech, we pray, since ye have boldness 
 before the Savior who is good, that He may save our souls.
- 
+
 \readerline{Both now and ever and unto ages of ages. Amen.}
+
 \centeredsection{Theotokion}
 
 Thou who for our sake wast born of a virgin and didst suffer crucifixion,
@@ -97,6 +91,8 @@ Despise not those whom Thou hast created with Thine own hand;
 show forth Thy love for mankind,
 O merciful One; accept the intercession of Thy mother, the Theotokos,
 for us, and save Thy despairing people, O our Savior.
+
+\vbox{}
 Deliver us not up utterly, for Thy holy name’s sake,
 neither disannul Thou Thy covenant, 
 and cause not Thy mercy to depart from us,
@@ -113,14 +109,14 @@ and for Israel’s, Thy holy one.
 \begin{maybetwocolumns}
 \instruction{Only one of the following:}
 
-\centeredsection{A -- Kontakion}
+\centeredsection{(Not Lent) -- Kontakion}
 \instruction{Outside of Lent}
 
-Unto Thee, O Lord, the Author of creation, the universe doth offer the God-bearing 
-martyrs as the first-fruits of nature. By whose prayers, through the Theotokos, do Thou 
-preserve in peace profound Thy Church, O most merciful One. 
+Unto Thee, O Lord, the Author of creation, the universe doth offer the God-bearing
+martyrs as the first-fruits of nature. By whose prayers, through the Theotokos,
+do Thou preserve Thy Church in profound peace, O most merciful One.
 
-\centeredsection{B -- Kontakion}
+\centeredsection{(Lent) -- Kontakion}
 \instruction{During Lent}
 
 When the thief beheld the Author of life hanging upon the cross, he said:
@@ -130,20 +126,26 @@ neither would the earth have shaken with trembling.
 But do Thou, who sufferest for all men, remember me,
 O Lord, when Thou comest in Thy kingdom.
 
+\vbox{}
 Glory to the Father, and to the Son, and to the Holy Spirit.
 
+\vbox{}
 In the midst, between two thieves, was Thy cross found, the balance-beam of
 righteousness; for while the one was led down to hades by the heaviness of his
 blaspheming, the other was lightened of his sins,
 unto the knowledge of things divine, O Christ God, glory to Thee.
+
+\vbox{}
 Both now and ever, and unto ages of ages. Amen.
+
+\vbox{}
 When she who bore Thee beheld upon the cross Thee, the Lamb and Shepherd and Savior
 of the world, she weeping said: The world rejoiceth, in that it hath received redemption,
 but my inward parts are inflamed as I behold Thy crucifixion, which Thou sufferest for all
 men, O my Son and My God.
 
 \centeredsection{Prayer of the Hours}
-\readerline{Lord have mercy. (40x)}
+\readerline{Lord have mercy. \instruction{(40x)}}
 
 Thou who, at all times and at every hour, both in heaven and on earth art
 worshiped and glorified, O Christ God, long-suffering, plenteous in mercy
@@ -158,8 +160,12 @@ and unto the comprehension of Thine ineffable glory. For blessed art Thou unto
 ages of ages. Amen.
 \end{maybetwocolumns}
 
+% if the end of maybetwocolumns is to close to the bottom,
+% the below text may look like it's part of the first column instead of
+% reverting back to full page.
+\needspace{5\baselineskip}
 \begin{reader}
-\item Lord, have mercy. (3x)
+\item Lord, have mercy. \instruction{(x3)}
 \item Glory to the Father, and to the Son, and to the Holy Spirit;
   both now and ever, and unto ages of ages. Amen.
 \item More honorable than the cherubim and more glorious beyond compare than
@@ -172,6 +178,24 @@ ages of ages. Amen.
 may He show the light of His countenance upon us and be merciful unto us.}
 
 \readerline{Amen.}
+
+\centeredsection{(Lent) -- The Prayer of Saint Ephraim the Syrian}
+\instruction{During Lent}
+\input{./Common/PrayerOfStEphraim.tex}
+
+\instruction{Then, twelve metanias are made saying each time:}
+\priestline{O God, be gracious unto me the sinner.}
+
+\instruction{The prayer of Saint Ephraim is said again with only one prostration
+  being made at the conclusion of it.}
+
+\vbox{}
+\input{Common/TrisagionPrayerRecited-NeedsAmen.tex}
+
+\begin{reader}
+\item Amen.
+\item Lord, have mercy. \instruction{(x12)}
+\end{reader}
 
 \centeredsection{Prayer of St. Basil the Great}
 \begin{maybetwocolumns}
@@ -203,19 +227,21 @@ life-giving Spirit, now and ever, and unto ages of ages. Amen.
 \begin{reader}
 \item Glory to the Father and to the Son and to the Holy Spirit,
   both now and ever, and unto ages of ages. Amen.
-\item Lord, have mercy. (3x) 
+\item Lord, have mercy. \instruction{(x3)}
 \item Father, bless.
 \end{reader}
 
-\priestline{May Christ our true God,
-through the intercessions of His all-immaculate and all-blameless holy Mother;
-of the holy, glorious, and right-victorious martyrs; 
-of our venerable and God-bearing fathers; of the holy and righteous ancestors 
-of God Joachim and Anna; of (N., saint of the day), whose memory we 
-celebrate, and of all the saints: have mercy upon us and save us forasmuch as 
-he is good and loveth mankind. 
-Through the prayers of our holy fathers, Lord Jesus Christ our God, have 
-mercy on us, and save us.}
+\begin{priest}
+\item May Christ our true God,
+  through the intercessions of His all-immaculate and all-blameless holy Mother;
+  of the holy, glorious, and right-victorious martyrs;
+  of our venerable and God-bearing fathers; of the holy and righteous ancestors
+  of God, Joachim and Anna; of (N., saint of the day), whose memory we
+  celebrate and of all the saints: have mercy upon us, and save us,
+  forasmuch as He is good and loveth mankind.
+\item Through the prayers of our holy fathers, Lord Jesus Christ our God,
+  have mercy on us, and save us.
+\end{priest}
 
 \readerline{Amen}
 }
