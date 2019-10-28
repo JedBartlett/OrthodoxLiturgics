@@ -13,7 +13,7 @@ global = {
 }
 
 lyricText = \lyricmode {
-  To Thee, O Lord
+  To Thee, O Lord.
 }
 
 melody = \relative c' {

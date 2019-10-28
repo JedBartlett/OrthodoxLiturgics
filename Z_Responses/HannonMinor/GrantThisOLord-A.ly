@@ -12,7 +12,7 @@ global = {
 }
 
 lyricText = \lyricmode {
-  Grant this, O Lord
+  Grant this, O Lord.
 }
 
 melody = \relative c' {

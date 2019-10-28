@@ -10,8 +10,8 @@ global = {
 }
 
 English = \lyricmode {Lord, have  mer -- cy,  Lord, have mer -- cy,   Lord, have mer -- cy. }
-Arabic  = \lyricmode {Ya    rub   bur -- ham, Ya    rub   bur -- ham, Ya    rub   bur -- ham }
-Greek   = \lyricmode {Kyrie El -- ei --  son, Kyrie El -- ei --  son, Kyrie El -- ei --  son }
+Arabic  = \lyricmode {Ya    rub   bur -- ham, Ya    rub   bur -- ham, Ya    rub   bur -- ham. }
+Greek   = \lyricmode {Kyrie El -- ei --  son, Kyrie El -- ei --  son, Kyrie El -- ei --  son. }
 
 EnglishLyrics = \context Lyrics = MelodyAndIsonEnglish \lyricsto melody \English
 ArabicLyrics  = \context Lyrics = MelodyAndIsonArabic \lyricsto melody \Arabic

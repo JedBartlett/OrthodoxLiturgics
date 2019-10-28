@@ -17,12 +17,12 @@ lyricText = \lyricmode {
 
   a -- ges, A -- men
 
-  Al -- le -- lu -- i -- a
-  Al -- le -- lu -- i -- a
-  Al -- le -- lu -- i -- a
+  Al -- le -- lu -- i -- a,
+  Al -- le -- lu -- i -- a,
+  Al -- le -- lu -- i -- a,
 
-  Glo -- ry to Thee, O God
-  Glo -- ry to Thee, O God % Second time for second variant of the repeat.
+  Glo -- ry to Thee, O God.
+  Glo -- ry to Thee, O God. % Second time for second variant of the repeat.
 
   O our God and our Hope,
   glo -- ry to Thee!

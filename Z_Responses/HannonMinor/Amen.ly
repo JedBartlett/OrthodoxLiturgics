@@ -12,7 +12,7 @@ global = {
 }
 
 lyricText = \lyricmode {
-  A -- men
+  A -- men.
 }
 
 melody = \relative c' {

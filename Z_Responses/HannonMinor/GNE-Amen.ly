@@ -13,8 +13,8 @@ global = {
 
 lyricText = \lyricmode {
   Glo -- ry \recite ""% Positioned text in melody goes here
-  of a -- ges.
-  A -- men
+  of a -- ges,
+  A -- men.
 }
 
 melody = \relative c' {

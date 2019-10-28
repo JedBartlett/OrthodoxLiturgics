@@ -12,10 +12,10 @@ global = {
 }
 
 lyricText = \lyricmode {
-  A -- men
+  A -- men.
   Pre -- serve \recite ""% Positioned text in melody goes here
 
-  of a -- ges, A -- men
+  of a -- ges, A -- men.
 }
 
 melody = \relative c' {
