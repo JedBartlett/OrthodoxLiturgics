@@ -140,3 +140,6 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
+
+# Dolphin File Browser
+.directory
