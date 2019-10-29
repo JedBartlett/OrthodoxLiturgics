@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2019
+% Great Vespers, preceded by 9th Hour
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside, letterpaper, 12pt]{report}
+\usepackage{orthodoxservicebook}
+
+\begin{document}
+%\maketitle
+
+\title{Divine Liturgy\\
+As celebrated on most Sundays which are not Feastdays}
+
+\author{St. Katherine Orthodox Church}
+\date{}% Remove date
+\maketitle
+
+\instruction{This page intentionally left blank}
+
+\cleardoublepage
+\chapter*{Divine Liturgy}
+\centeredsection{Preparation and Opening Dialogue}
+
+\begin{priest}
+\item \input{Common/OheavenlyKing.tex}
+\item Glory to God in the highest, and on earth peace, good will among men \instruction{2x}
+\item O Lord, Thou shalt open my lips, and my mouth shall declare Thy praise.
+\end{priest}
+
+\deaconline{It is time for the Lord to act. Bless, father.}
+\priestline{Blessed is our God, always, now and ever, and unto ages of ages.}
+\deaconline{Amen. Pray for me, father.}
+\priestline{The Lord direct thy steps unto every good work.}
+\deaconline{Remember me, holy father.}
+\priestline{The Lord God remember thee in His kingdom, always, now and ever, and unto ages of ages.}
+\begin{deacon}
+\item Amen.
+\item O Lord, thou shalt open my lips, and my mouth shall declare Thy praise.
+\item Bless, father
+\end{deacon}
+
+\instruction{This is proclaimed loudly, and signifies that preparations are complete,
+  and the service is now beginning}
+\priestline{Blessed is the kingdom of the Father and of the Son and of the Holy Spirit,
+   now and ever and unto ages of ages.}
+
+\lilypondfile{./Z_Responses/Kazan/Amen.ly}
+
+% Want to ensure this pretty much starts on a new page.
+\needspace{20\baselineskip}
+\centeredsection{The Litany of Peace}
+
+\deaconline{In peace, let us pray to the Lord.}
+\instruction{Repeat these phrases until the last petition.}
+\lilypondfile{./Z_Responses/Kazan/LordHaveMercy-A.ly}
+
+\deaconline{For the peace from above and the salvation of our souls, let us pray to the Lord.}
+\lilypondfile{./Z_Responses/Kazan/LordHaveMercy-B.ly}
+
+\deaconline{For the peace of the whole world, the good estate of the holy churches of God
+  and the union of all men, plet us pray to the Lord.}
+\lilypondfile{./Z_Responses/Kazan/LordHaveMercy-C.ly}
+
+\begin{deacon}
+\item For this Holy House, and for those who with faith, reverence,
+  and fear of God, enter therein,
+  let us pray to the Lord.
+\item For our father and Metropolitan N., (for our Archbishop N. or Bishop N.),
+  for the venerable Priesthood, the Diaconate in Christ, for all the clergy and the people,
+  let us pray to the Lord.
+\item For the President of the United States, for all civil authorities,
+  and for our Armed Forces everywhere, let us pray to the Lord.
+\item For this city, and for every city and land, and for the faithful who dwell therein,
+  let us pray to the Lord.
+\item For healthful seasons, for abundance of the fruits of the earth, and for peaceful times,
+  let us pray to the Lord.
+\item For travelers by sea, by land, and by air; for the sick and the suffering;
+  for captives and their salvation,
+  let us pray to the Lord.
+\item For our deliverance from all tribulation, wrath, danger, and necessity,
+  let us pray to the Lord.
+\item Help us; save us; have mercy on us; and keep us, O God, by Thy grace.
+\end{deacon}
+\lilypondfile{./Z_Responses/Kazan/LordHaveMercy-Z.ly}
+
+\deaconline{Calling to remembrance our all-holy, immaculate, most blessed and glorious Lady Theotokos\\
+  \instruction{(Recited quietly as the petitioner continues)}\\
+  \lilypondfile[staffsize=15]{./Z_Responses/Kazan/MostHolyTheotokosSaveUs.ly}\\
+  and ever-virgin Mary, with all the Saints: let us commend ourselves and each other,
+  and all our life unto Christ our God.
+}
+
+\priestline{For unto Thee are due all glory, honor, and worship:
+  to the Father, and to the Son, and to the Holy Spirit; now and ever and unto ages of ages.}
+\lilypondfile{./Z_Responses/Kazan/Amen.ly}
+
+\centeredsection{The First Antiphon}
+
+
+\end{document}
