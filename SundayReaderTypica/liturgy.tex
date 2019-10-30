@@ -1,8 +1,12 @@
-\setlength{\paperwidth}{SZWAST_PAPER_WIDTH}
-\setlength{\paperheight}{SZWAST_PAPER_HEIGHT}
+\newcommand{\PAPERWIDTH}{8.5in}
+\newcommand{\PAPERHEIGHT}{11in}
+\newcommand{\MARGINWIDTH}{0.5in}
+
+\setlength{\paperwidth}{\PAPERWIDTH}
+\setlength{\paperheight}{\PAPERHEIGHT}
 
 \usepackage{calc}
-\usepackage[left=SZWAST_MARGIN_WIDTH+5em,right=SZWAST_MARGIN_WIDTH,top=SZWAST_MARGIN_WIDTH,bottom=SZWAST_MARGIN_WIDTH+0.25in,footskip=0.25in]{geometry}
+\usepackage[left=\MARGINWIDTH+5em,right=\MARGINWIDTH,top=\MARGINWIDTH,bottom=\MARGINWIDTH+0.25in,footskip=0.25in]{geometry}
 \usepackage{titlesec}
 \usepackage{color}
 \usepackage{etoolbox}	% For toggles.
@@ -15,6 +19,7 @@
 %\usepackage{verbatim}	// for comment environment
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\usepackage{lyluatex}
 
 \usetikzlibrary{calc}	% Arithmetic syntax for combining lengths.
 %\pdfpagewidth{\pagewidth}
@@ -30,12 +35,9 @@
 \newtoggle{Pentecost}
 \newtoggle{Ascension}
 % Preprocessing will replace this with one of the 4 toggles defined above.
-\toggletrue{SZWAST_SEASON}
+\toggletrue{Pentecost}
 
 
-\titleformat{\section}[block]{\center\Large\bfseries}{}{}{}
-\titleformat{\subsection}[block]{\center\bfseries}{1em}{}{}
-\titleformat{\subsubsection}[block]{\center\bfseries}{1em}{}{}
 % Put paragraph titles in the left margin in red.  The paragraph titles are the
 % part callouts ("Priest", "Reader", "People").
 \titleformat{\paragraph}[leftmargin]{\scshape}{1em}{}{\color{\myred}}
@@ -63,8 +65,8 @@
 	\newlength{\framehalfwidth};
 	\newlength{\framehalfheight};
 
-	\pgfmathsetlength{\framewidth}{SZWAST_PAPER_WIDTH - 2*SZWAST_MARGIN_WIDTH + 0.5in};
-	\pgfmathsetlength{\frameheight}{SZWAST_PAPER_HEIGHT - 2*SZWAST_MARGIN_WIDTH + 0.5in};
+	\pgfmathsetlength{\framewidth}{\PAPERWIDTH - 2*\MARGINWIDTH + 0.5in};
+	\pgfmathsetlength{\frameheight}{\PAPERHEIGHT - 2*\MARGINWIDTH + 0.5in};
 	\pgfmathsetlength{\framehalfwidth}{0.5*\framewidth};
 	\pgfmathsetlength{\framehalfheight}{0.5*\frameheight};
 
@@ -120,8 +122,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\liturgytitle[1]{
 	\newlength{\titlemargin}
-	\setlength{\titlemargin}{SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH}
-	\newgeometry{left=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH,right=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH,top=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH,bottom=SZWAST_MARGIN_WIDTH+SZWAST_MARGIN_WIDTH+0.25in,footskip=0.25in}
+	\setlength{\titlemargin}{\MARGINWIDTH+\MARGINWIDTH}
+	\newgeometry{left=\MARGINWIDTH+\MARGINWIDTH,right=\MARGINWIDTH+\MARGINWIDTH,top=\MARGINWIDTH+\MARGINWIDTH,bottom=\MARGINWIDTH+\MARGINWIDTH+0.25in,footskip=0.25in}
 	%\maketitle
 	\thispagestyle{empty}
 	\vspace*{\fill}
@@ -213,7 +215,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 \newcommand\psalm[1]{
 \switch[#1 =]
 	\case{16}
-		\subsection{Psalm 16 (17)}
+		\subsection*{Psalm 16 (17)}
 			\begin{verse}
 				Hearken, O Lord, unto my righteousness,\nolinebreak\\
 				attend unto my supplication.\nolinebreak\\
@@ -253,7 +255,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 				I shall be filled when Thy glory is made manifest to me.
 			\end{verse}
 	\case{24}
-		\subsection{Psalm 24 (25)}
+		\subsection*{Psalm 24 (25)}
 			\begin{verse}
 				Unto Thee, O Lord, have I lifted up my soul.\nolinebreak\\
 				O my God, in Thee have I trusted; let me never be put to shame,\nolinebreak\\
@@ -302,7 +304,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 				out of all his afflictions.
 			\end{verse}
 	\case{33}
-		\subsection{Psalm 33 (34)}
+		\subsection*{Psalm 33 (34)}
 			\begin{verse}
 				I will bless the Lord at all times,\nolinebreak\\
 				His praise shall continually be in my mouth.\nolinebreak\\
@@ -350,7 +352,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 				and none of them will do wrong that hope in Him.
 			\end{verse}
 	\case{50}
-		\subsection{Psalm 50 (51)}
+		\subsection*{Psalm 50 (51)}
 			\begin{verse}
 				Have mercy on me, O God, according to Thy great mercy;\nolinebreak\\
 				and according to the multitude of Thy compassions blot out my transgression.\nolinebreak\\
@@ -395,7 +397,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 				Then shall they offer bullocks upon Thine altar.
 			\end{verse}
 	\case{53}
-		\subsection{Psalm 53 (54)}
+		\subsection*{Psalm 53 (54)}
 			\begin{verse}
 				O God, in Thy name save me,\nolinebreak\\
 				and in Thy strength do Thou judge me.\nolinebreak\\
@@ -414,7 +416,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 				and mine eye hath looked down upon mine enemies.
 			\end{verse}
 	\case{54}
-		\subsection{Psalm 54 (55)}
+		\subsection*{Psalm 54 (55)}
 			\begin{verse}
 				Give ear, O God, unto my prayer,\nolinebreak\\
 				and disdain not my supplication;\nolinebreak\\
@@ -475,7 +477,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 				but as for me, O Lord, I will hope in Thee.
 			\end{verse}
 	\case{90}
-		\subsection{Psalm 90 (91)}
+		\subsection*{Psalm 90 (91)}
 			\begin{verse}
 				He that dwelleth in the help of the Most High\nolinebreak\\
 				shall abide in the shelter of the God of heaven.\nolinebreak\\
@@ -514,7 +516,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 				and I will show him My salvation.''
 			\end{verse}
 	\case{144}
-		\subsection{Psalm 144 (145)}
+		\subsection*{Psalm 144 (145)}
 			\begin{verse}
 				I will exalt Thee, O my God, my king,\nolinebreak\\
 				and I will bless Thy name for ever,\nolinebreak\\
@@ -574,35 +576,35 @@ O come, let us worship and fall down before the Very Christ our King and our God
 % is in the left margin at the top of the first staff, rather than at the bottom.
 % I really wanted it vertically centered with the top staff, aligned with the lyrics
 % but couldn't get that.
-\newcommand\lilyalleluia{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{alleluia.ly}}
+\newcommand\lilyalleluia{\lilypondfile{./Common/alleluia.ly}}
 
-\newcommand\lilyantiphonone{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{bless_the_lord_greek.ly}}
+\newcommand\lilyantiphonone{\lilypondfile{./Common/bless_the_lord_greek.ly}}
 
-\newcommand\lilyantiphontwo{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{praise_the_lord_greek.ly}}
+\newcommand\lilyantiphontwo{\lilypondfile{./Common/praise_the_lord_greek.ly}}
 
-\newcommand\lilyamen{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{amen.ly}}
+\newcommand\lilyamen{\lilypondfile{./Common/amen.ly}}
 
-\newcommand\lilybeatitudes{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{beatitudes.ly}}
+\newcommand\lilybeatitudes{\lilypondfile{./Common/beatitudes.ly}}
 
-\newcommand\lilyblessedbethename{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{blessed_be_the_name_flat.ly}}
+\newcommand\lilyblessedbethename{\lilypondfile{./Common/blessed_be_the_name_flat.ly}}
 
-\newcommand\lilydismissal{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{dismissal_obikhod.ly}}
+\newcommand\lilydismissal{\lilypondfile{./Common/dismissal_obikhod.ly}}
 
-\newcommand\lilyentrance{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{entrance.ly}}
+\newcommand\lilyentrance{\lilypondfile{./Common/entrance.ly}}
 
-\newcommand\lilyglory{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{glory_to_thee.ly}}
+\newcommand\lilyglory{\lilypondfile{./Common/glory_to_thee.ly}}
 
-\newcommand\lilykontakkatherine{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{kontak_katherine_obikhod.ly}}
+\newcommand\lilykontakkatherine{\lilypondfile{./Common/kontak_katherine_obikhod.ly}}
 
-\newcommand\lilysundaytheotokion{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{steadfast_protectress.ly}}
+\newcommand\lilysundaytheotokion{\lilypondfile{./Common/steadfast_protectress.ly}}
 
-\newcommand\lilytrisagiona{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{trisagion_byzantine_a.ly}}
+\newcommand\lilytrisagiona{\lilypondfile{./Common/trisagion_byzantine_a.ly}}
 
-\newcommand\lilytrisagionb{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{trisagion_byzantine_b.ly}}
+\newcommand\lilytrisagionb{lilypondfile{./Common/trisagion_byzantine_b.ly}}
 
-\newcommand\lilytroparkatherine{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{tropar_katherine_obikhod.ly}}
+\newcommand\lilytroparkatherine{\lilypondfile{./Common/tropar_katherine_obikhod.ly}}
 
-\newcommand\lilytrulymeet{\ \\ \lilypondfile[staffsize=SZWAST_LILYPOND_STAFFSIZE]{truly_meet_obikhod.ly}}
+\newcommand\lilytrulymeet{\lilypondfile{./Common/truly_meet_obikhod.ly}}
 
 
 \newcommand\hourheavenlyking{\iftoggle{Pentecost}{Glory to Thee, our God, glory to Thee!
@@ -694,7 +696,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 				\hourpostpsalms
 
 				\hourtropar
-		\subsection{Theotokion}
+		\subsection*{Theotokion}
 
 				O Theotokos, thou art the true vine who didst bud forth for us the Fruit of life.  Implore thou him, we beseech thee, O Lady, together with the apostles and all the saints, that he will have mercy on our souls.
 
@@ -707,7 +709,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 
 			\hourclosing
 
-		\subsection{Prayer of Saint Mardarios}
+		\subsection*{Prayer of Saint Mardarios}
 			\reader
 				O Master God, Almighty Father, O Lord, the only-begotten Son Jesus Christ, and O Holy Spirit, one Godhead and one Power: Have mercy on me a sinner; and by the judgments which thou hast established, save me, thine unworthy servant, for thou art blessed unto ages of ages.  Amen.}
 
@@ -727,7 +729,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 
 			\hourtropar
 
-		\subsection{Theotokion}
+		\subsection*{Theotokion}
 			\reader
 				Seeing that we have no boldness, because of the multitude of our sins, do thou, O Virgin Theotokos, fervently entreat him who was born of thee; for the prayer of a mother availeth much to the good will of the Master. Despise not the supplications of sinners, O all-revered one; for merciful and mighty to save is he who graciously deigned to suffer for us.
 
@@ -740,7 +742,7 @@ O come, let us worship and fall down before the Very Christ our King and our God
 
 			\hourclosing
 
-		\subsection{Prayer of Saint Basil the Great}
+		\subsection*{Prayer of Saint Basil the Great}
 
 			\reader
 				O God and Lord of hosts and Maker of all things created, who through the tender-hearted compassion of thine incomparable mercy didst send down thine only-begotten Son, our Lord Jesus Christ, for the salvation of our race, and by his precious cross didst destroy the handwriting of our sins and didst thereby triumph over the origin and powers of darkness: Do thou, the same Lord, who lovest mankind, receive also these thanksgivings and fervent prayers of us sinners.  And deliver us from every harmful and gloomy transgression and from all enemies, both visible and invisible, who seek after us to destroy us.  Nail our flesh with the fear of thee, and incline not our hearts to words or thoughts of wickedness; but wound our souls with the love of thee, that looking ever unto thee and guided by thee in the light, beholding thee, the Light ineffable and everlasting, we may ascribe unto thee ceaseless confession and thanksgiving unto the unoriginate Father, together with Thine only-begotten Son, and thine all-holy and good and life-giving Spirit, now and ever, and unto ages of ages.  Amen.}
