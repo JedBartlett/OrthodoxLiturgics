@@ -1,201 +1,243 @@
 \documentclass[twoside, letterpaper, 12pt]{report}
-
-\title{The Sunday Reader's Service of the \textsc{Typica}}
+\usepackage{orthodoxservicebook}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+\title{The Sunday Reader's Service of the \\ \textsc{Typica}}
 \date{}
 \author{}
-%\date{St. Katherine Orthodox Church\\Moscow, Id}
 
-\input{./SundayReaderTypica/liturgy.tex}
+\newcommand\thrice{\instruction(3x)}
+\newcommand\twelve{\instruction(12x)}
+\newcommand\forty{\instruction(40x)}
+
+\newcommand\prostration{\emph{(prostration)}}
+
+\newcommand\lhmThree{Lord, have mercy.\thrice}
+\newcommand\lhmTwelve{Lord, have mercy.\twelve}
+\newcommand\lhmForty{Lord, have mercy.\forty}
+
+\newcommand\throughtheprayers{Through the prayers of our holy fathers,
+  Lord Jesus Christ our God,
+  have mercy on us, and save us}
+\newcommand\gne{Glory to the Father and to the Son and to the Holy Spirit,
+  both now and ever, and unto ages of ages.  Amen.}
+\newcommand\glory{Glory to the Father and to the Son and to the Holy Spirit,}
+\newcommand\nowandever{Both now and ever and unto ages of ages.  Amen.}
 
 \begin{document}
-	\maketitle
-	\graphicalinnerpage{Saint Katherine Orthodox Church}{./Images/Katherine1}{Moscow, Idaho}
+\maketitle
+\includegraphics[width=\textwidth]{Katherine1.jpg}
+\cleardoublepage
 
-	\section*{The Sunday Reader's Service of Typica}
+\chapter*{The Sunday Reader's Service of Typica}
+\readerline{Through the prayers of our holy fathers, Lord Jesus Christ our God,
+  have mercy on us, and save us}
+\lilypondfile{./Common/amen.ly}
+\readerline{Lord have mercy. \instruction{12x}}
 
-			\reader \throughtheprayers
 
-			\lilyamen
+\centeredsection{The First Antiphon}
+\instruction{This may be replaced for certain feast days.}
+\lilypondfile{./Common/bless_the_lord_greek.ly}
+\readerline{Lord have mercy. \instruction{3x}}
 
-			\reader \lhmTwelve
 
-		\subsection*{The First Antiphon}
-			\subsectionnote{This may be replaced for certain feast days.}
+\centeredsection{The Second Antiphon}
+\instruction{This may be replaced for certain feast days.}
+\lilypondfile{./Common/praise_the_lord_greek.ly}
+\readerline{Lord have mercy. \instruction{3x}}
 
-			\lilyantiphonone
 
-			\reader \lhmThree
+\centeredsection{The Third Antiphon}
+\instruction{This may be replaced for certain feast days.}
+\lilypondfile{./Common/beatitudes.ly}
 
-		\subsection*{The Second Antiphon}
+\centeredsection{The Entrance Hymn}
+\readerline{ Let us attend!}
+\lilypondfile{./Common/entrance.ly}
 
-			\subsectionnote{This may be replaced for certain feast days.}
 
-			\lilyantiphontwo
+\centeredsection{Troparia}
+\instruction{This is modified on Great Feasts.}
 
-			\reader \lhmThree
+\emph{The Sunday Tropar of the Resurection.}
 
-		\subsection*{The Third Antiphon}
+\readerline{Glory to the Father and to the Son and to the Holy Spirit,}
 
-			\subsectionnote{This may be replaced for certain feast days.}
+\emph{The appointed Tropar of the day.}
 
-			\lilybeatitudes
+\readerline{Now and ever and unto ages of ages.  Amen.}
 
-		\subsection*{The Entrance Hymn}
 
-			\reader Let us attend!
-			
-			\lilyentrance
+\centeredsection{The Tropar of Saint Katherine}
+\lilypondfile{./Common/kontak_katherine_obikhod.ly}
+\readerline{Through the prayers of our holy fathers, Lord Jesus Christ our God,
+  have mercy on us, and save us.}
+\lilypondfile{./Common/amen.ly}
 
-		\subsection*{Troparia}
-			\subsectionnote{This is modified on Great Feasts.}
 
-			\people \emph{The Sunday Tropar of the Resurection.}
+\centeredsection{The Trisagion Hymn}
+\lilypondfile{./Common/trisagion_byzantine_a.ly}
+\readerline{With Strength!}
+\lilypondfile{./Common/trisagion_byzantine_b.ly}
 
-			\reader \glory
 
-			\people \emph{The appointed Tropar of the day.}
+\centeredsection{The Prokeimenon}
+\paragraph{Reader 1}{Let us attend!}
 
-			\reader \nowandever
+\instruction{The second reader should be standing in front of the royal doors facing the altar}
+\paragraph{Reader 2} The Prokeimenon!
 
-			\subsubsection*{The Tropar of Saint Katherine}
+\instruction{The reader then intones the prokeimenon while facing the altar}
 
-			\lilytroparkatherine
 
-			\reader \throughtheprayers
+\centeredsection{The Epistle}
+\paragraph{Reader 1} Wisdom!
 
-			\lilyamen
+\instruction{The second reader continues facing the altar}
+\paragraph{Reader 2} The reading from the Epistle of the holy Apostle Paul to the
+  \underline{\hspace{1in}}
+  
+  (or from the Acts of the Holy Apostles.)
+  
+  (or from the Holy Epistle of Saint \underline{\hspace{1cm}}.)
 
-		\subsection*{The Trisagion Hymn}
+\paragraph{Reader 1} Let us attend.
 
-			\lilytrisagiona
+\instruction{The Reader turns and faces the people, and then chants the appointed Epistle,
+  or Epistles for the day.}
 
-			\reader With Strength!
+\lilypondfile{./Common/alleluia.ly}
 
-			\lilytrisagionb
 
-		\subsection*{The Prokeimenon}
+\centeredsection{The Gospel}
+\readerline{Let us attend, the reading from the Holy Gospel according to Saint
+  \underline{\hspace{1in}}.}
+\lilypondfile{./Common/glory_to_thee.ly}
 
-			\paragraph{Reader 1} Let us attend!
+\readerline{\instruction{Gospel reading for the day}}
+\lilypondfile{./Common/glory_to_thee.ly}
 
-				\emph{The second reader should be standing in front of the royal doors facing the altar}
+\begin{reader}
+\item Lord, have mercy. \instruction{3x - (Said in place of the litany of the catechumens)}
+\item Lord, have mercy. \instruction{3x - (Said in place of the first litany of the faithful)}
+\item Lord, have mercy. \instruction{3x - (Said in place of the second litany of the faithful)}
+\end{reader}
 
-			\paragraph{Reader 2} The Prokeimenon!
 
-				\emph{The reader then intones the prokeimenon while facing the altar}
+\centeredsection{Prayer to the Lord of Hosts}
+\newcommand\metania{\emph{(metania)}}
+Remember us, O Lord, when thou comest in thy kingdom.\metania
 
-		\subsection*{The Epistle}
+Remember us, O Master, when thou comest in thy kingdom.\metania
 
-			\paragraph{Reader 1} Wisdom!
+Remember us, O Holy One, when thou comest in thy kingdom.\metania
 
-				\emph{The second reader continues facing the altar}
+The heavenly choir singeth thy praises, saying: Holy, holy, holy, Lord of Sabaoth; heaven and earth are full of Thy glory.
 
-			\paragraph{Reader 2} The reading from the Epistle of the holy Apostle Paul to the \underline{\hspace{1in}}
+Come unto him, and be enlightened, and your faces shall not be ashamed.
 
-				(or from the Acts of the Holy Apostles.)
+The heavenly choir singeth thy praises, saying: Holy, holy, holy, Lord of Sabaoth; heaven and earth are full of Thy glory.
 
-				(or from the Holy Epistle of Saint \underline{\hspace{1cm}}.)
+\emph{Glory to the Father and to the Son and to the Holy Spirit,}
 
-			\paragraph{Reader 1} Let us attend.
+The choir of the holy angels and archangels, with all the powers of heaven, singeth thy praises, saying: Holy, holy, holy, Lord of Sabaoth; heaven and earth are full of Thy glory.
 
-				\emph{The Reader turns and faces the people, and then chants the appointed Epistle, or Epistles for the day.}
+\emph{both now and ever and unto ages of ages.  Amen.}
 
-			\lilyalleluia
 
-		\subsection*{The Gospel}
+\centeredsection{The Creed}
+\instruction{Recited together as a congregation}
 
-			\reader Let us attend, the reading from the Holy Gospel according to Saint \underline{\hspace{1in}}.
+I believe in one God, the Father Almighty, Maker of heaven and earth,
+and of all things visible and invisible.
+And in one Lord Jesus Christ, the Son of God, the Only-begotten,
+Begotten of the Father before all worlds, Light of Light, Very God of Very God,
+Begotten, not made; of one essence with the Father, by Whom all things were made:
+Who for us men and for our salvation came down from heaven,
+and was incarnate of the Holy Spirit and the Virgin Mary, and became man.
+And was crucified also for us under Pontius Pilate, and suffered and was buried.
+And on the third day He rose again, according to the Scriptures; and ascended into
+heaven, and sitteth at the right hand of the Father.
+And He shall come again with glory to judge the living and the dead,
+Whose Kingdom shall have no end.
+And I believe in the Holy Spirit, the Lord, and Giver of Life,
+Who proceeds from the Father,
+Who with the Father and the Son together is worshiped and glorified,
+Who spake by the Prophets.
+And I believe in One Holy Catholic and Apostolic Church.
+I acknowledge one Baptism for the remission of sins.
+I look for the Resurrection of the dead, and the Life of the world to come.
+Amen.
 
-			\lilyglory
 
-			\reader \emph{Gospel reading for the day}
+\centeredsection{Prayer of Forgiveness}
+\readerline{Forgive, remit, pardon, O God, our sins,
+  both voluntary and involuntary, in deed and in word, in knowledge or in ignorance,
+  committed by night or by day, in mind and in thought.
+  Forgive us them all, for thou art good and lovest mankind.
+}
 
-			\lilyglory
 
-			\reader \lhmThree \emph{(Said in place of the litany of the catechumens)}
+\centeredsection{The Lord’s Prayer}
+\instruction{Recited together as a congregation}
 
-				\lhmThree \emph{(Said in place of the first litany of the faithful)}
+Our Father, who art in heaven, hallowed be thy name; thy kingdom come;
+thy will be done on earth, as it is in heaven. Give us this day our daily bread.
+And forgive us our trespasses, as we forgive those who trespass against us.
+And lead us not into temptation,but deliver us from evil.
 
-				\lhmThree \emph{(Said in place of the second litany of the faithful)}
+\readerline{Through the prayers of our holy fathers, Lord Jesus Christ our God, have mercy on us.}
+\lilypondfile{./Common/amen.ly}
 
-		\subsection*{Prayer to the Lord of Hosts}
 
-				Remember us, O Lord, when thou comest in thy kingdom.\metania
+\centeredsection{Kontakia}
+\instruction{This is modified on Great Feasts.}
 
-				Remember us, O Master, when thou comest in thy kingdom.\metania
+\centeredsubsection{Kontakion of Saint Katherine}
+\lilypondfile{./Common/kontak_katherine_obikhod.ly}
 
-				Remember us, O Holy One, when thou comest in thy kingdom.\metania
+\emph{The appointed Kontakion of the day.}
 
-				The heavenly choir singeth thy praises, saying: Holy, holy, holy, Lord of Sabaoth; heaven and earth are full of Thy glory.
+\readerline{\glory}
 
-				Come unto him, and be enlightened, and your faces shall not be ashamed.
-				
-				The heavenly choir singeth thy praises, saying: Holy, holy, holy, Lord of Sabaoth; heaven and earth are full of Thy glory.
+\emph{The Sunday Kontakion of the Resurrection.}
 
-				\glory
+\readerline{\nowandever}
 
-				The choir of the holy angels and archangels, with all the powers of heaven, singeth thy praises, saying: Holy, holy, holy, Lord of Sabaoth; heaven and earth are full of Thy glory.
+\centeredsubsection{Theotokion for Ordinary Sundays}
+\instruction{This is often replaced with a Theotokion specific to the day.}
 
-				\nowandever
+\lilypondfile{./Common/steadfast_protectress.ly}
 
-		\subsection*{The Creed}
+\readerline{\lhmForty}
 
-			\people I believe in one God, the Father Almighty, Maker of heaven and earth, and of all things visible and invisible. And in one Lord Jesus Christ, the Son of God, the Only-begotten, Begotten of the Father before all worlds, Light of Light, Very God of Very God, Begotten, not made; of one essence with the Father, by Whom all things were made: Who for us men and for our salvation came down from heaven, and was incarnate of the Holy Spirit and the Virgin Mary, and became man. And was crucified also for us under Pontius Pilate, and suffered and was buried. And on the third day He rose again, according to the Scriptures; and ascended into heaven, and sitteth at the right hand of the Father. And He shall come again with glory to judge the living and the dead, Whose Kingdom shall have no end. And I believe in the Holy Spirit, the Lord, and Giver of Life, Who proceedeth from the Father, Who with the Father and the Son together is worshipped and glorified, Who spake by the Prophets. And I believe in One Holy Catholic and Apostolic Church. I acknowledge one Baptism for the remission of sins. I look for the Resurrection of the dead, and the Life of the world to come.  Amen.
+\lilypondfile{./Common/blessed_be_the_name_flat.ly}
 
-		\subsection*{Prayer of Forgiveness}
+\readerline{\gne}
 
-			\reader Forgive, remit, pardon, O God, our sins, both voluntary and involuntary, in deed and in word, in knowledge or in ignorance, committed by night or by day, in mind and in thought.  Forgive us them all, for thou art good and lovest mankind.
-			
-		\subsection*{The Lord’s Prayer}
+\begin{maybetwocolumns}
+\centeredsection{Psalm 33}
+\input{./Psalms/Psalm033-unknowntrans.txt}
 
-			\people \lordsprayer
+\centeredsection{Psalm 144}
+\input{./Psalms/Psalm144-unknowntrans.txt}
+\end{maybetwocolumns}
 
-			\reader \throughtheprayers
+\readerline{\gne}
 
-			\lilyamen
 
-		\subsection*{Kontakia}
-			\subsectionnote{This is modified on Great Feasts.}
+\centeredsection{The Theotokion}
+\lilypondfile{./Common/truly_meet_obikhod.ly}
 
-			\subsubsection*{Kontakion of Saint Katherine}
-			\lilykontakkatherine
 
-			\people \emph{The appointed Kontakion of the day.}
+\centeredsection{}{The Dismissal}
 
-			\reader \glory
+\lilypondfile{./Common/dismissal_obikhod.ly}
 
-			\people \emph{The Sunday Kontakion of the Resurrection.}
+\readerline{\throughtheprayers}
 
-			\reader \nowandever
-
-		\subsubsection*{Theotokion for Ordinary Sundays}
-			\subsectionnote{This is often replaced with a Theotokion specific to the day.}
-
-			\lilysundaytheotokion
-
-			\reader \lhmForty
-
-				\lilyblessedbethename
-
-			\reader \gne
-
-				\psalm{33}
-
-				\psalm{144}
-
-			\reader \gne
-
-		\subsection*{The Theotokion}
-
-			\lilytrulymeet
-
-		\subsection*{The Dismissal}
-
-			\lilydismissal
-
-			\reader \throughtheprayers
-
-			\lilyamen
-
-	\pagebreak \ \thispagestyle{empty}
+\lilypondfile{./Common/amen.ly}
 
 \end{document}
+
