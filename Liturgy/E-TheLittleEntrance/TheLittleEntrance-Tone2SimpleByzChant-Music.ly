@@ -12,39 +12,26 @@ global = {
 }
 
 lyricText = \lyricmode {
-  Save us, O Son of God, Who art ri -- sen from the dead,
-    who sing __ to Thee,
-    Al -- le -- lu __ i --  a.
-  Glo -- ry \recite"to the Father and to the Son and to the" Ho -- ly Spi -- rit.
-  \recite"Both now and ever, and unto ages" of a -- ges. A -- men.
-  Save us, O Son of God, Who art ri -- sen from the dead,
+  Come, let us wor -- ship and fall __ down be -- fore __ Christ.
+  Save us, O Son of God Who art ri -- sen from __ the dead, __
     who sing __ to Thee,
     Al -- le -- lu __ i --  a.
 }
 
 melody = \relative c'' {
   \global % Leave these here for key to display
-  \repeat volta 2 { b4( c) b aes b aes g2 b4 aes g f e8( f e4) f g2 \bar "|"
-                    g4 c8( b c d) b4 b2 \bar "|"
-                    aes4 g g8( aes b4) aes g2 \bar "|"}
-     \alternative {
-          { g4 g g\breve  g4 g g2 g2 \bar ":|." }
-          { g\breve  g4 g2 g4 g g \bar "|" }
-     }
-  b4( c) b aes b aes g2 b4 aes g f e8( f e4) f g2 \bar"|"
+  g2 g4 g aes2 g4 g b( aes) g f e8( f g4) g2 \bar "|"
+  b4( c) b aes b aes g2 b4 aes g f e8( f e4) f aes( g f8 g e f g2)  \bar "|"
   g4 c8( b c d) b4 b2 \bar"|"
   aes4 g g8( aes b4) aes g2 \bar "|."
 }
 
 ison = \relative c' {
   \global % Leave these here for key to display
-  \repeat volta 2 { c\breve s1. s1 s2 g'4 g2 c,1 s2.}
-     \alternative {
-          { c\breve s\breve  \bar ":|." }
-          { c\breve  s1. \bar "||" }
-     }
-  c\breve s1. s1 s2 g'4 g2 c,1 s2. \bar "|."
-
+  c\breve s\breve \bar "|"
+  s\breve s\breve s1 s4 \bar "|"
+  c4 g'2 g4 g2 \bar "|"
+  c,1 s2. \bar "|."
 }
 
 \score {
@@ -71,7 +58,7 @@ ison = \relative c' {
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 200
+  \midi { \tempo 4 = 150
           \context {
             \Voice
             \remove "Dynamic_performer"

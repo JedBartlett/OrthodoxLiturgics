@@ -1,6 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Copyright 2019
-% Great Vespers, preceded by 9th Hour
+% Liturgy of St. John Chrysostom for regular Sundays
+% Simple traditional Arabic chants through to the Trisagion,
+% and then switching to more choral for the remainder of the service.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[twoside, letterpaper, 12pt]{report}
@@ -118,14 +120,8 @@ As celebrated on most Sundays which are not Feast days}
 
 \lilypondfile{./Z_Responses/Kazan/ToTheeOLord.ly}
 
-\begin{priest}
-\item O Lord our God, save Thy people, and bless thine inheritance;
-  preserve the fullness of Thy Church, sanctify those who love the
-  beauty of Thy house, glorify them in recompense by Thy divine power,
-  and forsake us not who hope in Thee.
-\item For Thine is the might, and Thine is the kingdom and the power and the glory
-  of the Father and of the Son and of the Holy Spirit, now and ever, and unto ages of ages.
-\end{priest}
+\priestline{For Thine is the might, and Thine is the kingdom and the power and the glory
+  of the Father and of the Son and of the Holy Spirit, now and ever, and unto ages of ages.}
 
 \lilypondfile{./Z_Responses/Kazan/Amen.ly}
 
@@ -149,6 +145,18 @@ As celebrated on most Sundays which are not Feast days}
 
 \lilypondfile{./Z_Responses/Kazan/ToTheeOLord.ly}
 
+\priestline{For Thou art a good God and lovest mankind,
+  and unto thee we ascribe glory to the Father and to the Son and to the Holy Spirit,
+  now and ever, and unto ages of ages.}
+\lilypondfile{./Z_Responses/Kazan/Amen.ly}
 
+\centeredsection{Apolytikion}
+\instruction{Sing the Apolytikion appointed for the day as the 3rd antiphon before the entrance.}
+
+\centeredsection{The Little Entrance}
+\lilypondfile{./Liturgy/E-TheLittleEntrance/TheLittleEntrance-Tone2SimpleByzChant-Music.ly}
+
+\centeredsection{Apolytikion}
+\instruction{Again, sing the Apolytikion appointed for the day.}
 
 \end{document}
