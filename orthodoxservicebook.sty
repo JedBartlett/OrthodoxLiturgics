@@ -70,12 +70,20 @@
 \newcommand{\squashedcenteredsection}[1]{%
   \section*{\centering{}#1}%
 }
+\newcommand{\squashedcenteredsubsection}[1]{%
+  \subsection*{\centering{}#1}%
+}
 % and encourage page breaks before these sections.
 \RequirePackage{needspace}
 \newcommand{\centeredsection}[1]{%
-  \needspace{10\baselineskip}%
+  \needspace{15\baselineskip}%
   \squashedcenteredsection{#1}%
 }
+\newcommand{\centeredsubsection}[1]{%
+  \needspace{15\baselineskip}%
+  \squashedcenteredsubsection{#1}%
+}
+
 
 
 % Allow content to be in one column on narrower page layouts,
