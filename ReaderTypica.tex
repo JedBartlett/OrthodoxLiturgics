@@ -6,24 +6,6 @@
 \date{}
 \author{}
 
-\newcommand\thrice{\instruction(3x)}
-\newcommand\twelve{\instruction(12x)}
-\newcommand\forty{\instruction(40x)}
-
-\newcommand\prostration{\emph{(prostration)}}
-
-\newcommand\lhmThree{Lord, have mercy.\thrice}
-\newcommand\lhmTwelve{Lord, have mercy.\twelve}
-\newcommand\lhmForty{Lord, have mercy.\forty}
-
-\newcommand\throughtheprayers{Through the prayers of our holy fathers,
-  Lord Jesus Christ our God,
-  have mercy on us, and save us}
-\newcommand\gne{Glory to the Father and to the Son and to the Holy Spirit,
-  both now and ever, and unto ages of ages.  Amen.}
-\newcommand\glory{Glory to the Father and to the Son and to the Holy Spirit,}
-\newcommand\nowandever{Both now and ever and unto ages of ages.  Amen.}
-
 \begin{document}
 \maketitle
 \includegraphics[width=\textwidth]{Katherine1.jpg}
@@ -32,54 +14,53 @@
 \chapter*{The Sunday Reader's Service of Typica}
 \readerline{Through the prayers of our holy fathers, Lord Jesus Christ our God,
   have mercy on us, and save us}
-\lilypondfile{./Common/amen.ly}
-\readerline{Lord have mercy. \instruction{12x}}
+\lilypondfile{./Z-Responses/Obikhod/Amen.ly}
+\readerline{\lhmTwelve}
 
 
 \centeredsection{The First Antiphon}
 \instruction{This may be replaced for certain feast days.}
-\lilypondfile{./Common/bless_the_lord_greek.ly}
-\readerline{Lord have mercy. \instruction{3x}}
+\lilypondfile{./Liturgy/B-FirstAntiphon/BlessTheLord_Greek-Music.ly}
+\readerline{\lhmThree}
 
 
 \centeredsection{The Second Antiphon}
 \instruction{This may be replaced for certain feast days.}
-\lilypondfile{./Common/praise_the_lord_greek.ly}
-\readerline{Lord have mercy. \instruction{3x}}
+\lilypondfile{./Liturgy/C-SecondAntiphon/PraiseTheLord_Greek-Music.ly}
+\readerline{\lhmThree}
 
 
 \centeredsection{The Third Antiphon}
 \instruction{This may be replaced for certain feast days.}
-\lilypondfile{./Common/beatitudes.ly}
+\lilypondfile{./Liturgy/D-ThirdAntiphon/Beatitudes_Moscow-Music.ly}
 
 \centeredsection{The Entrance Hymn}
 \readerline{ Let us attend!}
-\lilypondfile{./Common/entrance.ly}
+\lilypondfile{./Liturgy/E-LittleEntrance/Entrance_Russian-Music.ly}
 
 
-\centeredsection{Troparia}
+\centeredsection{Apolytikion}
 \instruction{This is modified on Great Feasts.}
 
-\emph{The Sunday Tropar of the Resurection.}
+\emph{The Sunday Apolytikion of the Resurrection.}
 
-\readerline{Glory to the Father and to the Son and to the Holy Spirit,}
+\readerline{\glory}
 
-\emph{The appointed Tropar of the day.}
+\emph{The appointed Apolytikion of the day.}
 
-\readerline{Now and ever and unto ages of ages.  Amen.}
+\readerline{\nowandever}
 
 
 \centeredsection{The Tropar of Saint Katherine}
-\lilypondfile{./Common/kontak_katherine_obikhod.ly}
-\readerline{Through the prayers of our holy fathers, Lord Jesus Christ our God,
-  have mercy on us, and save us.}
-\lilypondfile{./Common/amen.ly}
+\lilypondfile{./Menaion/11-25-StKatherine/Katherine-Trop_Obikhod-Music.ly}
+\readerline{\throughtheprayers}
+\lilypondfile{./Z-Responses/Obikhod/Amen.ly}
 
 
 \centeredsection{The Trisagion Hymn}
-\lilypondfile{./Common/trisagion_byzantine_a.ly}
+\lilypondfile{./Liturgy/I-ThriceHolyHymn/Trisagion_Arabic_a.ly}
 \readerline{With Strength!}
-\lilypondfile{./Common/trisagion_byzantine_b.ly}
+\lilypondfile{./Liturgy/I-ThriceHolyHymn/Trisagion_Arabic_b.ly}
 
 
 \centeredsection{The Prokeimenon}
@@ -107,16 +88,16 @@
 \instruction{The Reader turns and faces the people, and then chants the appointed Epistle,
   or Epistles for the day.}
 
-\lilypondfile{./Common/alleluia.ly}
+\lilypondfile{./Liturgy/J-EpistleGospel/Alleluarion_Moscow-Music.ly}
 
 
 \centeredsection{The Gospel}
 \readerline{Let us attend, the reading from the Holy Gospel according to Saint
   \underline{\hspace{1in}}.}
-\lilypondfile{./Common/glory_to_thee.ly}
+\lilypondfile{./Liturgy/J-EpistleGospel/GloryToThee_Kievan-Music.ly}
 
 \readerline{\instruction{Gospel reading for the day}}
-\lilypondfile{./Common/glory_to_thee.ly}
+\lilypondfile{./Liturgy/J-EpistleGospel/GloryToThee_Kievan-Music.ly}
 
 \begin{reader}
 \item Lord, have mercy. \instruction{3x - (Said in place of the litany of the catechumens)}
@@ -139,11 +120,11 @@ Come unto him, and be enlightened, and your faces shall not be ashamed.
 
 The heavenly choir singeth thy praises, saying: Holy, holy, holy, Lord of Sabaoth; heaven and earth are full of Thy glory.
 
-\emph{Glory to the Father and to the Son and to the Holy Spirit,}
+\emph{\glory}
 
 The choir of the holy angels and archangels, with all the powers of heaven, singeth thy praises, saying: Holy, holy, holy, Lord of Sabaoth; heaven and earth are full of Thy glory.
 
-\emph{both now and ever and unto ages of ages.  Amen.}
+\emph{\nowandever}
 
 
 \centeredsection{The Creed}
@@ -188,14 +169,14 @@ And forgive us our trespasses, as we forgive those who trespass against us.
 And lead us not into temptation,but deliver us from evil.
 
 \readerline{Through the prayers of our holy fathers, Lord Jesus Christ our God, have mercy on us.}
-\lilypondfile{./Common/amen.ly}
+\lilypondfile{./Z-Responses/Obikhod/Amen.ly}
 
 
 \centeredsection{Kontakia}
 \instruction{This is modified on Great Feasts.}
 
 \centeredsubsection{Kontakion of Saint Katherine}
-\lilypondfile{./Common/kontak_katherine_obikhod.ly}
+\lilypondfile{./Menaion/11-25-StKatherine/Katherine-Kont_Obikhod-Music.ly}
 
 \emph{The appointed Kontakion of the day.}
 
@@ -208,11 +189,11 @@ And lead us not into temptation,but deliver us from evil.
 \centeredsubsection{Theotokion for Ordinary Sundays}
 \instruction{This is often replaced with a Theotokion specific to the day.}
 
-\lilypondfile{./Common/steadfast_protectress.ly}
+\lilypondfile{./Liturgy/H-Kontakion/OProtectionOfChristians_Greek-Music.ly}
 
 \readerline{\lhmForty}
 
-\lilypondfile{./Common/blessed_be_the_name_flat.ly}
+\lilypondfile{./Liturgy/Z-PostCommunionHymns/BlessedBeTheName_Plain-Music.ly}
 
 \readerline{\gne}
 
@@ -228,16 +209,16 @@ And lead us not into temptation,but deliver us from evil.
 
 
 \centeredsection{The Theotokion}
-\lilypondfile{./Common/truly_meet_obikhod.ly}
+\lilypondfile{./Liturgy/S-Megalynarion/ItIsTrulyMeet_Obikhod-Music.ly}
 
 
 \centeredsection{}{The Dismissal}
 
-\lilypondfile{./Common/dismissal_obikhod.ly}
-
+\lilypondfile{./Z-Responses/Obikhod/GNE-Amen.ly}
+\lilypondfile{./Z-Responses/Obikhod/LordHaveMercyX3-OLordBless.ly}
 \readerline{\throughtheprayers}
 
-\lilypondfile{./Common/amen.ly}
+\lilypondfile{./Z-Responses/Obikhod/Amen.ly}
 
 \end{document}
 
