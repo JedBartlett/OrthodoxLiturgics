@@ -15,13 +15,13 @@
         Let us say with all our soul and with all our mind, let us say:
 }
 
-\include "./LordHaveMercy_A.ly"
+\include "./PreThrefoldLhm_A.ly"
 
 \markup{\smallCaps{Deacon:}\override #'(line-width . 90)
         O Lord Almighty, the God of our fathers, we pray Thee, hearken and have mercy.
 }
 
-\include "./LordHaveMercy_B.ly"
+\include "./PreThrefoldLhm_B.ly"
 
 \markup{\smallCaps{Deacon:}\override #'(line-width . 90)
         Have mercy on us, O God, according to Thy great mercy, we pray Thee, hearken and have mercy.

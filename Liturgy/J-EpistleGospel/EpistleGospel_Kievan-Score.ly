@@ -4,8 +4,8 @@
   title = "Epistle Alleluarion, Gospel Responses"
   subtitle = ""
   subsubtitle = ""
-  composer = "Kievan Chant"
-  arranger = "Rdr. George"
+  composer = "Kievan"
+  arranger = ""
   copyright = "This arrangement is free to distribute for Liturgical use"
   tagline = "This arrangement is free to distribute for Liturgical use"
 }

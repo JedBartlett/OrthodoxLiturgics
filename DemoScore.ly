@@ -5,6 +5,7 @@
   title = "Title"
   subtitle = "Subtitle"
   subsubtitle = "Subsubtitle"
+  piece = "Tone or Style"
   composer = "Style or composer"
   arranger = "If you want"
   copyright = "This arrangement is free to distribute for Liturgical use"

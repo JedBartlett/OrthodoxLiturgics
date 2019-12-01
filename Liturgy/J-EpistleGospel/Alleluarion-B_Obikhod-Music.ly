@@ -6,36 +6,32 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 1/1 % Not used, Time_signature_engraver is removed from layout
-  \key g \major
-  \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
+  \time 4/4
+  \key f \major
 }
 
 verseOne = \lyricmode {
-  Wel -- come
+  Al -- le -- lu -- ia, Al -- le -- lu -- ia, Al -- le -- lu -- ia
 }
 
 soprano = \relative g' {
-  % Ritardando spanning several notes use '\startTextSpan' and \stopTextSpan
-  \override TextSpanner.bound-details.left.text = "rit."
   \global % Leave these here for key to display
-  b2 \acciaccatura {c8} b2 % acciaccatura are 0 duration grace notes
+  a4 a8( bes) c4( bes) a2 bes4 \< c \! d2 \> c \! bes4( c bes a8 bes c4) c bes2 a1 \bar "||"
 }
 
 alto = \relative g' {
   \global % Leave these here for key to display
-  g2 g
+  f4 f8( g) a4( g) fis2 g4 a bes2 a g4( a g f8 g a4) a g2 f1
 }
 
 tenor = \relative c' {
   \global % Leave these here for key to display
-  c2 c
+  c4 c f( d) d2 d4 f f2 f e4( f c2( c4)) c c2 c1
 }
 
-
-bass = \relative c {
+bass = \relative f {
   \global % Leave these here for key to display
-  g2 g
+  f4 f f( g) d2 g4 f bes,4( d) f2 c2.( d8 c f4) f c2 <f f,>1
 }
 
 \score {
@@ -70,7 +66,7 @@ bass = \relative c {
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 300
+  \midi { \tempo 4 = 120
           \context {
             \Voice
             \remove "Dynamic_performer"

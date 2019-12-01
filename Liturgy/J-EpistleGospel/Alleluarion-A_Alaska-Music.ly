@@ -1,41 +1,43 @@
 \version "2.18.2"
 
-% Provide an easy way to group a bunch of text together on a breve
-% http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
-recite = \once \override LyricText.self-alignment-X = #-1
-
-\defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 1/1 % Not used, Time_signature_engraver is removed from layout
-  \key g \major
-  \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
+  \time 4/4 % Not used, Time_signature_engraver is removed from layout
+  \key f \major
 }
 
 verseOne = \lyricmode {
-  Wel -- come
+   Al -- le -- lu -- ia,
+   Al -- le -- lu -- ia,
+   Al -- le -- lu -- ia
 }
 
 soprano = \relative g' {
   % Ritardando spanning several notes use '\startTextSpan' and \stopTextSpan
-  \override TextSpanner.bound-details.left.text = "rit."
   \global % Leave these here for key to display
-  b2 \acciaccatura {c8} b2 % acciaccatura are 0 duration grace notes
+  \partial 4 f8 g a4.( g8) f4
+  bes8 bes a4.( g8) f4
+  f8 a g4.( f8 e4 d8 e) f2. \fermata \bar "||"
 }
 
 alto = \relative g' {
   \global % Leave these here for key to display
-  g2 g
+  \partial 4 f8 g a4.( g8) f4
+  bes8 bes a4.( g8) f4
+  f8 a g4.( f8 e4 d8 e) f2.
 }
 
-tenor = \relative c' {
+tenor = \relative c {
   \global % Leave these here for key to display
-  c2 c
+  \partial 4 f8 g a4.( g8) f4
+  bes8 bes a4.( g8) f4
+  f8 a g4.( f8 e4 d8 e) f2.
 }
-
 
 bass = \relative c {
   \global % Leave these here for key to display
-  g2 g
+  \partial 4 f8 g a4.( g8) f4
+  bes8 bes a4.( g8) f4
+  f8 a g4.( f8 e4 d8 e) f2. \fermata
 }
 
 \score {
@@ -70,7 +72,7 @@ bass = \relative c {
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 300
+  \midi { \tempo 4 = 120
           \context {
             \Voice
             \remove "Dynamic_performer"

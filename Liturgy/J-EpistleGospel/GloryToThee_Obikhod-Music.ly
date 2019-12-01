@@ -6,37 +6,16 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 1/1 % Not used, Time_signature_engraver is removed from layout
-  \key g \major
+  \time 4/4 % Not used, Time_signature_engraver is removed from layout
+  \key f \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-verseOne = \lyricmode {
-  Wel -- come
-}
-
-soprano = \relative g' {
-  % Ritardando spanning several notes use '\startTextSpan' and \stopTextSpan
-  \override TextSpanner.bound-details.left.text = "rit."
-  \global % Leave these here for key to display
-  b2 \acciaccatura {c8} b2 % acciaccatura are 0 duration grace notes
-}
-
-alto = \relative g' {
-  \global % Leave these here for key to display
-  g2 g
-}
-
-tenor = \relative c' {
-  \global % Leave these here for key to display
-  c2 c
-}
-
-
-bass = \relative c {
-  \global % Leave these here for key to display
-  g2 g
-}
+lyricText = \lyricmode {          Glo -- ry \recite"to Thee, O Lord," glo -- ry   to  Thee}
+soprano = \relative c'' { \global a4     a   \parenthesize a1         bes2   bes4 bes a1 \bar "||" }
+alto    = \relative c'  { \global f4     f   \parenthesize f1         f2     e4   e   f1 }
+tenor   = \relative c'  { \global c4     c   \parenthesize c1         d2     c4   c   c1 }
+bass    = \relative c   { \global f4     f   \parenthesize f1         <bes bes,>2 <g c,>4 <g c,>4 <f f,>1 }
 
 \score {
   \new ChoirStaff <<
@@ -49,15 +28,15 @@ bass = \relative c {
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \verseOne
+    } \lyricsto "soprano" \lyricText
 
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { T B }
-    } <<
-      \clef bass
-      \new Voice = "tenor" { \voiceOne \tenor }
-      \new Voice = "bass" { \voiceTwo \bass }
+      } <<
+        \clef bass
+        \new Voice = "tenor" { \voiceOne \tenor }
+        \new Voice = "bass" { \voiceTwo \bass }
     >>
   >>
   \layout {
@@ -70,7 +49,7 @@ bass = \relative c {
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 300
+  \midi { \tempo 4 = 120
           \context {
             \Voice
             \remove "Dynamic_performer"
