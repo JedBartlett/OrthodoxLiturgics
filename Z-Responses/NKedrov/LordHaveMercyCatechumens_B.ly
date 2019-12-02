@@ -56,4 +56,3 @@ bass    = \relative c  { \global f4    f    f2     f   }
     }
   }
 }
-
