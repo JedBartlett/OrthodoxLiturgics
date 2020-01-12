@@ -11,7 +11,7 @@ global = {
 }
 
 hymnLyrics = \lyricmode {
-  Let __ us who mys -- tic -- lly
+  Let __ us who mys -- tic -- 'lly
   rep -- re -- sent the cher -- u -- bim
   and who sing the thrice- ho -- ly hymn
   to __ the __ life- cre -- a -- ting,

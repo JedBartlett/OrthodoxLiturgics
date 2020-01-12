@@ -23,17 +23,17 @@
 
 \include "../../Z-Responses/Obikhod/Amen.ly"
 
-\markuplist{\wordwrap-lines{Priest: Our (Metropolitan or Archbishop or Bishop,) N.,
+\markuplist{\wordwrap-lines{Priest: Our (Metropolitan or Archbishop) N., and our Bishop, N.,
   and all our brotherhood in Christ, the Lord God remember in His Kingdom,
   always, now and ever, and unto ages of ages.}}
 \include "../../Z-Responses/Obikhod/Amen.ly"
 
 \markuplist{\wordwrap-lines{Priest: Our president, civil authorities and armed forces,
-  the Lord God remember in his kingdom, always, now and ever, and unto ages of ages.}}
+  the Lord God remember in His kingdom, always, now and ever, and unto ages of ages.}}
 \include "../../Z-Responses/Obikhod/Amen.ly"
 
 \markuplist{\wordwrap-lines{Priest: The Orthodox servant(s) of God, NN., that he(she, they) may have mercy,
-  life, peace, salvation and visitation, pardon and forgiveness of sins,
+  life, peace, health, salvation and visitation, pardon and forgiveness of sins,
   the Lord God remember in His kingdom, always, now and ever and unto ages of ages.}}
 \include "../../Z-Responses/Obikhod/Amen.ly"
 

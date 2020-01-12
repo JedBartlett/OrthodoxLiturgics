@@ -13,11 +13,11 @@ global = {
 
 lyricText = \lyricmode {
   Ho -- ly! Ho -- ly! Ho -- ly! \bar"|"
-  Lord of Sa -- ba -- oth. \bar"|"
-  \recite "Heaven and earth are" full of Thy glo -- ry \bar"|"
-  \recite "Hosanna in the" high -- est \bar"|"
-  Bless -- ed is He that comes in the name of the Lord! \bar"|"
-  Ho -- san -- na in the high -- est
+  Lord of Sa -- ba -- oth; \bar"|"
+  \recite "Heaven and earth are" full of Thy glo -- ry: \bar"|"
+  \recite "Hosanna in the" high -- est. \bar"|"
+  Bless -- ed is He that comes in the name of the Lord. \bar"|"
+  Ho -- san -- na in the high -- est.
 }
 soprano = \relative g' {
   \global % Leave these here for key to display

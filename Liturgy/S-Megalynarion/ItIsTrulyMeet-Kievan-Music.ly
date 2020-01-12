@@ -24,12 +24,12 @@ soprano = \relative e' {
   % Ritardando spanning several notes use '\startTextSpan' and \stopTextSpan
   \override TextSpanner.bound-details.left.text = "rit."
   \global % Leave these here for key to display
-  e4 e g2 g\breve g4 e a4.( b8 g4 fis) e2
+  e4 e g2 g\breve g4 e a4.( b8 \acciaccatura { b16 a } g4 fis) e2
   g4 g a\breve a4 fis g b a g fis( g2)
   e4 g2 g4 g g e a4.( b8 g4) fis e2
   g4 g a\breve a4 fis g( b a) g fis( g2)
-  e4 e e g2 g\breve g4 e a4.( b8 g4) fis e2
-  g4 g g a a b g2 fis4 fis e1 \bar"|."
+  e4 e e g2 g\breve g4 e a4.( b8 \acciaccatura { b16 a } g4) fis e2
+  g4 g g a \startTextSpan a b g2 fis4 \stopTextSpan fis e1 \fermata \bar"|."
 }
 
 alto = \relative e' {
@@ -60,7 +60,7 @@ bass = \relative c {
   e4 e2 e4 e e g a2( b4) b, e2
   e4 e d\breve d4 d g2( fis4) g d( g2)
   e4 e e e2 e\breve e4 g a2( b4) b,4 e2
-  e4 e e d d fis a,2 b4 b <e e,>1
+  e4 e e d d fis a,2 b4 b <e e,>1 \fermata
 }
 
 \score {
@@ -95,7 +95,7 @@ bass = \relative c {
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 150
+  \midi { \tempo 4 = 100
           \context {
             \Voice
             \remove "Dynamic_performer"

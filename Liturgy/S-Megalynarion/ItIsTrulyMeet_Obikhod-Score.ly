@@ -2,10 +2,10 @@
 
 \header {
   title = "Megalynarion"
-  subtitle = ""
-  subsubtitle = ""
+  subtitle = "It is Truly Meet"
+  subsubtitle = "For Normal Sundays"
   composer = "Obikhod"
-  arranger = "John Szwast"
+  arranger = ""
   copyright = "This arrangement is free to distribute for Liturgical use"
   tagline = ""
 }
