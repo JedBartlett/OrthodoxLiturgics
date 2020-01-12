@@ -6,16 +6,16 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 9/4 % Not used, Time_signature_engraver is removed from layout
-  \key g \major
+  \time 6/4 % Not used, Time_signature_engraver is removed from layout
+  \key f \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode {          And to thy spir -- it }
-soprano = \relative c'' { \global g4  g  g   fis2    g1 \bar "|." }
-alto    = \relative c'  { \global d4  d  d   d2      d1 }
-tenor   = \relative c'  { \global b4  b  b   a2      b1 }
-bass    = \relative c'  { \global g4  g  g   d2      g1 }
+verseOne = \lyricmode {          A --         men. }
+soprano = \relative g' { \global a2( g4 f g2) a1  \bar "|." }
+alto    = \relative g' { \global f2( e4 d e2) f1 }
+tenor   = \relative c' { \global c2.(  a4 c2) c1 }
+bass    = \relative c  { \global f2( c4 d c2) f1 }
 
 \score {
   \new ChoirStaff <<
@@ -28,7 +28,7 @@ bass    = \relative c'  { \global g4  g  g   d2      g1 }
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \lyricText
+    } \lyricsto "soprano" \verseOne
 
     \new Staff \with {
       midiInstrument = "choir aahs"
@@ -49,7 +49,7 @@ bass    = \relative c'  { \global g4  g  g   d2      g1 }
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 120
+  \midi { \tempo 4 = 150
           \context {
             \Voice
             \remove "Dynamic_performer"

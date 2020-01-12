@@ -6,46 +6,57 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 4/4 % Not used, Time_signature_engraver is removed from layout
+  \time 1/4 % Not used, Time_signature_engraver is removed from layout
   \key f \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
 lyricText = \lyricmode {
-  Lord \recite "have mercy, Lord have mercy, Lord" have mer -- cy.
-  Fa -- ther, bless.
+  It is meet and right, \bar"|"
+  \recite "to worship the" Fa -- ther, \bar"|"
+  and the Son, \bar"|"
+  and the Ho -- ly Spir -- it: \bar"|"
+  \recite "the Tri-ni-ty, one in" es -- sence, \bar"|"
+  and un -- di -- vid -- ed
+}
+soprano = \relative g' {
+  \global % Leave these here for key to display
+  bes4 bes bes2 bes4 a2
+  a\breve a2 a
+  a4 a a2
+  a4 a g f g2 a
+  a\breve a2 a
+  a4 g f g2 a1 \bar"||"
 }
 
-soprano = \relative c'' {
+alto = \relative f' {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  a4 a\breve a4 a2 a4 \bar "|"
-  bes2 bes2 a1 \bar "|."
-}
-
-alto = \relative c' {
-  \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  f4 f\breve f4 f2 f4
-  d2 g f1
+  g4 g g2 g4 f2
+  f\breve f2 f
+  f4 f f2
+  f4 f e d e2 f
+  f\breve f2 f
+  f4 e d e2 f1
 }
 
 tenor = \relative c' {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  c4 c\breve c4 c2  c4
-  bes2 bes c1
+  d4 d d2 c4 c2
+  c\breve c2 c
+  c4 c c2
+  c4 c c a c2 c
+  c\breve c2 c
+  c4 c a c2 c1
 }
 
-bass = \relative c {
+bass = \relative d {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  f4 f\breve f4 f2 f4
-  d2 d <f f,>1
+  g4 g g2 c,4 f2
+  f\breve f2 f
+  f4 f f2
+  f4 f c d c2 f
+  f\breve f2 f
+  f4 c d c2 f1
 }
 
 \score {

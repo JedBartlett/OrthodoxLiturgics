@@ -6,16 +6,34 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 9/4 % Not used, Time_signature_engraver is removed from layout
-  \key g \major
+  \time 4/4 % Not used, Time_signature_engraver is removed from layout
+  \key f \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode {          And to thy spir -- it }
-soprano = \relative c'' { \global g4  g  g   fis2    g1 \bar "|." }
-alto    = \relative c'  { \global d4  d  d   d2      d1 }
-tenor   = \relative c'  { \global b4  b  b   a2      b1 }
-bass    = \relative c'  { \global g4  g  g   d2      g1 }
+lyricText = \lyricmode {
+  Lord, have mer -- cy.
+}
+
+soprano = \relative c'' {
+  \global % Leave these here for key to display
+  a4 a4 a2 a2 \bar "|."
+}
+
+alto = \relative c' {
+  \global % Leave these here for key to display
+  f4 f4 f2 f2
+}
+
+tenor = \relative c' {
+  \global % Leave these here for key to display
+  c4 c4 c2 c2
+}
+
+bass = \relative c {
+  \global % Leave these here for key to display
+  f4 f4 f2 f2
+}
 
 \score {
   \new ChoirStaff <<
@@ -33,10 +51,10 @@ bass    = \relative c'  { \global g4  g  g   d2      g1 }
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { T B }
-    } <<
-      \clef bass
-      \new Voice = "tenor" { \voiceOne \tenor }
-      \new Voice = "bass" { \voiceTwo \bass }
+      } <<
+        \clef bass
+        \new Voice = "tenor" { \voiceOne \tenor }
+        \new Voice = "bass" { \voiceTwo \bass }
     >>
   >>
   \layout {
@@ -49,7 +67,7 @@ bass    = \relative c'  { \global g4  g  g   d2      g1 }
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 120
+  \midi { \tempo 4 = 150
           \context {
             \Voice
             \remove "Dynamic_performer"

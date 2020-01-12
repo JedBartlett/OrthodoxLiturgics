@@ -6,16 +6,16 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 9/4 % Not used, Time_signature_engraver is removed from layout
-  \key g \major
+  \time 1/4 % Not used, Time_signature_engraver is removed from layout
+  \key f \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode {          And to thy spir -- it }
-soprano = \relative c'' { \global g4  g  g   fis2    g1 \bar "|." }
-alto    = \relative c'  { \global d4  d  d   d2      d1 }
-tenor   = \relative c'  { \global b4  b  b   a2      b1 }
-bass    = \relative c'  { \global g4  g  g   d2      g1 }
+lyricText = \lyricmode { \recite"Most Holy Theotokos," save us! }
+soprano = \relative f' { \global a\breve               bes2 a \bar "||"}
+alto    = \relative d' { \global f\breve               g2   f }
+tenor   = \relative c' { \global c\breve               c2   c }
+bass    = \relative c  { \global f\breve               c2   <f f,> }
 
 \score {
   \new ChoirStaff <<
@@ -49,7 +49,7 @@ bass    = \relative c'  { \global g4  g  g   d2      g1 }
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 120
+  \midi { \tempo 4 = 250
           \context {
             \Voice
             \remove "Dynamic_performer"

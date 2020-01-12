@@ -6,16 +6,16 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 8/4 % Not used, Time_signature_engraver is removed from layout
+  \time 6/4 % Not used, Time_signature_engraver is removed from layout
   \key f \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
 verseOne = \lyricmode {          A -- men. }
-soprano = \relative g' { \global a1   a  \bar "|."}
-alto    = \relative g' { \global f1   f }
-tenor   = \relative c' { \global c1   c }
-bass    = \relative c  { \global f1   f }
+soprano = \relative g' { \global a2   a1  \bar "|." }
+alto    = \relative g' { \global f2   f1 }
+tenor   = \relative c' { \global c2   c1 }
+bass    = \relative c  { \global f2   f1 }
 
 \score {
   \new ChoirStaff <<
@@ -49,7 +49,7 @@ bass    = \relative c  { \global f1   f }
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 300
+  \midi { \tempo 4 = 200
           \context {
             \Voice
             \remove "Dynamic_performer"
