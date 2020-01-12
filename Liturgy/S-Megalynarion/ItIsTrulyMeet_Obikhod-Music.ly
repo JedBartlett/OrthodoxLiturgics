@@ -52,7 +52,7 @@
 			ev -- er bles -- sed and most pure, and the Moth -- er of our God.
 			More hon -- 'ra -- ble than the Cher -- u -- bim,
 			and more glo -- ri -- ous be -- yond com -- pare than the Ser -- a -- phim,
-			with -- out de -- file -- ment thou gav -- est birth to God the Word:
+			with -- out cor -- rup -- tion thou gav -- est birth to God the Word:
 			true The -- o -- to -- kos we mag -- ni -- fy thee.
 		}
 		\context Staff = men
