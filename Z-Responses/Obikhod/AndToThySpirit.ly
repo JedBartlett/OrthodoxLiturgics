@@ -12,10 +12,10 @@ global = {
 }
 
 lyricText = \lyricmode {          And to thy Spi -- rit. }
-soprano = \relative c'' { \global a4  a   a  a2     a1 \bar "||" }
+soprano = \relative c'' { \global a4  a   a  a2     a1 \fermata \bar "||" }
 alto    = \relative c'  { \global f4  f   f  f2     f1 }
 tenor   = \relative c'  { \global c4  c   c  c2     c1 }
-bass    = \relative c   { \global f4  f   f  f2     f1 }
+bass    = \relative c   { \global f4  f   f  f2     f1 \fermata }
 
 \score {
   \new ChoirStaff <<

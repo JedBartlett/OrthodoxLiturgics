@@ -12,10 +12,10 @@ global = {
 }
 
 verseOne = \lyricmode {          A -- men. }
-soprano = \relative g' { \global a2   a1  \bar "|." }
+soprano = \relative g' { \global a2   a1 \fermata  \bar "|." }
 alto    = \relative g' { \global f2   f1 }
 tenor   = \relative c' { \global c2   c1 }
-bass    = \relative c  { \global f2   f1 }
+bass    = \relative c  { \global f2   f1 \fermata }
 
 \score {
   \new ChoirStaff <<
