@@ -52,7 +52,7 @@ bass = \relative c {
   f\breve c1 f2 \fermata
   f\breve c2 f\fermata
   f4 f f2 f4 f( bes,) ees2 \fermata
-  c\breve f2 f4 f2
+  c\breve f2 f4 f2 \fermata
   f4 f bes,4 ees2( d ees) bes1 \fermata
 }
 
