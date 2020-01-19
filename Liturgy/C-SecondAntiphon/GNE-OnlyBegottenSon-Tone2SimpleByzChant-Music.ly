@@ -28,9 +28,9 @@ melody = \relative c' {
   \override TextSpanner.bound-details.left.text = "rit."
   \global % Leave these here for key to display
   e4( f) g g aes g g g b aes aes g g f f2 e1  \bar "|"
-  f4 d e f f( g) g2 g4 g fis g aes( b) b1 \bar "|"
+  f4 d e f f( g) g2 g4 g fis g aes( b) \parenthesize b1 \bar "|"
   b4 b c c b aes aes2 g4 g b aes g f f2 e1 \bar "|"
-  d4 e f g f e( f) g1 \bar "|"
+  d4 e f g f e( f) \parenthesize g1 \bar "|"
   f4 g aes g g aes b( c b) aes g1 \bar "|"
   g4 b aes g( f) e2. d4 c1 \bar "|"
   g'4 g aes2 g4 aes b c b aes g1 \bar "|"
@@ -44,8 +44,8 @@ ison = \relative c' {
    c\breve s\breve s1
    c\breve s\breve s2
    r2 c\breve s\breve s2
-   d4 c1 c2 g'1
-   g\breve s1.
+   d4 c1 c2 s1
+   g'\breve s1.
    g4 c,\breve s1
    g'\breve s1.
    g\breve s\breve s1
