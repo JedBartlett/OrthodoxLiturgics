@@ -22,24 +22,26 @@ hymnLyrics = \lyricmode {
 
 soprano = \relative g' {
   \global % Leave these here for key to display
-  f4.( g8) bes4 a a f8( g) g2
+  % Ritardando spanning several notes use '\startTextSpan' and \stopTextSpan
+  \override TextSpanner.bound-details.left.text = "rit."
+  f4.\mp( g8) bes4 a a\> f8( g)\! g2\pp
 
-  c,8( f) f( e) f4. f8 g4 f8( g) a2
+  c,8( f) f( e) f4. f8 g4\< f8( g)\! a2\mp
 
   \set Timing.measureLength = #(ly:make-moment 8/4)
-  a4. g8 bes4 a a f8 g g2
+  a4. g8 bes4 a\> a\!\pp f8 g g2
 
   \set Timing.measureLength = #(ly:make-moment 6/4)
-  c,8( f) f(e) f4. f8 g4 f8( g)
+  c,8\p( f) f(e) f4.\< f8 g4 f8( g)
 
   \set Timing.measureLength = #(ly:make-moment 4/4)
-  a4 bes8( c) d4 c c f,8( g) g2 \break
+  a4 bes8( c) d4\f c c\> f,8( g)\! g2\p \break
 
    \set Timing.measureLength = #(ly:make-moment 10/4)
-  f8( a) g8 bes a4  a8 bes c4. c8 c4 f,8( g) g2
+  f8\mp\<( a) g8 bes a4  a8 bes\! c4.\ff c8 c4\> f,8( g)\! g2\mp
 
   \set Timing.measureLength = #(ly:make-moment 4/4)
-  c,8( f) f( e) f2 c8( f) f e f2
+  c,8\pp\startTextSpan( f) f( e) f2 c8( f) f\> e\! f2\ppp\stopTextSpan
 }
 
 alto = \relative f' {

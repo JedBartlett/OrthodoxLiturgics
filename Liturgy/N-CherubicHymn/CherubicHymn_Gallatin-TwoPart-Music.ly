@@ -24,7 +24,9 @@ hymnLyrics = \lyricmode {
 
 melody = \relative f' {
   \global % Leave these here for key to display
-  f4.( g8) bes4 a a f8( g) g2
+  % Ritardando spanning several notes use '\startTextSpan' and \stopTextSpan
+  \override TextSpanner.bound-details.left.text = "rit."
+  f4.\mp( g8) bes4 a a f8( g) g2
 
   c,8( f) f( e) f4. f8 g4 f8( g) a2
 
@@ -41,7 +43,7 @@ melody = \relative f' {
   f8( a) g8 bes a4  a8 bes c4. c8 c4 f,8( g) g2
 
   \set Timing.measureLength = #(ly:make-moment 4/4)
-  c,8( f) f( e) f2 c8( f) f e f2
+  c,8\startTextSpan( f) f( e) f2 c8( f) f e f2\stopTextSpan
 }
 
 
