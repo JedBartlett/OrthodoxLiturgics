@@ -7,7 +7,7 @@ global = {
 
 lyrtxt  = \lyricmode           { To    Thee,       O       Lord. }
 soprano = \relative f' { \global a4    bes2        bes2    a1 \fermata \bar "|." }
-alto    = \relative d' { \global f4    f2          f2      f1 }
+alto    = \relative d' { \global f4    f2          e2      f1 }
 tenor   = \relative c' { \global c4    d2          c2      c1 }
 bass    = \relative c  { \global f4    <bes bes,>2 <g c,>2 f1 \fermata }
 

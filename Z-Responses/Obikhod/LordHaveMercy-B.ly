@@ -11,42 +11,11 @@ global = {
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode {
-  Lord \recite "have mercy, Lord have mercy, Lord" have mer -- cy.
-  Fa -- ther, bless.
-}
-
-soprano = \relative c'' {
-  \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  a4 a\breve a4 g2^"rit." a4 \bar "|"
-  bes2. bes4 a2 \fermata \bar "|."
-}
-
-alto = \relative c' {
-  \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  f4 f\breve f4 e2 f4
-  d2( e4) g4 f2
-}
-
-tenor = \relative c' {
-  \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  c4 c\breve c4 c2  c4
-  d2( c4) c4 c2
-}
-
-bass = \relative c {
-  \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  f4 f\breve f4 c2 f4
-  d2( c4) c4 <f f,>2 \fermata
-}
+lyricText = \lyricmode {         Lord, have mer -- cy. }
+soprano = \relative g' { \global a4     a4   g2     a2 \bar "|." }
+alto    = \relative c' { \global f4     f4   e2     f2 }
+tenor   = \relative c' { \global c4     c4   c2     c2 }
+bass    = \relative c  { \global f4     f4   c2     f2 }
 
 \score {
   \new ChoirStaff <<

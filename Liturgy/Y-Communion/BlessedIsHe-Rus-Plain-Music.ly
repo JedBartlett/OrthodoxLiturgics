@@ -6,46 +6,42 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 4/4 % Not used, Time_signature_engraver is removed from layout
+  \time 14/4 % Not used, Time_signature_engraver is removed from layout
   \key f \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode {
-  Lord \recite "have mercy, Lord have mercy, Lord" have mer -- cy.
-  Fa -- ther, bless.
+lyrtxt = \lyricmode {
+  \recite"" name of the Lord! \bar"|" % Positioned text in melody goes at recited quote
+  \recite"" Him -- self to us!
 }
 
-soprano = \relative c'' {
+soprano = \relative g' {
   \global % Leave these here for key to display
   \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  a4 a\breve a4 g2^"rit." a4 \bar "|"
-  bes2. bes4 a2 \fermata \bar "|."
+  a\breve_\markup{\hspace #2 \column{ \line{Blessed is He}
+                                      \line{that comes in the}}} a2 a4 a4 a1 \fermata
+  a\breve_\markup{\hspace #2 \column{ \line{God is the Lord}
+                                      \line{and has revealed}}} a4 bes2 bes a1 \fermata \bar"||"
 }
 
-alto = \relative c' {
+alto = \relative g' {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  f4 f\breve f4 e2 f4
-  d2( e4) g4 f2
+  f\breve f2 f4 f4 f1
+  f\breve f4 f2( e) f1
 }
 
 tenor = \relative c' {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  c4 c\breve c4 c2  c4
-  d2( c4) c4 c2
+  c\breve c2 c4 c4 c1
+  c\breve c4 d2( c) c1
 }
+
 
 bass = \relative c {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  f4 f\breve f4 c2 f4
-  d2( c4) c4 <f f,>2 \fermata
+  f\breve f2 f4 f4 f1 \fermata
+  f\breve f4  <bes bes,>2 <g c,>2 <f f,>1 \fermata
 }
 
 \score {
@@ -59,15 +55,15 @@ bass = \relative c {
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \lyricText
+    } \lyricsto "soprano" \lyrtxt
 
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { T B }
-      } <<
-        \clef bass
-        \new Voice = "tenor" { \voiceOne \tenor }
-        \new Voice = "bass" { \voiceTwo \bass }
+    } <<
+      \clef bass
+      \new Voice = "tenor" { \voiceOne \tenor }
+      \new Voice = "bass" { \voiceTwo \bass }
     >>
   >>
   \layout {
@@ -80,7 +76,7 @@ bass = \relative c {
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 150
+  \midi { \tempo 4 = 200
           \context {
             \Voice
             \remove "Dynamic_performer"

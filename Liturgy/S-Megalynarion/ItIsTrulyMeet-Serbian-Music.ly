@@ -14,7 +14,7 @@ global = {
 verseOne = \lyricmode {
   It is tru -- ly meet to bless thee, \bar"|"
   O The -- o -- to -- kos, \bar"|"
-  e -- ver bles -- sed and most __ pure and the Mo -- ther of our God. \bar"||"
+  ev -- er bles -- sed and most __ pure and the Mo -- ther of our God. \bar"||"
   More hon -- 'ra -- ble than the Che -- ru -- bim, \bar"|"
   and more glo -- ri -- ous be -- yond com -- pare than the Se -- ra -- phim, \bar"|"
   with -- out de -- file -- ment thou ga -- vest birth to God __ the Word: \bar"|"
@@ -105,7 +105,7 @@ bass = \relative c {
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 150
+  \midi { \tempo 4 = 120
           \context {
             \Voice
             \remove "Dynamic_performer"

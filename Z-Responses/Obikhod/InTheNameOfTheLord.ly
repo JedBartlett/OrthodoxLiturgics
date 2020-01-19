@@ -11,29 +11,11 @@ global = {
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode {
-  Lord, have mer -- cy.
-}
-
-soprano = \relative c'' {
-  \global % Leave these here for key to display
-  a4 a4 a2 a2 \bar "|."
-}
-
-alto = \relative c' {
-  \global % Leave these here for key to display
-  f4 f4 f2 f2
-}
-
-tenor = \relative c' {
-  \global % Leave these here for key to display
-  c4 c4 c2 c2
-}
-
-bass = \relative c {
-  \global % Leave these here for key to display
-  f4 f4 f2 f2
-}
+lyricText = \lyricmode {         In   the  name of   the  Lord. }
+soprano = \relative g' { \global a4   a4   a2   a4   a4   a2 \bar "|." }
+alto    = \relative c' { \global f4   f4   f2   f4   f4   f2 }
+tenor   = \relative c' { \global c4   c4   c2   c4   c4   c2 }
+bass    = \relative c  { \global f4   f4   f2   f4   f4   f2 }
 
 \score {
   \new ChoirStaff <<

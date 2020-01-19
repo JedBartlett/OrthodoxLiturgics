@@ -6,46 +6,54 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 4/4 % Not used, Time_signature_engraver is removed from layout
-  \key f \major
+  \time 100/4 % Not used, Time_signature_engraver is removed from layout
+  \key ees \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode {
-  Lord \recite "have mercy, Lord have mercy, Lord" have mer -- cy.
-  Fa -- ther, bless.
+lyrtxt = \lyricmode {
+  \recite "We have seen the" true Light, \bar"|"
+  \recite "we have received the Heavenly" Spi -- rit,  \bar"|"
+  we have found the true Faith,  \bar"|"
+  \recite "Worshiping the Undivided" Tri -- ni -- ty, \bar"|"
+  for He hath saved us.
 }
 
-soprano = \relative c'' {
+soprano = \relative g' {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  a4 a\breve a4 g2^"rit." a4 \bar "|"
-  bes2. bes4 a2 \fermata \bar "|."
+  aes\breve c2( bes) aes2 \fermata
+  aes\breve g2 aes \fermata
+  aes4 aes aes2\accent aes4 aes2 g2 \fermata
+  g\breve aes2\accent aes4 aes2 \fermata
+  aes4^"rit." aes aes g2( aes g) f1\fermata \bar"|."
 }
 
-alto = \relative c' {
+alto = \relative g' {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  f4 f\breve f4 e2 f4
-  d2( e4) g4 f2
+  f\breve aes2( g) f
+  f\breve e2 f
+  f4 f f2 f4 f( d) ees2
+  e\breve f2 f4 f2
+  f4 f d ees2( f ees) d1
 }
 
 tenor = \relative c' {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  c4 c\breve c4 c2  c4
-  d2( c4) c4 c2
+  c\breve c1 c2
+  c\breve c2 c
+  c4 c c2 c4 c( bes) bes2
+  c\breve c2 c4 c2
+  c4 c bes bes1. bes1
 }
+
 
 bass = \relative c {
   \global % Leave these here for key to display
-  \textLengthOn
-  % Note that inserted text here ABOVE the lyrics noted above
-  f4 f\breve f4 c2 f4
-  d2( c4) c4 <f f,>2 \fermata
+  f\breve c1 f2 \fermata
+  f\breve c2 f\fermata
+  f4 f f2 f4 f( bes,) ees2 \fermata
+  c\breve f2 f4 f2
+  f4 f bes,4 ees2( d ees) bes1 \fermata
 }
 
 \score {
@@ -59,15 +67,15 @@ bass = \relative c {
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \lyricText
+    } \lyricsto "soprano" \lyrtxt
 
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { T B }
-      } <<
-        \clef bass
-        \new Voice = "tenor" { \voiceOne \tenor }
-        \new Voice = "bass" { \voiceTwo \bass }
+    } <<
+      \clef bass
+      \new Voice = "tenor" { \voiceOne \tenor }
+      \new Voice = "bass" { \voiceTwo \bass }
     >>
   >>
   \layout {
@@ -80,7 +88,7 @@ bass = \relative c {
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 150
+  \midi { \tempo 4 = 200
           \context {
             \Voice
             \remove "Dynamic_performer"
