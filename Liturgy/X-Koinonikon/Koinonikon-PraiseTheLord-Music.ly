@@ -15,7 +15,7 @@ verseOne = \lyricmode {
 verseTwo = \lyricmode {
   Praise __ ye Him,
   O __ praise ye Him
-  in the high -- est.
+  in the high -- est,
   in the high -- est.
 }
 
@@ -101,6 +101,6 @@ bass = \relative c {
 }
 
 \markup{\larger Verses:}
-\markup{\hspace#4 1. Praise Him, all ye angels; praise Him all ye hosts }
-\markup{\hspace#4 2. Praise Him, O sun and moon; praise Him all ye stars and lights }
-\markup{\hspace#4 3. Praise Him, ye heavens of heavens and thou water that art above the heavens }
+\markup{\hspace#4 1. Praise Him, all ye angels; praise Him all ye hosts. }
+\markup{\hspace#4 2. Praise Him, O sun and moon; praise Him all ye stars and lights. }
+\markup{\hspace#4 3. Praise Him, ye heavens of heavens and thou water that art above the heavens. }
