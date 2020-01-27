@@ -161,7 +161,7 @@ As celebrated on most Sundays which are not Feast days}
 
 \centeredsection{Apolytikia}
 \instruction{Again, sing the Apolytikia in the order appointed for the day.}
-\cleardoublepage
+\clearpage
 \begin{variables}{timberwolf}
 \needspace{20\baselineskip}
 \centeredsubsection{Tone - 1}
@@ -604,24 +604,28 @@ As celebrated on most Sundays which are not Feast days}
 \instruction{This pre-communion hymn is often replaced as prescribed}
 \lilypondfile{./Liturgy/W-PreCommunionPrayers/PraiseTheLord-Rus-Plain-Music.ly}
 
-\centeredsection{Pre-Communion Prayers}
+\centeredsection{Pre-Communion Prayers \& Koinonikon}
 \instruction{Recited together as a congregation}
 
 \input{Common/PreCommunionPrayer.txt}
 
-\centeredsection{Koinonikon}
+\vspace{12pt}
+
+\instruction{Koinonikon Hymns are sung while the lamb is prepared.}
+
+\clearpage
 \begin{variables}{timberwolf}
-\instruction{Hymns are sung while the lamb is prepared.}
 \centeredsubsection{1 - For Usual Sundays}
 \lilypondfile{./Liturgy/X-Koinonikon/Koinonikon-PraiseTheLord-Music.ly}
 \centeredsubsection{2 - Partial Polyeleos (Psalm 135) from Festal Orthros}
-\lilypondfile{./Liturgy/X-Koinonikon/OGiveThanksToTheLord-Music.ly}
+\lilypondfile{./Liturgy/X-Koinonikon/Kiononikon-OGiveThanksToTheLord-Music.ly}
 \centeredsubsection{3 - The Lord is My Shepherd (Psalm 33)}
-\lilypondfile{./Liturgy/X-Koinonikon/TheLordIsMyShepherd-RusT8-Music.ly}
+\lilypondfile{./Liturgy/X-Koinonikon/Kiononikon-TheLordIsMyShepherd-RusT8-Music.ly}
 \centeredsubsection{4 - Praise be the Name of the Lord}
 \lilypondfile{./Liturgy/X-Koinonikon/Koinonikon-PraiseYetheNameOftheLord-Music.ly}
 \centeredsubsection{5 - Of Thy Mystical Supper}
 \lilypondfile{./Liturgy/X-Koinonikon/Koinonikon-OfThyMysticalSupper-Music.ly}
+\centeredsubsection{5 - A New Commandment}
 \end{variables}
 
 \centeredsection{Communion of the Faithful}
@@ -630,9 +634,6 @@ As celebrated on most Sundays which are not Feast days}
 
 \instruction{The priest communicates those who are prepared to receive
   the holy mysteries as the choir chants the communion hymn appointed for the day.}
-% This leaves the above hymn kind of orphaned,
-% but adding a clearpage here places the next 3 songs on opposing sheets.
-\clearpage
 
 \instruction{Once the communion hymn is completed (or if there is none appointed for the day),
   the choir will begin singing each of the "Receive the Body" settings below,
@@ -642,18 +643,20 @@ As celebrated on most Sundays which are not Feast days}
   the Alleluarion matching the setting to conclude the communion of the faithful.}
 
 \begin{center}
-\needspace{5\baselineskip}
+\needspace{10\baselineskip}
 1- Moscow Chant
 \lilypondfile{./Liturgy/Y-Communion/ReceiveTheBody-MoscowChant-Music.ly}
 
-\needspace{5\baselineskip}
+\needspace{10\baselineskip}
 2- Kovalevsky
 \lilypondfile{./Liturgy/Y-Communion/ReceiveTheBody-Kovalevsky-Music.ly}
 
-\needspace{5\baselineskip}
+\needspace{10\baselineskip}
 3- Alaskan Melody
 \lilypondfile{./Liturgy/Y-Communion/ReceiveTheBody-Alaskan-Music.ly}
 \end{center}
+
+Verses recited between hymns
 
 \centeredsection{After Communion}
 
