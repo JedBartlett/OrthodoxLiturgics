@@ -5,7 +5,7 @@ global = {
   \key f \major
 }
 
-lyrtxt  = \lyricmode           { A     --                   men }
+lyrtxt  = \lyricmode           { A     --                   men. }
 soprano = \relative f' { \global a2(   bes2        bes2)    a1 \fermata \bar "|." }
 alto    = \relative d' { \global f2(   f2          e2)      f1 }
 tenor   = \relative c' { \global c2(   d2          c2)      c1 }

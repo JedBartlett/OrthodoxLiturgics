@@ -12,7 +12,7 @@ global = {
 }
 
 lyricText = \lyricmode {
-  To Thee, O Lord
+  To Thee, O Lord.
 }
 
 soprano = \relative f' {

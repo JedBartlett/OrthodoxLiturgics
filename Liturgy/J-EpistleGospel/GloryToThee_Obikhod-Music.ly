@@ -11,7 +11,7 @@ global = {
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode {          Glo -- ry \recite"to Thee, O Lord," glo -- ry   to  Thee}
+lyricText = \lyricmode {          Glo -- ry \recite"to Thee, O Lord," glo -- ry   to  Thee.}
 soprano = \relative c'' { \global a4     a   \parenthesize a1         bes2   bes4 bes a1 \bar "||" }
 alto    = \relative c'  { \global f4     f   \parenthesize f1         f2     e4   e   f1 }
 tenor   = \relative c'  { \global c4     c   \parenthesize c1         d2     c4   c   c1 }

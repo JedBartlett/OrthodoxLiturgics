@@ -11,7 +11,7 @@ global = {
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode {Lord have mer -- cy }
+lyricText = \lyricmode {Lord have mer -- cy. }
 
 soprano = \relative f'  {\global f4. g8 a4( g)   f2      \bar "|."}
 alto    = \relative c'  {\global c4. e8 f4( e)   c2 }

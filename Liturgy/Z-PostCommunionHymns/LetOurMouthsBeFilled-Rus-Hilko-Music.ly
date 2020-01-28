@@ -21,7 +21,7 @@ lyrtxt = \lyricmode {
   Es -- tab -- lish \recite""fi -- ca -- tion, \bar"|"
   \recite"" Thy right -- eous -- ness. \bar"|"
   \recite"" ia! \bar"|"
-  Al -- le -- lu -- ia
+  Al -- le -- lu -- ia.
 }
 
 soprano = \relative g' {
@@ -41,7 +41,7 @@ soprano = \relative g' {
                             \line{we may meditate upon}}} a4\accent bes2 bes4 bes2
   bes\breve _\markup{\column{ \line{Alleluia!}
                              \line{Allelu-}}} bes4^"rit."
-  a2.\accent a4 bes2\accent( a\accent) g1 \fermata
+  a2.\accent a4 bes2\accent( a\accent) g1 \fermata \bar "|."
 }
 
 alto = \relative g' {

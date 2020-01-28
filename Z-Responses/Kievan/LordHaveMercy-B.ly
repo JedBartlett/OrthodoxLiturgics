@@ -12,7 +12,7 @@ global = {
 }
 
 lyricText = \lyricmode {
-  Lord, have mer -- cy
+  Lord, have mer -- cy.
 }
 
 soprano = \relative f' {

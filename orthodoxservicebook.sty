@@ -1,5 +1,6 @@
 \ProvidesPackage{orthodoxservicebook}
 
+\RequirePackage{verbatim} % For including the Lord's prayer etc.. as verse
 \RequirePackage{graphicx}
 \graphicspath{ {./Images/} {../Images}}
 
@@ -29,8 +30,6 @@
 % https://tex.stackexchange.com/questions/126155/how-to-set-colored-ruled-margins-for-some-pages
 \RequirePackage{tikz} % Drawing stuff
 \usetikzlibrary{calc}
-
-
 \newenvironment{variables}[1]
 {
   \fancypagestyle{variables}{%
@@ -152,6 +151,9 @@
 \newenvironment{maybetwocolumns}
 {\ifdim \textwidth > 7in \begin{multicols}{2}\fi}
 {\ifdim \textwidth > 7in \end{multicols}\fi}
+
+% Provide a nice lilypond command for indented choral response
+\newcommand\choralresponse[1]{\lilypondfile[max-protrusion=-0.4in, staffsize=17]{#1}}
 
 % Commonly used liturgical phrases
 \newcommand\thrice{\instruction{(3x)}}

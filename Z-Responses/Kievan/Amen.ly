@@ -12,7 +12,7 @@ global = {
 }
 
 lyricText = \lyricmode {
-  A -- men
+  A -- men.
 }
 
 soprano = \relative f' {

@@ -16,7 +16,7 @@ verseOne = \lyricmode {
   ev -- er \recite"bless-ed and most pure" and the moth -- er of our God, \bar"|"
   more hon' -- ra -- ble than the Cher -- u bim, \bar"|"
   and more \recite"glorious beyond compare" than the Ser -- a -- phim. \bar"|"
-  With -- out cor -- rup- \recite"tion thou gavest" birth to God the Word: \bar"|"
+  With -- out cor -- rup- \recite"tion thou gavest" birth to God __ the Word: \bar"|"
   true The -- o -- to -- kos we mag -- ni -- fy thee!
 }
 

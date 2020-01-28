@@ -12,7 +12,7 @@ global = {
 }
 
 lyricText = \lyricmode {
-  And to Thy spir -- it
+  And to Thy spir -- it.
 }
 
 soprano = \relative f' {

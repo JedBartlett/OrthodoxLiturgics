@@ -1,21 +1,16 @@
 \version "2.18.2"
 
-% Provide an easy way to group a bunch of text together on a breve
-% http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
-recite = \once \override LyricText.self-alignment-X = #-1
-
-\defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 9/4 % Not used, Time_signature_engraver is removed from layout
+  \time 4/4 % Not used, Time_signature_engraver is removed from layout
   \key g \major
-  \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-lyricText = \lyricmode  {         A -- men. }
-soprano = \relative c'  { \global fis1 g \bar "|." }
-alto    = \relative c'  { \global d1   d }
-tenor   = \relative a   { \global a1   b }
-bass    = \relative f   { \global d1   <g g,> }
+lyrtxt  = \lyricmode  {                     And all         man --     kind. }
+soprano = \relative g' { \global \partial 4 e4  a4.( b8)\acciaccatura { b16 a }
+                                                           g4( fis)   e1 \fermata \bar"|." }
+alto    = \relative g' { \global \partial 4 e4  d2         d2         b1}
+tenor   = \relative c' { \global \partial 4 g4  c2         b4( a)     g1}
+bass    = \relative c  { \global \partial 4 e4  d2         d         <e e,>1\fermata }
 
 \score {
   \new ChoirStaff <<
@@ -28,7 +23,7 @@ bass    = \relative f   { \global d1   <g g,> }
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \lyricText
+    } \lyricsto "soprano" \lyrtxt
 
     \new Staff \with {
       midiInstrument = "choir aahs"
@@ -49,7 +44,7 @@ bass    = \relative f   { \global d1   <g g,> }
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 200
+  \midi { \tempo 4 = 150
           \context {
             \Voice
             \remove "Dynamic_performer"

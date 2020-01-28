@@ -11,7 +11,7 @@ global = {
 }
 
 verseOne = \lyricmode {
-  Al -- le -- lu -- ia, Al -- le -- lu -- ia, Al -- le -- lu -- ia
+  Al -- le -- lu -- ia, Al -- le -- lu -- ia, Al -- le -- lu -- ia.
 }
 
 soprano = \relative g' {

@@ -8,9 +8,9 @@ global = {
 Soprano = \relative f'{ \global fis2  fis2  g4(a)  a2   b2    b4  a    cis4  b  a2     b4(a)  a( g) g(fis2.) \bar "|."}
 Alto    = \relative d'{ \global d2    d     e4 fis fis2 g2    g4  fis  a4    g  fis2   g4(fis) fis(e) e(d2.) }
 
-English = \lyricmode  {         Lord  have  mer -- cy;  Lord  ha- ve   mer -- _ cy;    Lord   have   mercy   }
-Arabic  = \lyricmode  {         Ya    rub   bur -- ham, Ya    ru- b    bur -- _ ham,   Ya     rub    burham  }
-Greek   = \lyricmode  {         Kyrie El -- ei --  son, Ky -- rie E -- le -- i -- son, Kyrie  El --  eison   }
+English = \lyricmode  {         Lord  have  mer -- cy;  Lord  ha- ve   mer -- _ cy;    Lord   have   mercy.   }
+Arabic  = \lyricmode  {         Ya    rub   bur -- ham, Ya    ru- b    bur -- _ ham,   Ya     rub    burham.  }
+Greek   = \lyricmode  {         Kyrie El -- ei --  son, Ky -- rie E -- le -- i -- son, Kyrie  El --  eison.   }
 
 Tenor   = \relative d { \global d2    d     d      d    g     g4  d    g2       d      g4(d)  d4 <d a> <d a> (d2.)  }
 Bass    = \relative d,{ \global d2    d     d      d    g     g4  d    g2       d      g4(d)  d(a')   a(d,2.) }
