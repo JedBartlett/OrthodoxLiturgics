@@ -53,5 +53,5 @@ verse = \lyricmode {
   } { \sopranoVoice }
   \addlyrics { \verse }
   \layout { }
-  \midi { }
+  \midi {\tempo 4 = 200 }
 }

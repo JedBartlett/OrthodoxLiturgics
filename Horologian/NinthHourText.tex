@@ -1,0 +1,244 @@
+% !TeX root = ../8-NinthHourSaturday.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2019
+% This document contains the ninth hour prayers layout as LaTeX commands.
+% This allows the command to me modified depending on the day provided
+% as an argument, (FUTURE) inserting the appropriate psalms for the day.
+%
+% The closing content is provided as a separate command, so that it can
+% be optionally included.
+%
+% The TEX commands in this document require the orthodoxservicebook.sty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\NinthHourContent}[1]{
+\instruction{#1 - Plain Reading}
+% TODO - Pull in the proper content based on the day of week argument
+
+\priestline{Glory to Thee, O God \thrice}
+
+\priestline{Blessed is our God always, now and ever, and unto ages of ages.}
+
+\readerline{Amen.}
+
+\instruction{Exclude from Pascha to Pentecost}
+\begin{priest}
+\item Glory to Thee, our God. Glory to Thee.
+\item \input{./Common/OheavenlyKing.txt}
+\end{priest}
+
+\instruction{From Pascha to Ascension - CHANT
+\emph{``Christ is risen from the dead, trampling down death by death,
+and upon those in the tombs, bestowing life.''}
+(3x), and then SKIP the first line
+\emph{``Holy God, Holy Mighty, Holy Immortal: have mercy on us. \thrice''}}
+
+\centeredsection{The Trisagion Prayers}
+\input{./Common/TrisagionPrayerRecited-NeedsAmen.tex}
+
+\begin{reader}
+\item Amen.
+\item Lord, have mercy. \twelve
+\item Glory to the Father, and to the Son, and to the Holy Spirit;
+  both now and ever, 
+  and unto ages of ages. Amen.
+
+\item O come, let us worship and fall down before God our King.\\
+  O come, let us worship and fall down before Christ, our King and our God.\\
+  O come, let us worship and fall down before the Very Christ, our King and our God.
+\end{reader}
+\begin{maybetwocolumns}
+\squashedcenteredsection{Psalm 83} 
+\input{./Psalms/Psalm083-unknwntrans.txt}
+
+\squashedcenteredsection{Psalm 84}
+\input{./Psalms/Psalm084-unknwntrans.txt}
+
+\squashedcenteredsection{Psalm 85}
+\input{./Psalms/Psalm085-unknwntrans.txt}
+
+\needspace{2\baselineskip}
+\instruction{And again:}
+
+Work unto me a sign unto good, and let them that hate me behold and be put to shame;
+for Thou, O Lord, hast holpen me and comforted me.
+
+\end{maybetwocolumns}
+
+\begin{reader}
+  \item \gne
+  \item Alleluia. Alleluia. Alleluia. Glory to Thee, O God. \thrice
+  \item \lhmThree
+  \item \glory
+\end{reader}
+
+\begin{maybetwocolumns}
+\centeredsection{Apolytikion}
+O ye apostles, martyrs and prophets, hierarchs,
+venerable and righteous ones, who have 
+finished well the contest and guarded the faith:
+Beseech, we pray, since ye have boldness 
+before the Savior who is good, that He may save our souls.
+
+\readerline{\nowandever}
+
+\centeredsection{Theotokion}
+
+Thou who for our sake wast born of a virgin and didst suffer crucifixion,
+O good One, 
+and didst despoil death through death and as God didst reveal resurrection:
+Despise not those whom Thou hast created with Thine own hand;
+show forth Thy love for mankind,
+O merciful One; accept the intercession of Thy mother, the Theotokos,
+for us, and save Thy despairing people, O our Savior.
+
+\vbox{}
+Deliver us not up utterly, for Thy holy name’s sake,
+neither disannul Thou Thy covenant, 
+and cause not Thy mercy to depart from us,
+for Abraham’s sake, Thy beloved,
+and for Isaac’s sake, Thy servant,
+and for Israel’s, Thy holy one.
+\end{maybetwocolumns}
+
+\centeredsection{Trisagion}
+\input{Common/TrisagionPrayerRecited-NeedsAmen.tex}
+
+\readerline{Amen.}
+
+\begin{maybetwocolumns}
+\instruction{Only one of the following:}
+
+\centeredsection{(Not Lent) -- Kontakion}
+\instruction{Outside of Lent}
+
+Unto Thee, O Lord, the Author of creation, the universe doth offer the God-bearing
+martyrs as the first-fruits of nature. By whose prayers, through the Theotokos,
+do Thou preserve Thy Church in profound peace, O most merciful One.
+
+\centeredsection{(Lent) -- Kontakion}
+\instruction{During Lent}
+
+When the thief beheld the Author of life hanging upon the cross, he said:
+If Thou wert not God, who art here crucified with us,
+then had the sun not veiled its rays,
+neither would the earth have shaken with trembling.
+But do Thou, who sufferest for all men, remember me,
+O Lord, when Thou comest in Thy kingdom.
+
+\vbox{}
+Glory to the Father, and to the Son, and to the Holy Spirit.
+
+\vbox{}
+In the midst, between two thieves, was Thy cross found, the balance-beam of
+righteousness; for while the one was led down to hades by the heaviness of his
+blaspheming, the other was lightened of his sins,
+unto the knowledge of things divine, O Christ God, glory to Thee.
+
+\vbox{}
+Both now and ever, and unto ages of ages. Amen.
+
+\vbox{}
+When she who bore Thee beheld upon the cross Thee, the Lamb and Shepherd and Savior
+of the world, she weeping said: The world rejoiceth, in that it hath received redemption,
+but my inward parts are inflamed as I behold Thy crucifixion, which Thou sufferest for all
+men, O my Son and My God.
+
+\centeredsection{Prayer of the Hours}
+\readerline{\lhmForty}
+
+Thou who, at all times and at every hour, both in heaven and on earth art
+worshiped and glorified, O Christ God, long-suffering, plenteous in mercy
+and compassion, who lovest the just and showest mercy to sinners, who callest
+all men to salvation through the promise of good things to come: Do Thou, the
+same Lord, receive also our supplications at this present hour, and direct our
+lives according to Thy commandments. Sanctify our souls; purify our bodies;
+set aright our minds; cleanse our thoughts; and deliver us from all calamity,
+wrath and distress. Compass us round about with Thy holy Angels; that
+guided and guarded by their hosts, we may attain unto the unity of the faith,
+and unto the comprehension of Thine ineffable glory. For blessed art Thou unto
+ages of ages. Amen.
+\end{maybetwocolumns}
+
+% if the end of maybetwocolumns is to close to the bottom,
+% the below text may look like it's part of the first column instead of
+% reverting back to full page.
+\needspace{5\baselineskip}
+\begin{reader}
+\item \lhmThree
+\item \gne
+\item \input{Common/MoreHonorableThanTheCherubim.txt}
+\item Bless, father in the name of the Lord.
+\end{reader}
+
+\priestline{May God have compassion upon us and bless us;
+may He show the light of His countenance upon us and be merciful unto us.}
+
+\readerline{Amen.}
+
+\centeredsection{(Lent) -- The Prayer of Saint Ephraim the Syrian}
+\instruction{During Lent}
+\input{./Common/PrayerOfStEphraim.tex}
+
+\instruction{Then, twelve metanias are made saying each time:}
+\priestline{O God, be gracious unto me the sinner.}
+
+\instruction{The prayer of Saint Ephraim is said again with only one prostration
+  being made at the conclusion of it.}
+
+\vbox{}
+\input{Common/TrisagionPrayerRecited-NeedsAmen.tex}
+
+\begin{reader}
+\item Amen.
+\item \lhmTwelve
+\end{reader}
+
+\centeredsection{Prayer of St. Basil the Great}
+\begin{maybetwocolumns}
+O Master, Lord Jesus Christ our God, who art long-suffering toward our sins
+and who hast led us even to the present hour, in which, as Thou didst hang
+upon the life-giving tree Thou didst make a way into paradise for the penitent
+thief and by death didst destroy death: Be gracious unto us sinners and Thine
+unworthy servants; for we have sinned and dealt iniquitously, and we are not
+worthy to lift up our eyes and look upon the heights of heaven, inasmuch as
+we have departed from the path of Thy righteousness and have walked after the
+desires of our own hearts. But we implore of Thy boundless goodness: Spare
+us, O Lord, according to the multitude of Thy mercy, and save us, for Thy holy
+name’s sake; for our days have passed away in vanity. Wrest us out of the
+hand of the adversary, and forgive our sins, and mortify our carnal
+imagination, that, putting off the old man, we may be clothed upon with the
+new man and may live unto Thee, our Master and our Benefactor, and that, so
+following after Thy commandments, we may attain unto rest eternal, where is
+the abode of all those who rejoice. For Thou art, in verity, the true Joy and
+Exultation of those who love Thee, O Christ our God, and unto Thee we ascribe
+glory, together with Thine unoriginate Father and Thine all-holy and good and
+life-giving Spirit, now and ever, and unto ages of ages. Amen.
+\end{maybetwocolumns}
+}
+
+\newcommand{\NinthHourClosingContent}{
+% This is omitted when Vespers follows immediately.
+\priestline{Glory to Thee, O Christ our God and our Hope, glory to Thee.}
+
+\begin{reader}
+\item Glory to the Father and to the Son and to the Holy Spirit,
+  both now and ever, and unto ages of ages. Amen.
+\item \lhmThree
+\item Father, bless.
+\end{reader}
+
+\begin{priest}
+\item May Christ our true God,
+  through the intercessions of His all-immaculate and all-blameless holy Mother;
+  of the holy, glorious, and right-victorious martyrs;
+  of our venerable and God-bearing fathers; of the holy and righteous ancestors
+  of God, Joachim and Anna; of (N., saint of the day), whose memory we
+  celebrate and of all the saints: have mercy upon us, and save us,
+  forasmuch as He is good and loveth mankind.
+\item Through the prayers of our holy fathers, Lord Jesus Christ our God,
+  have mercy on us, and save us.
+\end{priest}
+
+\readerline{Amen.}
+}

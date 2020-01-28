@@ -1,0 +1,837 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2019
+% Liturgy of St. John Chrysostom for regular Sundays
+% Simple traditional Arabic chants through to the Trisagion,
+% and then switching to more choral for the remainder of the service.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside, letterpaper, 12pt]{report}
+\usepackage{orthodoxservicebook}
+\title{Divine Liturgy\\
+As celebrated on most Sundays which are not Feast days}
+
+\author{St. Katherine Orthodox Church}
+\date{}% Remove date
+\titlepic{\includegraphics[width=0.5\textwidth]{Katherine1.jpg}}
+
+\begin{document}
+\maketitle
+\pagestyle{empty}
+\instruction{This page intentionally left blank}
+\cleardoublepage
+\pagestyle{plain}
+
+\chapter*{Divine Liturgy}
+
+\centeredsection{Preparation and Opening Dialogue}
+
+\begin{maybetwocolumns}
+\footnotesize
+\begin{priest}
+\item \input{Common/OheavenlyKing.txt}
+\item Glory to God in the highest, and on earth peace, good will among men. \instruction{2x}
+\item O Lord, Thou shalt open my lips, and my mouth shall declare Thy praise.
+\end{priest}
+
+\deaconline{It is time for the Lord to act. Bless, father.}
+\priestline{Blessed is our God, always, now and ever, and unto ages of ages.}
+\deaconline{Amen. Pray for me, father.}
+\priestline{The Lord direct thy steps unto every good work.}
+\deaconline{Remember me, holy father.}
+\priestline{The Lord God remember thee in His kingdom, always, now and ever, and unto ages of ages.}
+\begin{deacon}
+\item Amen.
+\item O Lord, thou shalt open my lips, and my mouth shall declare Thy praise.
+\item Bless, father.
+\end{deacon}
+\normalsize
+\end{maybetwocolumns}
+
+\instruction{The preparation prayers completed, `blessed is the kingdom'
+  is proclaimed loudly, and signifies that preparations are complete,
+  and the service is now beginning.}
+\clearpage
+\priestline{Blessed is the kingdom of the Father and of the Son and of the Holy Spirit,
+   now and ever and unto ages of ages.}
+
+\choralresponse{./Z-Responses/Kazan/Amen.ly}
+
+% Want to ensure this pretty much starts on a new page.
+\needspace{17\baselineskip}
+
+\centeredsection{The Litany of Peace}
+\begin{maybetwocolumns}
+\deaconline{In peace, let us pray to the Lord.}
+\instruction{Repeat these responses until the last petition.}
+\choralresponse{./Z-Responses/Kazan/LordHaveMercy-A.ly}
+
+\deaconline{For the peace from above and the salvation of our souls, let us pray to the Lord.}
+\choralresponse{./Z-Responses/Kazan/LordHaveMercy-B.ly}
+
+\deaconline{For the peace of the whole world, the good estate of the holy churches of God
+  and the union of all men, plet us pray to the Lord.}
+\choralresponse{./Z-Responses/Kazan/LordHaveMercy-C.ly}
+
+\begin{deacon}
+\item For this Holy House, and for those who with faith, reverence,
+  and fear of God, enter therein,
+  let us pray to the Lord.
+\item For our father and Metropolitan N., (for our Archbishop N. or Bishop N.),
+  for the venerable Priesthood, the Diaconate in Christ, for all the clergy and the people,
+  let us pray to the Lord.
+\item For the President of the United States, for all civil authorities,
+  and for our Armed Forces everywhere, let us pray to the Lord.
+\item For this city, and for every city and land, and for the faithful who dwell therein,
+  let us pray to the Lord.
+\item For healthful seasons, for abundance of the fruits of the earth, and for peaceful times,
+  let us pray to the Lord.
+\item For travelers by sea, by land, and by air; for the sick and the suffering;
+  for captives and their salvation,
+  let us pray to the Lord.
+\item For our deliverance from all tribulation, wrath, danger, and necessity,
+  let us pray to the Lord.
+\item Help us; save us; have mercy on us; and keep us, O God, by Thy grace.
+\end{deacon}
+\choralresponse{./Z-Responses/Kazan/LordHaveMercy-Z.ly}
+
+\deaconline{Calling to remembrance our all-holy, immaculate, most blessed and glorious Lady the Theotokos\\
+  \instruction{(Recited quietly as the petitioner continues)}\\
+  \lilypondfile[staffsize=16]{./Z-Responses/Kazan/MostHolyTheotokosSaveUs.ly}\\
+  and ever-virgin Mary, with all the Saints: let us commend ourselves and each other,
+  and all our life unto Christ our God.
+}
+
+\choralresponse{./Z-Responses/Kazan/ToTheeOLord.ly}
+
+\needspace{5\baselineskip}
+\priestline{For unto Thee are due all glory, honor, and worship:
+  to the Father, and to the Son, and to the Holy Spirit; now and ever and unto ages of ages.}
+\choralresponse{./Z-Responses/Kazan/Amen.ly}
+
+\end{maybetwocolumns}
+
+\centeredsection{The First Antiphon}
+\lilypondfile{./Liturgy/B-FirstAntiphon/TheFirstAntiphon-Tone2SimpleByzChant-Music.ly}
+
+
+\centeredsection{The Little Litany}
+\begin{maybetwocolumns}
+\deaconline{Again and again, in peace, let us pray to the Lord.}
+\choralresponse{./Z-Responses/Kazan/LordHaveMercy-A.ly}
+
+\deaconline{Help us, save us, have mercy on us; and keep us, O God, by Thy grace.}
+\choralresponse{./Z-Responses/Kazan/LordHaveMercy-B.ly}
+
+\needspace{5\baselineskip}
+\deaconline{Calling to remembrance our all-holy, immaculate, most blessed and glorious Lady the Theotokos\\
+  \instruction{(Recited quietly as the petitioner continues)}\\
+  \lilypondfile[staffsize=16]{./Z-Responses/Kazan/MostHolyTheotokosSaveUs.ly}\\
+  and ever-virgin Mary, with all the Saints: let us commend ourselves and each other,
+  and all our life unto Christ our God.
+}
+
+\choralresponse{./Z-Responses/Kazan/ToTheeOLord.ly}
+
+\priestline{For Thine is the might, and Thine is the kingdom and the power and the glory
+  of the Father and of the Son and of the Holy Spirit, now and ever, and unto ages of ages.}
+
+\choralresponse{./Z-Responses/Kazan/Amen.ly}
+\end{maybetwocolumns}
+
+\centeredsection{The Second Antiphon}
+\lilypondfile{./Liturgy/C-SecondAntiphon/TheSecondAntiphon-Tone2SimpleByzChant-Music.ly}
+\needspace{10\baselineskip}
+\lilypondfile{./Liturgy/C-SecondAntiphon/GNE-OnlyBegottenSon-Tone2SimpleByzChant-Music.ly}
+
+\centeredsection{The Little Litany}
+\begin{maybetwocolumns}
+\deaconline{Again and again, in peace, let us pray to the Lord.}
+\choralresponse{./Z-Responses/Kazan/LordHaveMercy-A.ly}
+
+\deaconline{Help us, save us, have mercy on us; and keep us, O God, by Thy grace.}
+\choralresponse{./Z-Responses/Kazan/LordHaveMercy-B.ly}
+
+\needspace{5\baselineskip}
+\deaconline{Calling to remembrance our all-holy, immaculate, most blessed and glorious Lady the Theotokos\\
+  \instruction{(Recited quietly as the petitioner continues)}\\
+  \lilypondfile[staffsize=16]{./Z-Responses/Kazan/MostHolyTheotokosSaveUs.ly}\\
+  and ever-virgin Mary, with all the Saints: let us commend ourselves and each other,
+  and all our life unto Christ our God.
+}
+
+\choralresponse{./Z-Responses/Kazan/ToTheeOLord.ly}
+
+\priestline{For Thou art a good God and lovest mankind,
+  and unto thee we ascribe glory to the Father and to the Son and to the Holy Spirit,
+  now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/Kazan/Amen.ly}
+\end{maybetwocolumns}
+
+\centeredsection{Apolytikion}
+\instruction{Sing the Apolytikion appointed for the day as the 3rd antiphon before the entrance.}
+
+\centeredsection{The Little Entrance}
+\lilypondfile{./Liturgy/E-LittleEntrance/TheLittleEntrance-Tone2SimpleByzChant-Music.ly}
+
+\instruction{Again, sing the Apolytikia in the order appointed for the day.}
+\clearpage
+\begin{variables}{timberwolf}
+\needspace{20\baselineskip}
+\centeredsubsection{Tone - 1}
+\needspace{20\baselineskip}
+\lilypondfile{./Octoechos/ResurrectionalApolytikion-Tone1-Kazan-Music.ly}
+\needspace{20\baselineskip}
+\centeredsubsection{Tone - 2}
+\lilypondfile{./Octoechos/ResurrectionalApolytikion-Tone2-Kazan-Music.ly}
+\needspace{20\baselineskip}
+\centeredsubsection{Tone - 3}
+\lilypondfile{./Octoechos/ResurrectionalApolytikion-Tone3-Kazan-Music.ly}
+\needspace{20\baselineskip}
+\centeredsubsection{Tone - 4}
+\lilypondfile{./Octoechos/ResurrectionalApolytikion-Tone4-Kazan-Music.ly}
+\needspace{20\baselineskip}
+\centeredsubsection{Tone - 5}
+\lilypondfile{./Octoechos/ResurrectionalApolytikion-Tone5-Kazan-Music.ly}
+\needspace{20\baselineskip}
+\centeredsubsection{Tone - 6}
+\lilypondfile{./Octoechos/ResurrectionalApolytikion-Tone6-Kazan-Music.ly}
+\needspace{20\baselineskip}
+\centeredsubsection{Tone - 7}
+\lilypondfile{./Octoechos/ResurrectionalApolytikion-Tone7-Kazan-Music.ly}
+\needspace{20\baselineskip}
+\centeredsubsection{Tone - 8}
+\lilypondfile{./Octoechos/ResurrectionalApolytikion-Tone8-Kazan-Music.ly}
+\end{variables}
+
+\centeredsubsection{Apolytikion for Great-Martyr Katherine, the All-Wise of Alexandria}
+\instruction{On usual Sundays, one of the Apolytikia is that of the patron saint of the community.}
+\lilypondfile{./Menaion/11-25-StKatherine/Katherine-Trop_Tone5ByzChant-Music.ly}
+
+\needspace{25\baselineskip}
+\centeredsection{Kontakion}
+\instruction{Sing the Kontakion in the order appointed for the day. }
+
+\centeredsubsection{Kontakion to the Theotokos for Usual Sundays}
+\instruction{On usual Sundays, the Kontakion is the `O Protection of Christians' hymn to the Theotokos.}
+\lilypondfile{./Liturgy/H-Kontakion/OProtectionOfChristians_Tone2ByzChant-Music.ly}
+
+\centeredsection{The Prayer of the Thrice-Holy Hymn}
+\begin{maybetwocolumns}
+\deaconline{Let us pray to the Lord}
+\choralresponse{./Z-Responses/Kazan/LordHaveMercy-A.ly}
+
+\priestline{For holy art Thou, O our God, and unto Thee we ascribe glory
+  to the Father and to the Son and to the Holy Spirit, now and ever...}
+\deaconline{... and unto ages of ages.}
+
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+\end{maybetwocolumns}
+
+\centeredsection{The Thrice-Holy Hymn}
+\instruction{This may be replaced by the Baptismal or Hymn for the Cross as prescribed}
+\vspace{12pt}
+\lilypondfile{./Liturgy/I-ThriceHolyHymn/Trisagion_Arabic_a.ly}
+\deaconline{With Strength.}
+\lilypondfile{./Liturgy/I-ThriceHolyHymn/Trisagion_Arabic_b.ly}
+
+\cleardoublepage
+\begin{variables}{timberwolf}
+\centeredsection{Anti-Trisagion\\Baptismal Hymn}
+\instruction{Sung on certain days instead of the Thrice-Holy Hymn.}
+\vspace{5pt}
+\lilypondfile{./Liturgy/I-ThriceHolyHymn/AsManyAsHaveBeen-ByzPlain-a_Music.ly}
+\deaconline{With Strength.}
+\lilypondfile{./Liturgy/I-ThriceHolyHymn/AsManyAsHaveBeen-ByzPlain-b_Music.ly}
+\clearpage
+\centeredsection{Anti-Trisagion\\Before Thy Cross}
+\instruction{Sung on certain days instead of the Thrice-Holy Hymn.}
+\vspace{5pt}
+\lilypondfile{./Liturgy/I-ThriceHolyHymn/BeforeThyCross-Traditional_Music.ly}
+\end{variables}
+
+
+\centeredsection{The Readings from the New Testament}
+
+\instruction{The appointed reader prepares to read the prokeimenon, facing the Royal Doors.}
+
+\deaconline{Let us attend!}
+
+\readerline{\instruction{Announces the prokeimenon of the epistle.}}
+
+\deaconline{Wisdom.}
+
+\readerline{\instruction{Announces the title of the epistle.}}
+
+\deaconline{Let us attend!}
+
+\readerline{\instruction{Turns to face the people and chants the appointed epistle.}}
+
+\priestline{Peace be to thee that readest.}
+
+\readerline{And to thy spirit. \instruction{Receives blessing
+  and prepares to recite the alleluia verses while the choir sings:}}
+\lilypondfile{./Liturgy/J-EpistleGospel/Alleluarion-A_Alaska-Music.ly}
+
+\readerline{\instruction{Reads first Alleluia verse.}}
+\lilypondfile{./Liturgy/J-EpistleGospel/Alleluarion-B_Alaska-Music.ly}
+
+\readerline{\instruction{Reads second Alleluia verse and returns to the congregation.}}
+\lilypondfile{./Liturgy/J-EpistleGospel/Alleluarion-C_Alaska-Music.ly}
+
+\deaconline{Wisdom. Stand upright. Let us hear the holy gospel.}
+\priestline{Peace be to all.}
+\choralresponse{./Z-Responses/Obikhod/AndToThySpirit.ly}
+
+\deaconline{The reading from the holy gospel according to \instruction{N.}}
+\choralresponse{./Liturgy/J-EpistleGospel/GloryToThee_Obikhod-Music.ly}
+
+\deaconline{Let us attend. \instruction{Chant the appointed lection}}
+
+\choralresponse{./Liturgy/J-EpistleGospel/GloryToThee_Obikhod-Music.ly}
+
+\centeredsection{Homily}
+\instruction{The priest replaces the gospel book upon the antiminsion and preaches the homily}
+
+\cleardoublepage
+\centeredsection{The Ektenia of Fervent Supplication}
+\begin{maybetwocolumns}
+\deaconline{Let us say with our whole soul and with our whole mind, let us say:}
+\choralresponse{./Z-Responses/Greek/PreThrefoldLhm_A.ly}
+
+\deaconline{O Lord Almighty, the God of our fathers, we pray Thee hearken and have mercy.}
+\choralresponse{./Z-Responses/Greek/PreThrefoldLhm_B.ly}
+\end{maybetwocolumns}
+
+\deaconline{Have mercy on us, O God, according to Thy great mercy,
+    we pray Thee, hearken and have mercy.}
+\instruction{The following is repeated for the remaining petitions.}
+\lilypondfile{./Z-Responses/Greek/LordHaveMercyX3.ly}
+
+\begin{maybetwocolumns}
+\begin{deacon}
+\item Again we pray for all pious and Orthodox Christians.
+\item Again we pray for our metropolitan (or archbishop),
+  \instruction{N} and our bishop \instruction{N}.
+\item Again we pray for our brethren: the priests, hieromonks, deacons,
+  hierodeacons and monastics and all our brotherhood in Christ.
+\item Again we pray for mercy, life, peace, health, salvation and visitation
+  and pardon and forgiveness of sins for (the servants of God, \instruction{NN.}, and)
+  all Orthodox Christians of true worship, who live and dwell in this community
+\item Again we pray for the blessed and ever-memorable founders of this holy church
+  (and for the servants of God, \instruction{NN.},) and all of our fathers and brethren,
+  the Orthodox departed this life before us,
+  who here and in all the world lie asleep in the Lord.
+\item Again we pray for those who bear fruit and do good works in this holy
+  and all-venerable temple,
+  those who serve and those who sing and all the people here present,
+  who await Thy great and rich mercy.
+\end{deacon}
+
+\begin{priest}
+\item O Lord our God, receive this fervent supplication of Thy servants,
+  and have mercy on us according to the multitude of Thy mercy,
+  and send down Thy compassions upon us and upon all Thy people,
+  who await Thy great and rich mercy.
+\item For Thou art a merciful God and lovest mankind,
+  and unto Thee we ascribe glory to the Father and to the Son and to the Holy Spirit,
+  now and ever, and unto ages of ages.
+\end{priest}
+
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+\end{maybetwocolumns}
+
+\centeredsection{The Litany for the Catechumens}
+\begin{maybetwocolumns}
+\instruction{The refrains are generally sung softly while the petitioner prays for the catechumens.}
+\deaconline{Pray to the Lord, ye catechumens.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercyCatechumens_A.ly}
+
+\deaconline{Let us, the faithful, pray for the catechumens,
+  that the Lord will have mercy on them.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercyCatechumens_B.ly}
+
+\deaconline{That He will teach them the word of truth.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercyCatechumens_C.ly}
+
+\deaconline{That He will reveal to them the gospel of righteousness.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercyCatechumens_D.ly}
+
+\deaconline{That He will unite them to His holy, catholic and apostolic Church.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercyCatechumens_E.ly}
+
+\deaconline{Save them; have mercy on them; help them; and keep them, O God, by Thy grace.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercyCatechumens_F.ly}
+
+\deaconline{Bow your heads unto the Lord, ye catechumens.}
+\choralresponse{./Z-Responses/NKedrov/ToTheeOLord.ly}
+
+\priestline{That with us they may glorify Thine all-honorable and majestic name of the Father
+  and of the Son and of the Holy Spirit, now and ever, and of the Son and of the Holy Spirit,
+  now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/NKedrov/Amen.ly}
+\end{maybetwocolumns}
+
+\centeredsection{The Liturgy of the Faithful}
+\begin{maybetwocolumns}
+\centeredsubsection{First Litany of the Faithful}
+
+\deaconline{As many as are of the faithful, again and again in peace, let us pray to the Lord.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercy_A.ly}
+
+\deaconline{Help us; save us; have mercy upon us; and keep us, O God, by Thy grace.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercy_B.ly}
+
+\deaconline{Wisdom.}
+\priestline{For unto Thee are due all glory, honor and worship to the Father and to the Son
+  and to the Holy Spirit, now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/NKedrov/Amen.ly}
+
+
+\centeredsubsection{Second Litany of the Faithful}
+
+\deaconline{Again and again in peace, let us pray to the Lord.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercy_A.ly}
+
+\deaconline{Help us; save us; have mercy upon us; and keep us, O God, by Thy grace.}
+\choralresponse{./Z-Responses/NKedrov/LordHaveMercy_B.ly}
+
+\instruction{If a deacon is serving, he may intone four additional petitions.
+  Repeat the refrains above for each.}
+\deaconline{Wisdom.}
+
+\priestline{That guarded always by Thy might we may ascribe glory unto Thee
+  to the Father and to the Son and to the Holy spirit,
+  now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/NKedrov/Amen_B.ly}
+\end{maybetwocolumns}
+
+\clearpage
+\centeredsubsection{The Cherubic Hymn}
+
+\instruction{Tone 3}
+\lilypondfile{./Liturgy/N-CherubicHymn/CherubicHymn_Gallatin-TwoPart-Music.ly}
+
+\instruction{Harmonized}
+\lilypondfile{./Liturgy/N-CherubicHymn/CherubicHymn_Gallatin-Harmonized-Music.ly}
+
+\needspace{10\baselineskip}
+\begin{maybetwocolumns}
+\deaconline{All of you, the Lord God remember in His kingdom;
+  always, now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+
+\priestline{Our (Metropolitan or Archbishop) N., and our Bishop, N.,
+  and all our brotherhood in Christ, the Lord God remember in His Kingdom,
+  always, now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+
+\priestline{Our president, civil authorities and armed forces,
+  the Lord God remember in His kingdom, always, now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+
+\priestline{The Orthodox servant(s) of God, NN., that he(she, they) may have mercy,
+  life, peace, health, salvation and visitation, pardon and forgiveness of sins,
+  the Lord God remember in His kingdom, always, now and ever and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+
+\deaconline{The Orthodox servant(s) of God departed this life in the hope of the
+  resurrection and life eternal, NN., the Lord God remember in His kingdom,
+  always, now and ever, and unto ages of ages.}
+\end{maybetwocolumns}
+\lilypondfile{./Liturgy/N-CherubicHymn/ThatWeMayReceive_Gallatin-Harmonized-Music.ly}
+
+\centeredsubsection{The Litany of Supplication}
+\begin{maybetwocolumns}
+\deaconline{Let us complete our prayer unto the Lord.}
+\choralresponse{./Z-Responses/Obikhod/LordHaveMercy-A.ly}
+
+\deaconline{For the precious gifts now set forth, let us pray to the Lord.}
+\instruction{Repeat these responses until the first 'let us ask of the Lord'.}
+\choralresponse{./Z-Responses/Kievan/LordHaveMercy-B.ly}
+
+\deaconline{For this Holy house and those who with faith, reverence and fear of God enter therein,
+  let us pray to the Lord.}
+\choralresponse{./Z-Responses/Kievan/LordHaveMercy-A.ly}
+
+\begin{deacon}
+  \item For our deliverance from all tribulation, wrath, danger and necessity,
+    let us pray to the Lord.
+  \item Help us; save us; have mercy on us and keep us, O God, by Thy grace.
+  \item That the whole day may be perfect, holy, peaceful and sinless,
+    let us ask of the Lord.
+\end{deacon}
+\instruction{Alternate between these responses until the end of the litany}
+\choralresponse{./Z-Responses/Kievan/GrantThisOLord-A.ly}
+
+\deaconline{An angel of peace, a faithful guide, a guardian of our souls and bodies,
+ let us ask of the Lord.}
+\choralresponse{./Z-Responses/Kievan/GrantThisOLord-B.ly}
+\begin{deacon}
+  \item Pardon and forgiveness of our sins and transgressions,
+    let us ask of the Lord.
+  \item All things good and profitable for our souls and peace for the world,
+    let us ask of the Lord.
+  \item That we may complete the remaining time of our life in peace and repentance,
+    let us ask of the Lord.
+  \item A Christian ending to our life, painless, blameless, peaceful and a good defense
+    before the fearful judgment seat of Christ, let us ask.
+\end{deacon}
+
+\deaconline{Calling to remembrance our all-holy, immaculate, most blessed and glorious Lady the Theotokos\\
+  \instruction{(Recited quietly as the petitioner continues)}\\
+  \lilypondfile[staffsize=16]{./Z-Responses/Kievan/MostHolyTheotokosSaveUs.ly}\\
+  and ever-virgin Mary, with all the Saints: let us commend ourselves and each other,
+  and all our life unto Christ our God.
+}
+\choralresponse{./Z-Responses/Kievan/ToTheeOLord.ly}
+
+\priestline{Through the compassions of Thine only-begotten Son, with whom Thou art blessed,
+  together with Thine all-holy and good and life-giving Spirit,
+  now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+\end{maybetwocolumns}
+
+\centeredsubsection{The Peace}
+
+\priestline{Peace be to all.}
+\choralresponse{./Z-Responses/Obikhod/AndToThySpirit.ly}
+
+\deaconline{Let us love one another, that with one accord we may confess:}
+
+\lilypondfile{./Liturgy/P-Peace/FatherSonAndHolySpirit-Plain.ly}
+
+\centeredsubsection{The Nicene Creed}
+\instruction{Recited together as a congregation}
+
+\verbatiminput{Common/TheCreed.txt}
+
+\centeredsection{The Holy Anaphora}
+\deaconline{The doors, the doors. In wisdom let us attend.}
+\priestline{Let us stand aright. Let us stand with fear. Let us attend,
+  that we may offer the holy oblation in peace.}
+\choralresponse{./Liturgy/R-Anaphora/AMercyOfPeace-Traditional.ly}
+
+\priestline{The grace of our Lord Jesus Christ and the love of God the Father
+  and the communion of the Holy Spirit, be with you all.}
+\choralresponse{./Liturgy/R-Anaphora/AndWithThySpirit-Traditional.ly}
+
+\priestline{Let us lift up our hearts.}
+\choralresponse{./Liturgy/R-Anaphora/WeLiftThemUp-Traditional.ly}
+
+\priestline{Let us give thanks unto the Lord.}
+\lilypondfile{./Liturgy/R-Anaphora/ItIsMeetAndRight-Traditional.ly}
+
+\priestline{Singing the triumphal hymn, shouting, proclaiming and saying:}
+\lilypondfile{./Liturgy/R-Anaphora/HolyHolyHoly-Traditional.ly}
+
+\needspace{10\baselineskip}
+\begin{maybetwocolumns}
+\priestline{Take, eat. This is my Body which is broken for you,
+  for the forgiveness of sins.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+
+\priestline{And likewise after supper, He took the cup saying:
+  Drink of this, all of you. This is My Blood of the new covenant,
+  which is shed for you and for many, for the forgiveness of sins.}
+\choralresponse{./Z-Responses/Obikhod/Amen2.ly}
+\end{maybetwocolumns}
+\priestline{Thine own of Thine own, we offer unto Thee in behalf of all and for all.}
+\lilypondfile{./Liturgy/R-Anaphora/WePraiseThee-Plain.ly}
+
+\centeredsection{Megalynarion}
+\instruction{The choir then sings the Megalynarion appointed for the day.}
+\clearpage
+\begin{variables}{timberwolf}
+\centeredsubsection{ (For St. John's Liturgy) Megalynarion}
+\begin{priest}
+\footnotesize
+\item That to those who shall partake thereof they may be unto vigilance of soul,
+  unto forgiveness of sins, unto the communion of Thy Holy Spirit,
+  unto the fulfillment of the kingdom of heaven and unto boldness toward Thee,
+  not unto judgment nor unto condemnation.
+  And again we offer unto Thee this rational worship for all those who in faith
+  have gone before us to their rest:
+  forefathers, fathers, patriarchs, prophets, apostles, preachers, evangelists,
+  martyrs, confessors, ascetics and every righteous spirit made perfect in faith:
+\normalsize
+\item Especially our all-holy, immaculate,
+  most blessed and glorious Lady the Theotokos and ever-virgin Mary;
+\end{priest}
+\instruction{The following Megalynarion may be replaced as prescribed. }
+\vspace{5pt}
+\lilypondfile[staffsize=19]{./Liturgy/S-Megalynarion/ItIsTrulyMeet-Kievan-Music.ly}
+
+\needspace{10\baselineskip}
+
+\priestline{Among the first be mindful, O Lord, of our metropolitan
+  (or archbishop), N., and our bishop N., whom do Thou grant unto Thy holy churches in peace,
+  safety, honor, health and length of days, and rightly dividing the word of Thy truth.}
+
+\deaconline{And of (those who offer these precious gifts to the Lord our God,
+  the honorable presbytery, the deaconate in Christ and every priestly order and for their
+  salvation, of the peace and stability of the whole world, the good estate of the holy
+  churches of God, the salvation and help of) the people here present,
+  those whom they are remembering, and of all mankind.}
+
+  \choralresponse{./Liturgy/T-AndAllMankind/AndAllMankind-Kievan-Music.ly}
+
+\vspace{1in}
+
+\centeredsubsection{ (For St. Basil's Liturgy) Megalynarion}
+\begin{priest}
+  \footnotesize
+  \item And as for us, partakers of the one bread and of the cup,
+    do Thou unite all to one another unto communion of the one Holy Spirit,
+    and grant that no one of us may partake of the holy Body and Blood of Thy Christ
+    unto judgment or unto condemnation, but rather that we may find mercy and grace
+    with all the holy ones who through the ages have been well pleasing unto Thee:
+    forefathers, fathers, patriarchs, evangelists, martyrs, confessors, preachers, evangelists,
+    martyrs, confessors, teachers and every righteous spirit made perfect in faith:
+  \normalsize
+  \item Especially our all-holy, immaculate,
+    most blessed and glorious Lady the Theotokos and ever-virgin Mary;
+\end{priest}
+
+\lilypondfile[staffsize=19]{./Liturgy/S-Megalynarion/AllOfCreationRejoices-ObikhodT6-Music.ly}
+\begin{priest}
+  \footnotesize
+  \item Deliver, O Lord, this city and every city and countryside from famine, plague,
+    earthquake, flood, fire, the sword, foreign invasion and civil war.
+  \normalsize
+  \item Among the first be mindful, O Lord, of our metropolitan
+  (or archbishop), N., and our bishop N., whom do Thou grant unto Thy holy churches in peace,
+  safety, honor, health and length of days, and rightly dividing the word of Thy truth.
+\end{priest}
+
+\deaconline{And of (those who offer these precious gifts to the Lord our God,
+  the honorable presbytery, the deaconate in Christ and every priestly order and for their
+  salvation, of the peace and stability of the whole world, the good estate of the holy
+  churches of God, the salvation and help of) the people here present,
+  those whom they are remembering, and of all mankind.}
+
+  \choralresponse{./Liturgy/T-AndAllMankind/AndAllMankind-ObikhodT6-Music.ly}
+
+\end{variables}
+
+
+
+\begin{maybetwocolumns}
+\priestline{And grant us with one mouth and one heart to glorify and praise Thine all-honorable
+  and majestic name of the Father and of the Son and of the Holy Spirit,
+  now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+
+\priestline{And the mercies of our great God and Saviour Jesus Christ be with you all.}
+\choralresponse{./Z-Responses/Obikhod/AndWithThySpirit.ly}
+
+\centeredsection{The Litany Before the Lord's Prayer}
+
+\deaconline{Having commemorated all the saints, again and again,
+  in peace let us pray to the Lord.}
+\choralresponse{./Z-Responses/Bachmetev/LordHaveMercy-A.ly}
+
+\deaconline{For the precious gifts which have been spread forth and sanctified,
+  let us pray to the Lord.}
+\choralresponse{./Z-Responses/Bachmetev/LordHaveMercy-B.ly}
+
+\deaconline{That our God, who loveth mankind, receiving them upon His holy,
+  most heavenly and ideal altar as a savour of spiritual sweetness,
+  will send down upon us in return His divine grace and the gift of the Holy Spirit,
+  let us pray to the Lord.}
+\choralresponse{./Z-Responses/Bachmetev/LordHaveMercy-C.ly}
+
+\deaconline{Asking for the unity of the faith and the communion of the Holy Spirit,
+  let us commend ourselves and each other and all our life unto Christ our God.}
+  \choralresponse{./Z-Responses/Bachmetev/ToTheeOLord.ly}
+\end{maybetwocolumns}
+
+\centeredsection{The Lord's Prayer}
+\begin{maybetwocolumns}
+\priestline{And vouchsafe, O Master,
+  that with boldness and without condemnation we may dare to call upon Thee
+  the heavenly God, as Father and to say:}
+
+\instruction{Recited together as a congregation:}
+\verbatiminput{Common/LordsPrayer.txt}
+
+\priestline{For Thine is the kingdom and the power and the glory of the
+  Father and of the Son and of the Holy Spirit, now and ever,
+  and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+
+\priestline{Peace be to all.}
+\choralresponse{./Z-Responses/Obikhod/AndToThySpirit.ly}
+
+\priestline{Bow your heads unto the Lord.}
+\choralresponse{./Z-Responses/Obikhod/ToTheeOLord.ly}
+
+\priestline{Through the grace and compassions and love toward mankind
+  of Thine only-begotten Son, with whom Thou art blessed,
+  together with Thine all-holy and good and life-giving Spirit,
+  now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen3.ly}
+
+\end{maybetwocolumns}
+
+\centeredsection{Preparation of the Lamb}
+\deaconline{Let us attend.}
+\priestline{The Holy Things are for the holy.}
+
+\lilypondfile{./Liturgy/V-LordsPrayerOneIsHoly/OneIsHoly-Rus-Plain-Music.ly}
+\instruction{This pre-communion hymn is often replaced as prescribed.}
+\lilypondfile{./Liturgy/W-PreCommunionPrayers/PraiseTheLord-Rus-Plain-Music.ly}
+
+\centeredsection{Pre-Communion Prayers \& Koinonikon}
+\instruction{Recited together as a congregation:}
+
+\verbatiminput{Common/PreCommunionPrayer.txt}
+
+\vspace{12pt}
+
+\instruction{Koinonikon Hymns are sung while the lamb is prepared.}
+
+\clearpage
+\begin{variables}{timberwolf}
+\centeredsubsection{1 - For Usual Sundays}
+\lilypondfile{./Liturgy/X-Koinonikon/Koinonikon-PraiseTheLord-Music.ly}
+\centeredsubsection{2 - Partial Polyeleos (Psalm 135) from Festal Orthros}
+\lilypondfile{./Liturgy/X-Koinonikon/Kiononikon-OGiveThanksToTheLord-Music.ly}
+\centeredsubsection{3 - The Lord is My Shepherd (Psalm 33)}
+\lilypondfile{./Liturgy/X-Koinonikon/Kiononikon-TheLordIsMyShepherd-RusT8-Music.ly}
+\centeredsubsection{4 - Praise be the Name of the Lord}
+\lilypondfile{./Liturgy/X-Koinonikon/Koinonikon-PraiseYetheNameOftheLord-Music.ly}
+\centeredsubsection{5 - Of Thy Mystical Supper}
+\lilypondfile{./Liturgy/X-Koinonikon/Koinonikon-OfThyMysticalSupper-Music.ly}
+\centeredsubsection{6 - A New Commandment}
+\lilypondfile{./Liturgy/X-Koinonikon/Koinonikon-ANewCommandment-Music.ly}
+\end{variables}
+
+\centeredsection{Communion of the Faithful}
+\deaconline{With fear of God and faith and love, draw near.}
+\lilypondfile{./Liturgy/Y-Communion/BlessedIsHe-Rus-Plain-Music.ly}
+
+\instruction{The priest communicates those who are prepared to receive
+  the holy mysteries as the choir chants the communion hymn appointed for the day.}
+
+\instruction{Once the communion hymn is completed (or if there is none appointed for the day),
+  the choir will begin singing each of the "Receive the Body" settings below,
+  repeating each 3 times, but without the Alleluarion.}
+
+\instruction{Once until the last communicant is receiving the gifts, the choir then sings
+  the Alleluarion matching the setting to conclude the communion of the faithful.}
+
+\begin{center}
+\needspace{10\baselineskip}
+1- Moscow Chant
+\lilypondfile{./Liturgy/Y-Communion/ReceiveTheBody-MoscowChant-Music.ly}
+
+\needspace{10\baselineskip}
+2- Kovalevsky
+\lilypondfile{./Liturgy/Y-Communion/ReceiveTheBody-Kovalevsky-Music.ly}
+
+\needspace{10\baselineskip}
+3- Alaskan Melody
+\lilypondfile{./Liturgy/Y-Communion/ReceiveTheBody-Alaskan-Music.ly}
+\end{center}
+
+Verses recited between hymns
+
+\centeredsection{After Communion}
+
+\priestline{O God, save Thy people and bless Thine inheritance.}
+\instruction{This hymn may be replaced on feast days.}
+\lilypondfile{./Liturgy/Z-PostCommunionHymns/WeHaveSeenTheTrueLight-Rus-Hilko-Music.ly}
+
+\priestline{Blessed is our God, always, now and ever, and unto ages of ages.}
+\lilypondfile{./Liturgy/Z-PostCommunionHymns/LetOurMouthsBeFilled-Rus-Hilko-Music.ly}
+
+\begin{maybetwocolumns}
+\deaconline{Stand upright. Having partaken of the divine, holy, immaculate,
+  immortal, heavenly, life-giving and dread mysteries of Christ,
+  let us worthily give thanks unto the Lord.}
+\choralresponse{./Z-Responses/Obikhod/LordHaveMercy-A.ly}
+
+\deaconline{Help us; save us; have mercy on us; and keep us, O God, by Thy grace.}
+\choralresponse{./Z-Responses/Obikhod/LordHaveMercy-B.ly}
+
+\deaconline{Asking that the whole day may be perfect, holy, peaceful and sinless,
+  let us commend ourselves and each other and all our life unto Christ our God.}
+
+\choralresponse{./Z-Responses/Obikhod/ToTheeOLord.ly}
+\end{maybetwocolumns}
+
+\centeredsection{The Thanksgiving Prayer}
+\begin{maybetwocolumns}
+\priestline{For Thou art our Sanctification,
+  and unto Thee we ascribe glory to the Father and to the Son and to the Holy Spirit,
+  now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+
+\priestline{Let us go forth in peace.}
+\choralresponse{./Z-Responses/Obikhod/InTheNameOfTheLord.ly}
+
+\deaconline{Let us pray to the Lord.}
+\choralresponse{./Z-Responses/Obikhod/LordHaveMercy-B.ly}
+\end{maybetwocolumns}
+
+\centeredsection{The Prayer Behind the Amvon}
+
+\priestline{ O Lord, Who blessest those who bless Thee and sanctifiest
+  those who put their trust in Thee: Save Thy people,
+  and bless Thine inheritance, preserve the fullness of Thy Church,
+  sanctify those who love the beauty of Thy house,
+  glorify them in recompense by Thy divine power,
+  and forsake us not who hope on Thee.
+  Give peace to Thy world, to Thy Churches, to the priests,
+  to the civil authorities, to the armed forces and to all Thy people;
+  for all good giving and every perfect gift is from above and cometh
+  down from Thee, the Father of lights, and unto Thee we ascribe glory,
+  thanksgiving and worship, to the Father and to the Son and to the Holy Spirit,
+  now and ever, and unto ages of ages.}
+
+\lilypondfile{./Liturgy/Z-PostCommunionHymns/BlessedBeTheName-RusFancy-Music.ly}
+
+\centeredsection{The Prayer at the Consumption of the Holy Gifts}
+\begin{maybetwocolumns}
+\deaconline{Let us pray to the Lord.}
+
+\choralresponse{./Z-Responses/Obikhod/LordHaveMercy-A.ly}
+
+\priestline{The blessing of the Lord and His mercy come upon you through
+His divine grace and love toward mankind, always, now and ever, and unto ages of ages.}
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+\end{maybetwocolumns}
+
+\priestline{Glory to Thee, O Christ our God and our hope, glory to Thee.}
+\choralresponse{./Z-Responses/Obikhod/GNE-Amen.ly}
+
+\lilypondfile{./Z-Responses/Obikhod/LordHaveMercyX3-FatherBless.ly}
+
+\begin{priest}
+\item May \instruction{-insert the appointed characteristic phrase-}, Christ our true God, through the intercessions of His
+    all-immaculate and all-blameless holy Mother; by the might of the Precious and Life-giving Cross;
+    by the protection of the honorable Bodiless Powers of Heaven;
+    at the supplication of the honorable, glorious Prophet, Forerunner and Baptist John;
+    of the holy, glorious and all-laudable apostles;
+    of our father among the saints
+      \instruction{John Chrysostom, archbishop of Constantinople OR
+                   Basil the Great, archbishop of C\ae{}sarea};
+    of the holy, glorious and right-victorious Martyrs;
+    of our venerable and God-bearing Fathers;
+    of Saint Katherine, the patron and protector of this holy mission;
+    of the holy and righteous ancestors of God, Joachim and Anna;
+    \instruction{-Additional Saints for the day listed here-} whose memory we celebrate today,
+    and of all the saints;
+    have mercy on us and save us, forasmuch as He is good and loveth mankind.
+\item Through the prayers of our Holy Fathers, Lord Jesus Christ our God,
+    have mercy upon us and save us.
+\end{priest}
+
+\choralresponse{./Z-Responses/Obikhod/Amen.ly}
+
+\cleardoublepage
+\chapter*{Prayers after Communion}
+\begin{maybetwocolumns}
+\input{Liturgy/ZZ_PrayersOfThanskgivingAfterCommunion/PrayersAfterCommunionText.tex}
+\end{maybetwocolumns}
+\end{document}

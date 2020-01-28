@@ -6,18 +6,20 @@ recite = \once \override LyricText.self-alignment-X = #-1
 
 \defineBarLine "invisible" #'("" "" "")
 global = {
-  \time 1/1 % Not used, Time_signature_engraver is removed from layout
+  \time 1/4 % Not used, Time_signature_engraver is removed from layout
   \key g \major
   \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
 }
 
-verseOne = \lyricmode {
+lyrtxt = \lyricmode {
   Wel -- come
 }
 
 soprano = \relative g' {
+  % Ritardando spanning several notes use '\startTextSpan' and \stopTextSpan
+  \override TextSpanner.bound-details.left.text = "rit."
   \global % Leave these here for key to display
-  b2 b
+  b2 \acciaccatura {c8} b2 % acciaccatura are 0 duration grace notes
 }
 
 alto = \relative g' {
@@ -47,7 +49,7 @@ bass = \relative c {
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \verseOne
+    } \lyricsto "soprano" \lyrtxt
 
     \new Staff \with {
       midiInstrument = "choir aahs"

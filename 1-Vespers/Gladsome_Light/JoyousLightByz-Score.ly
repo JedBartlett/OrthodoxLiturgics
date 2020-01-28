@@ -1,10 +1,6 @@
 \version "2.18.2"
 #(set-default-paper-size "letter")
 
-\global = {
-  \tempo 4=152
-}
-
 \paper {
   #(set-paper-size "letter")
   top-margin = 1\in

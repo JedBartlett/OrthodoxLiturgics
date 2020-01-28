@@ -1,11 +1,58 @@
 \ProvidesPackage{orthodoxservicebook}
 
+\RequirePackage{verbatim} % For including the Lord's prayer etc.. as verse
+\RequirePackage{graphicx}
+\graphicspath{ {./Images/} {../Images}}
+
+\RequirePackage{titlepic}
 \RequirePackage[margin=1.5cm]{geometry}
 % Remove indentation of first line in paragraph
 \setlength{\parindent}{0pt}
 
 % Allow use of lilypond imports directly into the document
 \RequirePackage{lyluatex}
+
+\RequirePackage{fancyhdr} % Used for page layout, including colored margins
+
+% Make a custom page style
+\fancypagestyle{plain}{%
+  \fancyhf{} % clear all fields
+  \fancyhead[RO,LE]{\bfseries\Huge\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+
+% Create a command to denote pages with variables that can be skipped
+% Note that this also kind of abuses the fancyhdr,
+% using the RightEven/LeftOdd headers to draw an overflowing
+% tikz picture down the entire side.
+% https://tex.stackexchange.com/questions/126155/how-to-set-colored-ruled-margins-for-some-pages
+\RequirePackage{tikz} % Drawing stuff
+\usetikzlibrary{calc}
+\newenvironment{variables}[1]
+{
+  \fancypagestyle{variables}{%
+      \fancyhf{}
+      \fancyhead[RO,LE]{\bfseries\Huge\thepage}
+      \fancyhead[RE]{%
+          \begin{tikzpicture}[overlay,remember picture]
+              \fill [color=#1] (current page.north west) rectangle
+                  ($ (current page.south west) + (1cm,0cm) $);
+          \end{tikzpicture}
+          }
+      \fancyhead[LO]{%
+          \begin{tikzpicture}[overlay,remember picture]
+              \fill [color=#1](current page.north east) rectangle
+                  ($ (current page.south east) + (-1cm,0cm) $);
+          \end{tikzpicture}
+          }
+      \renewcommand{\headrulewidth}{0pt}
+      \renewcommand{\footrulewidth}{0pt}
+  }
+  \pagestyle{variables}
+}
+{\cleardoublepage \pagestyle{plain}}
 
 % Used to make the various speaker sections in the document.
 % suggestion taken from:
@@ -66,16 +113,27 @@
   \texttt{\scriptsize{#1}}%
 }
 
+% Specify Additional Color Types that may be used
+\definecolor{timberwolf}{rgb}{0.86, 0.84, 0.82}
+
 % Specify a common type of header for all liturgical sections,
 \newcommand{\squashedcenteredsection}[1]{%
   \section*{\centering{}#1}%
 }
+\newcommand{\squashedcenteredsubsection}[1]{%
+  \subsection*{\centering{}#1}%
+}
 % and encourage page breaks before these sections.
 \RequirePackage{needspace}
 \newcommand{\centeredsection}[1]{%
-  \needspace{10\baselineskip}%
+  \needspace{15\baselineskip}%
   \squashedcenteredsection{#1}%
 }
+\newcommand{\centeredsubsection}[1]{%
+  \needspace{15\baselineskip}%
+  \squashedcenteredsubsection{#1}%
+}
+
 
 
 % Allow content to be in one column on narrower page layouts,
@@ -93,3 +151,25 @@
 \newenvironment{maybetwocolumns}
 {\ifdim \textwidth > 7in \begin{multicols}{2}\fi}
 {\ifdim \textwidth > 7in \end{multicols}\fi}
+
+% Provide a nice lilypond command for indented choral response
+\newcommand\choralresponse[1]{\lilypondfile[max-protrusion=-0.4in, staffsize=17]{#1}}
+
+% Commonly used liturgical phrases
+\newcommand\thrice{\instruction{(3x)}}
+\newcommand\twelve{\instruction{(12x)}}
+\newcommand\forty{\instruction{(40x)}}
+
+\newcommand\prostration{\emph{(prostration)}}
+
+\newcommand\lhmThree{Lord, have mercy.\thrice}
+\newcommand\lhmTwelve{Lord, have mercy.\twelve}
+\newcommand\lhmForty{Lord, have mercy.\forty}
+
+\newcommand\throughtheprayers{Through the prayers of our holy fathers,
+  Lord Jesus Christ our God,
+  have mercy on us, and save us}
+\newcommand\gne{Glory to the Father and to the Son and to the Holy Spirit,
+  both now and ever, and unto ages of ages.  Amen.}
+\newcommand\glory{Glory to the Father and to the Son and to the Holy Spirit,}
+\newcommand\nowandever{Both now and ever and unto ages of ages.  Amen.}
