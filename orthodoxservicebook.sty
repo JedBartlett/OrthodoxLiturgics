@@ -1,27 +1,79 @@
 \ProvidesPackage{orthodoxservicebook}
 
-\RequirePackage{verbatim} % For including the Lord's prayer etc.. as verse
-\RequirePackage{graphicx}
-\graphicspath{ {./Images/} {../Images}}
-
-\RequirePackage{titlepic}
-\RequirePackage[margin=1.5cm]{geometry}
-% Remove indentation of first line in paragraph
-\setlength{\parindent}{0pt}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lilypond Embedding of staff notation directly
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Allow use of lilypond imports directly into the document
 \RequirePackage{lyluatex}
 
-\RequirePackage{fancyhdr} % Used for page layout, including colored margins
+% Provide a nice lilypond command for indented choral response
+\newcommand\choralresponse[1]{\lilypondfile[max-protrusion=-0.4in, staffsize=17]{#1}}
 
-% Make a custom page style
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% General Formatting and layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[margin=1.5cm]{geometry} % Setup page geometry
+\RequirePackage{graphicx} % Allow importing of images
+\RequirePackage{titlepic} % Allow pictures on the titlepage
+\graphicspath{ {./Images/} {../Images}}
+\RequirePackage{fancyhdr} % Used for page layout, including colored margins
+\RequirePackage{verbatim} % For including the Lord's prayer etc.. as verse
+
+% Remove indentation of first line in paragraph
+\setlength{\parindent}{0pt}
+
+% Make a custom page style AND make it plain
+\newcommand{\OSBheader}{\bfseries\Huge\thepage}
 \fancypagestyle{plain}{%
   \fancyhf{} % clear all fields
-  \fancyhead[RO,LE]{\bfseries\Huge\thepage}
+  \fancyhead[RO,LE]{\OSBheader}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
 }
 
+% Specify Additional Color Types that may be used
+\definecolor{timberwolf}{rgb}{0.86, 0.84, 0.82}
+
+% Specify a common type of header for all liturgical sections,
+\newcommand{\squashedcenteredsection}[1]{%
+  \section*{\centering{}#1}%
+}
+\newcommand{\squashedcenteredsubsection}[1]{%
+  \subsection*{\centering{}#1}%
+}
+% and encourage page breaks before these sections.
+\RequirePackage{needspace}
+\newcommand{\centeredsection}[1]{%
+  \needspace{15\baselineskip}%
+  \squashedcenteredsection{#1}%
+}
+\newcommand{\centeredsubsection}[1]{%
+  \needspace{15\baselineskip}%
+  \squashedcenteredsubsection{#1}%
+}
+
+% Allow content to be in one column on narrower page layouts,
+% but use two columns for letter/A4 pages
+% Optimal line length for printed material seems to be 50-75 chars.
+% See discussions online like this one for links to research on the topic:
+% https://graphicdesign.stackexchange.com/questions/13724/recommended-column-width-for-text-reading-digital-vs-printed
+%
+% This environent is usually used for large recited blocks of text
+% such as Psalms, which because of their length, are less easily memorized
+% and thus requires active reading during the service, and shorter line-length
+% is used to assist the reader.
+\RequirePackage{multicol}
+\setlength\columnsep{15pt}
+\newenvironment{maybetwocolumns}
+{\ifdim \textwidth > 7in \begin{multicols}{2}\fi}
+{\ifdim \textwidth > 7in \end{multicols}\fi}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Special Liturgical Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Create a command to denote pages with variables that can be skipped
 % Note that this also kind of abuses the fancyhdr,
@@ -34,7 +86,7 @@
 {
   \fancypagestyle{variables}{%
       \fancyhf{}
-      \fancyhead[RO,LE]{\bfseries\Huge\thepage}
+      \fancyhead[RO,LE]{\OSBheader}% Leave the same numbering
       \fancyhead[RE]{%
           \begin{tikzpicture}[overlay,remember picture]
               \fill [color=#1] (current page.north west) rectangle
@@ -53,6 +105,13 @@
   \pagestyle{variables}
 }
 {\cleardoublepage \pagestyle{plain}}
+
+% Create a command for inserting instructions that have a visually
+% different style to help the reader understand that these are not part
+% of the content to be said aloud.
+\newcommand{\instruction}[1]{%
+  \texttt{\scriptsize{#1}}%
+}
 
 % Used to make the various speaker sections in the document.
 % suggestion taken from:
@@ -106,56 +165,10 @@
   \end{reader}
 }
 
-% Create a command for inserting instructions that have a visually
-% different style to help the reader understand that these are not part
-% of the content to be said aloud.
-\newcommand{\instruction}[1]{%
-  \texttt{\scriptsize{#1}}%
-}
-
-% Specify Additional Color Types that may be used
-\definecolor{timberwolf}{rgb}{0.86, 0.84, 0.82}
-
-% Specify a common type of header for all liturgical sections,
-\newcommand{\squashedcenteredsection}[1]{%
-  \section*{\centering{}#1}%
-}
-\newcommand{\squashedcenteredsubsection}[1]{%
-  \subsection*{\centering{}#1}%
-}
-% and encourage page breaks before these sections.
-\RequirePackage{needspace}
-\newcommand{\centeredsection}[1]{%
-  \needspace{15\baselineskip}%
-  \squashedcenteredsection{#1}%
-}
-\newcommand{\centeredsubsection}[1]{%
-  \needspace{15\baselineskip}%
-  \squashedcenteredsubsection{#1}%
-}
-
-
-
-% Allow content to be in one column on narrower page layouts,
-% but use two columns for letter/A4 pages
-% Optimal line length for printed material seems to be 50-75 chars.
-% See discussions online like this one for links to research on the topic:
-% https://graphicdesign.stackexchange.com/questions/13724/recommended-column-width-for-text-reading-digital-vs-printed
-%
-% This environent is usually used for large recited blocks of text
-% such as Psalms, which because of their length, are less easily memorized
-% and thus requires active reading during the service, and shorter line-length
-% is used to assist the reader.
-\RequirePackage{multicol}
-\setlength\columnsep{15pt}
-\newenvironment{maybetwocolumns}
-{\ifdim \textwidth > 7in \begin{multicols}{2}\fi}
-{\ifdim \textwidth > 7in \end{multicols}\fi}
-
-% Provide a nice lilypond command for indented choral response
-\newcommand\choralresponse[1]{\lilypondfile[max-protrusion=-0.4in, staffsize=17]{#1}}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Commonly used liturgical phrases
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newcommand\thrice{\instruction{(3x)}}
 \newcommand\twelve{\instruction{(12x)}}
 \newcommand\forty{\instruction{(40x)}}
