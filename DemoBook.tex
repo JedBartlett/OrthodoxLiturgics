@@ -1,10 +1,19 @@
-\documentclass[titlepage,10pt]{extarticle}
-\usepackage{lyluatex}
-\begin{document}
+\documentclass[twoside, titlepage,10pt]{report}
+\usepackage{orthodoxservicebook}
+
 \title{Hello}
 \author{} %Good to set an author
+
+\begin{document}
 \maketitle
-\section{The first}
+\pagestyle{empty} % Don't show page numbers
+\instruction{This page intentionally left blank}
+\cleardoublepage
+
+\pagestyle{plain}
+\chapter{First Chapter}
+\setcounter{page}{1} % Set the page counter to 1 on the first real page
+\centeredsection{The second level section first section}
 \begin{lilypond}
   music = \relative {
     c d e
@@ -21,7 +30,7 @@
     >>
   }
 \end{lilypond}
-\subsection{The Second}
+\centeredsubsection{The Second}
 \lilypondfile{DemoMusic}
 
 Hello world!

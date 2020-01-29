@@ -14,15 +14,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % General Formatting and layout
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\RequirePackage[margin=1.5cm]{geometry} % Setup page geometry
+% Setup page geometry
+\RequirePackage[margin=1.5cm, % Use relatively small margins
+                headheight=30pt, % Stop headheight warnings
+                headsep=0pt]{geometry} % Headsep bumps header off top if >>0
 \RequirePackage{graphicx} % Allow importing of images
 \RequirePackage{titlepic} % Allow pictures on the titlepage
 \graphicspath{ {./Images/} {../Images}}
 \RequirePackage{fancyhdr} % Used for page layout, including colored margins
+\RequirePackage[center]{titlesec} % Center the title headings in this doc
 \RequirePackage{verbatim} % For including the Lord's prayer etc.. as verse
+\RequirePackage{needspace} % Allow encouraging of page breaks
+
+% Specify Additional Color Types that may be used
+\definecolor{timberwolf}{rgb}{0.86, 0.84, 0.82}
 
 % Remove indentation of first line in paragraph
 \setlength{\parindent}{0pt}
+
 
 % Make a custom page style AND make it plain
 \newcommand{\OSBheader}{\bfseries\Huge\thepage}
@@ -33,25 +42,33 @@
   \renewcommand{\footrulewidth}{0pt}
 }
 
-% Specify Additional Color Types that may be used
-\definecolor{timberwolf}{rgb}{0.86, 0.84, 0.82}
-
 % Specify a common type of header for all liturgical sections,
-\newcommand{\squashedcenteredsection}[1]{%
-  \section*{\centering{}#1}%
+% Note that passing in the \DefaultOpt means that
+% we could switch this back to section by calling
+% \section[#1]{#2}, which would give us section numbering or:
+% Remove chapter numbering of sections and make sections capital letters
+% instead of arabic numbers.
+% Alpha sections, only 26 sections allowed!
+\renewcommand{\thesection}{\Alph{section}} 
+\newcommand\squashedcenteredsection[2][\DefaultOpt]{%
+  \def\DefaultOpt{#2}%
+  \section*{#2}%
 }
-\newcommand{\squashedcenteredsubsection}[1]{%
-  \subsection*{\centering{}#1}%
+\newcommand\squashedcenteredsubsection[2][\DefaultOpt]{%
+  \def\DefaultOpt{#2}%
+  \subsection*{#2}%
 }
 % and encourage page breaks before these sections.
-\RequirePackage{needspace}
-\newcommand{\centeredsection}[1]{%
+\newcommand\centeredsection[2][\DefaultOpt]{%
+  \def\DefaultOpt{#2}%
   \needspace{15\baselineskip}%
-  \squashedcenteredsection{#1}%
+  \squashedcenteredsection[#1]{#2}%
 }
-\newcommand{\centeredsubsection}[1]{%
+
+\newcommand\centeredsubsection[2][\DefaultOpt]{%
+  \def\DefaultOpt{#2}%
   \needspace{15\baselineskip}%
-  \squashedcenteredsubsection{#1}%
+  \squashedcenteredsubsection[#1]{#2}%
 }
 
 % Allow content to be in one column on narrower page layouts,

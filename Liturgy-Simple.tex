@@ -16,14 +16,12 @@ As celebrated on most Sundays which are not Feast days}
 
 \begin{document}
 \maketitle
-\pagestyle{empty}
+\pagestyle{empty} % Don't show page numbers
 \instruction{This page intentionally left blank}
 \cleardoublepage
-\pagestyle{plain}
-
+\setcounter{page}{1} % Set the page counter to 1 on the first real page
 \chapter*{Divine Liturgy}
-
-\centeredsection{Preparation and Opening Dialogue}
+\section*{Preparation and Opening Dialogue}
 
 \begin{maybetwocolumns}
 \footnotesize
@@ -51,6 +49,7 @@ As celebrated on most Sundays which are not Feast days}
   is proclaimed loudly, and signifies that preparations are complete,
   and the service is now beginning.}
 \clearpage
+\pagestyle{plain}
 \priestline{Blessed is the kingdom of the Father and of the Son and of the Holy Spirit,
    now and ever and unto ages of ages.}
 
@@ -114,7 +113,7 @@ As celebrated on most Sundays which are not Feast days}
 \lilypondfile{./Liturgy/B-FirstAntiphon/TheFirstAntiphon-Tone2SimpleByzChant-Music.ly}
 
 
-\centeredsection{The Little Litany}
+\centeredsubsection{The Little Litany after the First Antiphon}
 \begin{maybetwocolumns}
 \deaconline{Again and again, in peace, let us pray to the Lord.}
 \choralresponse{./Z-Responses/Kazan/LordHaveMercy-A.ly}
@@ -143,7 +142,7 @@ As celebrated on most Sundays which are not Feast days}
 \needspace{10\baselineskip}
 \lilypondfile{./Liturgy/C-SecondAntiphon/GNE-OnlyBegottenSon-Tone2SimpleByzChant-Music.ly}
 
-\centeredsection{The Little Litany}
+\centeredsubsection{The Little Litany after the Second Antiphon}
 \begin{maybetwocolumns}
 \deaconline{Again and again, in peace, let us pray to the Lord.}
 \choralresponse{./Z-Responses/Kazan/LordHaveMercy-A.ly}
@@ -167,14 +166,16 @@ As celebrated on most Sundays which are not Feast days}
 \choralresponse{./Z-Responses/Kazan/Amen.ly}
 \end{maybetwocolumns}
 
-\centeredsection{Apolytikion}
+\centeredsection{The Little Entrance}
 \instruction{Sing the Apolytikion appointed for the day as the 3rd antiphon before the entrance.}
 
-\centeredsection{The Little Entrance}
+\centeredsubsection{The Little Entrance Hymn}
 \lilypondfile{./Liturgy/E-LittleEntrance/TheLittleEntrance-Tone2SimpleByzChant-Music.ly}
 
+\centeredsection{Apolytikia of the Day}
 \instruction{Again, sing the Apolytikia in the order appointed for the day.}
 \clearpage
+
 \begin{variables}{timberwolf}
 \needspace{20\baselineskip}
 \centeredsubsection{Tone - 1}
@@ -203,7 +204,8 @@ As celebrated on most Sundays which are not Feast days}
 \lilypondfile{./Octoechos/ResurrectionalApolytikion-Tone8-Kazan-Music.ly}
 \end{variables}
 
-\centeredsubsection{Apolytikion for Great-Martyr Katherine, the All-Wise of Alexandria}
+\centeredsection{Apolytikion for the Patron Saint}
+\textbf{Great-Martyr Katherine, the All-Wise of Alexandria}
 \instruction{On usual Sundays, one of the Apolytikia is that of the patron saint of the community.}
 \lilypondfile{./Menaion/11-25-StKatherine/Katherine-Trop_Tone5ByzChant-Music.ly}
 
@@ -227,7 +229,7 @@ As celebrated on most Sundays which are not Feast days}
 \choralresponse{./Z-Responses/Obikhod/Amen.ly}
 \end{maybetwocolumns}
 
-\centeredsection{The Thrice-Holy Hymn}
+\centeredsubsection{The Thrice-Holy Hymn}
 \instruction{This may be replaced by the Baptismal or Hymn for the Cross as prescribed}
 \vspace{12pt}
 \lilypondfile{./Liturgy/I-ThriceHolyHymn/Trisagion_Arabic_a.ly}
@@ -236,21 +238,21 @@ As celebrated on most Sundays which are not Feast days}
 
 \cleardoublepage
 \begin{variables}{timberwolf}
-\centeredsection{Anti-Trisagion\\Baptismal Hymn}
+\centeredsubsection{Anti-Trisagion - Baptismal Hymn}
 \instruction{Sung on certain days instead of the Thrice-Holy Hymn.}
 \vspace{5pt}
 \lilypondfile{./Liturgy/I-ThriceHolyHymn/AsManyAsHaveBeen-ByzPlain-a_Music.ly}
 \deaconline{With Strength.}
 \lilypondfile{./Liturgy/I-ThriceHolyHymn/AsManyAsHaveBeen-ByzPlain-b_Music.ly}
 \clearpage
-\centeredsection{Anti-Trisagion\\Before Thy Cross}
+\centeredsubsection{Anti-Trisagion - Before Thy Cross}
 \instruction{Sung on certain days instead of the Thrice-Holy Hymn.}
 \vspace{5pt}
 \lilypondfile{./Liturgy/I-ThriceHolyHymn/BeforeThyCross-Traditional_Music.ly}
 \end{variables}
 
 
-\centeredsection{The Readings from the New Testament}
+\centeredsection{The Readings from the New Testament and Gospel}
 
 \instruction{The appointed reader prepares to read the prokeimenon, facing the Royal Doors.}
 
@@ -289,7 +291,7 @@ As celebrated on most Sundays which are not Feast days}
 
 \choralresponse{./Liturgy/J-EpistleGospel/GloryToThee_Obikhod-Music.ly}
 
-\centeredsection{Homily}
+\centeredsubsection{Homily}
 \instruction{The priest replaces the gospel book upon the antiminsion and preaches the homily}
 
 \cleardoublepage
@@ -440,7 +442,7 @@ As celebrated on most Sundays which are not Feast days}
 \end{maybetwocolumns}
 \lilypondfile{./Liturgy/N-CherubicHymn/ThatWeMayReceive_Gallatin-Harmonized-Music.ly}
 
-\centeredsubsection{The Litany of Supplication}
+\centeredsection{The Litany of Supplication}
 \begin{maybetwocolumns}
 \deaconline{Let us complete our prayer unto the Lord.}
 \choralresponse{./Z-Responses/Obikhod/LordHaveMercy-A.ly}
@@ -491,7 +493,7 @@ As celebrated on most Sundays which are not Feast days}
 \choralresponse{./Z-Responses/Obikhod/Amen.ly}
 \end{maybetwocolumns}
 
-\centeredsubsection{The Peace}
+\centeredsection{The Peace}
 
 \priestline{Peace be to all.}
 \choralresponse{./Z-Responses/Obikhod/AndToThySpirit.ly}
@@ -500,7 +502,7 @@ As celebrated on most Sundays which are not Feast days}
 
 \lilypondfile{./Liturgy/P-Peace/FatherSonAndHolySpirit-Plain.ly}
 
-\centeredsubsection{The Nicene Creed}
+\centeredsection{The Nicene Creed}
 \instruction{Recited together as a congregation}
 
 \verbatiminput{Common/TheCreed.txt}
