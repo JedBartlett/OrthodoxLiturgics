@@ -29,7 +29,7 @@ melody = \relative c' {
           { g\breve  g4 g2 g4 g g \bar "||" }
      }
   e4 e e f g g g g g\startTextSpan  aes aes( b) b2.\stopTextSpan \bar"|"
-  b4 c2 aes g4(\startTextSpan e f g) aes2( g)\stopTextSpan
+  b4 c2 aes g4(\startTextSpan e f g) aes1( g)\fermata \bar"|."
 }
 
 ison = \relative c' {
@@ -39,7 +39,7 @@ ison = \relative c' {
           { c\breve  s1. \bar ":|." }
           { c\breve  s1. \bar "||" }
      }
-  c\breve s\breve s\breve
+  c\breve c2. g'1 g4 c,\breve f1( c)\fermata  \bar"|."
 }
 
 \score {
@@ -66,7 +66,7 @@ ison = \relative c' {
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 200
+  \midi { \tempo 4 = 250
           \context {
             \Voice
             \remove "Dynamic_performer"
