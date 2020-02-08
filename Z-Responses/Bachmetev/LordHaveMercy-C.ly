@@ -9,7 +9,7 @@ lyrtxt  = \lyricmode           { Lord, have mer --    cy. }
 soprano = \relative f' { \global a4    a    g2( bes2) a1 \fermata \bar "|." }
 alto    = \relative d' { \global f4    f    f2( e2)   f1 }
 tenor   = \relative c' { \global c4    c    d2( c2)   c1 }
-bass    = \relative c  { \global f4    f    bes2( c2) f,1 \fermata }
+bass    = \relative c  { \global f4    f    bes,2( c2) f1 \fermata }
 
 \score {
   \new ChoirStaff <<
