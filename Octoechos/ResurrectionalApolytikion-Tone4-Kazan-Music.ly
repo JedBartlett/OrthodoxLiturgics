@@ -15,7 +15,7 @@ lyricText = \lyricmode {
   the wom -- en dis -- ci -- ples of the Lord cast from them
   their pa -- ren -- tal con -- dem -- na -- tion,
   and proud -- ly broke the news to the dis -- ci -- ples,
-  say -- ing: Death __ hath been spoiled.
+  say -- ing: Death hath been spoiled.
   Christ __ God is ris -- en, grant -- ing the world great __ mer -- cy.
 }
 

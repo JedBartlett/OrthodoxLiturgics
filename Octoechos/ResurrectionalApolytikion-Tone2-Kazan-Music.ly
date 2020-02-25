@@ -14,7 +14,7 @@ lyricText = \lyricmode {
   O Thou death -- less and im -- mor -- tal One,
   then Thou didst de -- stroy hell with Thy God -- ly pow'r,
   and when Thou didst raise the dead from be -- neath the earth,
-  all the powr's of heav -- en did cry a -- loud un -- to Thee:
+  all the pow'rs of heav -- en did cry a -- loud un -- to Thee:
   O Christ, __ Thou Giv -- er of life,
   glo -- ry to Thee!
 }
@@ -33,12 +33,12 @@ melody = \relative g' {
 ison = \relative g' {
   \global % Leave these here for key to display
   \tiny
-  \partial 4 g4 | e( f g aes) g f aes g g( f) f e f2.
-  \partial 4 g4 aes2 aes4 g g8 f e( f g4) g g2.
-  aes4 aes2 g4 g g2 g2 f4 g aes2( g4) f e2. r4
-  g1.g\breve s4 g1 g2. f4 aes g g( aes) g f e2.
+  \partial 4 g4 | e f g aes g f aes g g( f) f e f2.
+  \partial 4 g4 aes2 aes4 g g8 f e f g4 g g2.
+  aes4 aes2 g4 g g2 g2 f4 g aes2 g4 f e2. r4
+  g1.g\breve s4 g1 g2. f4 aes g g aes g f e2.
   g4 g1 g1.
-  e4( f g aes) g f g1
+  e4 f g aes g f g1
 }
 
 \score {
