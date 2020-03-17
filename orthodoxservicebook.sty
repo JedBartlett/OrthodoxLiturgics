@@ -29,6 +29,12 @@
 % Specify Additional Color Types that may be used
 \definecolor{timberwolf}{rgb}{0.86, 0.84, 0.82}
 
+% Special shaded box for optional/variable sections:
+\newcommand{\shadedbox}[1]{%
+  \par\noindent\colorbox{timberwolf}
+  {\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}
+}
+
 % Remove indentation of first line in paragraph
 \setlength{\parindent}{0pt}
 

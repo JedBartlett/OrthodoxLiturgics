@@ -14,4 +14,7 @@
 \include "GrantThisOLord.ly"
 \include "ToTheeOLord.ly"
 \include "MostHolyTheotokosSaveUs.ly"
+\include "LordHaveMercyThreefold.ly"
 \include "Amen.ly"
+\include "AndToThySpirit.ly"
+\include "GloryToThee.ly"
