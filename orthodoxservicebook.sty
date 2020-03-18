@@ -209,3 +209,37 @@
   both now and ever, and unto ages of ages.  Amen.}
 \newcommand\glory{Glory to the Father and to the Son and to the Holy Spirit,}
 \newcommand\nowandever{Both now and ever and unto ages of ages.  Amen.}
+
+% Can pass in \trisagionNeedsAmen[reader] to change the priestline
+% at the end into the reader's line.
+\newcommand{\trisagionNeedsAmen}[1][]{%
+  \instruction{Recited together as a congregation}
+
+  Holy God, Holy Mighty, Holy Immortal: have mercy on us. \thrice
+
+  \vbox{}
+  \emph{Glory to the Father, and to the Son, and to the Holy Spirit; both now and ever, and
+  unto ages of ages. Amen.}
+
+  \vbox{}
+  All-holy Trinity, have mercy on us. Lord, cleanse us from our sins. Master, pardon
+  our iniquities. Holy God, visit and heal our infirmities for Thy Name’s sake.
+
+  \vbox{}
+  \lhmThree
+
+  \vbox{}
+  \emph{Glory to the Father, and to the Son, and to the Holy Spirit; both now and ever, and
+  unto ages of ages. Amen.}
+
+  \vbox{}
+  \input{Common/LordsPrayer.txt}
+
+  \ifthenelse{\equal{#1}{reader}}{%
+    \readerline{\throughtheprayers{}}
+  }{%
+    \priestline{ For Thine is the kingdom, and the power, and the glory:
+    of the Father, and of the Son, and of the Holy Spirit;
+    now and ever, and unto ages of ages.}
+  }
+}
