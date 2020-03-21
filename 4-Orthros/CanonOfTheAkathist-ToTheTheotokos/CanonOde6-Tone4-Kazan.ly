@@ -10,7 +10,7 @@ global = {
 }
 
 lyricText = \lyricmode {
-  As we. the God -- ly- mind -- ed,
+  As we the God -- ly- mind -- ed,
   cel -- e -- brate this sa -- cred and all- hon -- 'ra -- ble feast
   of the Moth -- er of God,
   come, let us clap our hands to -- geth -- er

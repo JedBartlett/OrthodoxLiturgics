@@ -188,6 +188,22 @@
   \end{reader}
 }
 
+% Reader lines environment
+\newlist{people}{enumerate}{1}
+\raggedright
+\setlist[people]{%
+    label=People:,
+    leftmargin=1.6cm,
+    labelwidth=1.4cm,
+    align=left
+}
+% Quick Reader Line
+\newcommand{\peopleline}[1]{%
+  \begin{people}
+    \item{#1}
+  \end{people}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Commonly used liturgical phrases
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -202,13 +218,36 @@
 \newcommand\lhmTwelve{Lord, have mercy.\twelve}
 \newcommand\lhmForty{Lord, have mercy.\forty}
 
-\newcommand\throughtheprayers{Through the prayers of our holy fathers,
+\newcommand{\itistrulymeettoblessthee}{%
+It is truly meet to bless thee, O Theotokos,
+who art ever-blessed and all-blameless, and the mother of our God.
+}
+
+\newcommand{\morehonorablethanthetherubim}{%
+  More honorable than the cherubim
+  and more glorious beyond compare than the seraphim,
+  thou who without corruption bearest God the Word
+  and art truly Theotokos: We magnify thee.
+}
+
+\newcommand\throughtheprayers{%
+  Through the prayers of our holy fathers,
   Lord Jesus Christ our God,
-  have mercy on us, and save us}
-\newcommand\gne{Glory to the Father and to the Son and to the Holy Spirit,
-  both now and ever, and unto ages of ages.  Amen.}
+  have mercy on us, and save us
+}
+
+\newcommand\gne{%
+  Glory to the Father and to the Son and to the Holy Spirit,
+  both now and ever, and unto ages of ages.  Amen.
+}
+
 \newcommand\glory{Glory to the Father and to the Son and to the Holy Spirit,}
 \newcommand\nowandever{Both now and ever and unto ages of ages.  Amen.}
+
+
+\newcommand{\blessedbethename}{%
+  Blessed be the name of the Lord, henceforth and forevermore.
+}
 
 % Can pass in \trisagionNeedsAmen[reader] to change the priestline
 % at the end into the reader's line.

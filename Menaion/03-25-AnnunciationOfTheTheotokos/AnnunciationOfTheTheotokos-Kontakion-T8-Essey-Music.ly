@@ -38,7 +38,7 @@ melody = \relative c' { \global
   \fourbm  d4 f e( c) | d( e) f2 |  g4( f) e2 |
   \twobm   e4 f |\fourbm g g g g | g d e f |\fivebm e d c2. |
   \threebm g'4 g g |\fourbm c2 b4 a | g2
-  a4 g | g( f) e d | f( e d2. c b2 a4) b c1
+  a4 g | g( f) e d | f( e d2. c4 b2 a4) b c1
 \bar"|."}
 
 ison = \relative c' { \global \tiny
@@ -49,7 +49,7 @@ ison = \relative c' { \global \tiny
   g2 c2.
   \parenthesize g'1 s2.
   \parenthesize c,1 s s2
-  \parenthesize g1 s s2
+  \parenthesize g1 s
   \parenthesize c1
 }
 
