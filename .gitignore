@@ -143,3 +143,6 @@ sympy-plots-for-*.tex/
 
 # Dolphin File Browser
 .directory
+
+# Some KDE stuff
+org.kde.konsole.desktop
