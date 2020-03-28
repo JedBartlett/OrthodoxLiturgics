@@ -1,52 +1,124 @@
 {
-    "spellright.language": [
-        "English (American)"
-    ],
-    "spellright.documentTypes": [
-        "markdown",
-        "latex",
-        "plaintext"
-    ],
-    "cSpell.words": [
-        "Apolytikion",
-        "Kontakion",
-        "Orthros",
-        "Pascha",
-        "Prokeimenon",
-        "Sabaoth",
-        "Theotokion",
-        "Trisagion",
-        "Typica",
-        "appointedst",
-        "bearest",
-        "belongeth",
-        "callest",
-        "comest",
-        "compassions",
-        "endureth",
-        "fainteth",
-        "fillest",
-        "hierodeacons",
-        "hieromonks",
-        "holpen",
-        "hopeth",
-        "knoweth",
-        "lettest",
-        "longeth",
-        "lovest",
-        "loveth",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "lualatex -> bibtex -> lualatex*2",
+      "tools": [
         "lualatex",
-        "lyluatex",
-        "maybetwocolumns",
-        "orthodoxservicebook",
-        "rejoiceth",
-        "showest",
-        "singeth",
-        "sitteth",
-        "sufferest",
-        "theotokos",
-        "therof",
-        "unoriginate",
-        "workest"
-    ]
+        "bibtex",
+        "lualatex",
+        "lualatex"
+      ],
+    },
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-shell-escape",
+        "-pdflatex=lualatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-shell-escape",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": [
+        "-synctex=1",
+        "-shell-escape",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "spellright.language": [
+    "English (American)"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ],
+  
+  "cSpell.words": [
+    "Apolytikion",
+    "Kontakion",
+    "Orthros",
+    "Pascha",
+    "Prokeimenon",
+    "Sabaoth",
+    "Theotokion",
+    "Trisagion",
+    "Typica",
+    "appointedst",
+    "bearest",
+    "belongeth",
+    "callest",
+    "comest",
+    "compassions",
+    "endureth",
+    "fainteth",
+    "fillest",
+    "hierodeacons",
+    "hieromonks",
+    "holpen",
+    "hopeth",
+    "knoweth",
+    "lettest",
+    "longeth",
+    "lovest",
+    "loveth",
+    "lualatex",
+    "lyluatex",
+    "maybetwocolumns",
+    "orthodoxservicebook",
+    "rejoiceth",
+    "showest",
+    "singeth",
+    "sitteth",
+    "sufferest",
+    "theotokos",
+    "therof",
+    "unoriginate",
+    "workest"
+  ]
 }

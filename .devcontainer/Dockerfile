@@ -81,6 +81,13 @@ RUN apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
+# Install lilypond manually
+# Manually wget the binaries for lilypond and install them
+RUN wget \
+    http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.18.2-1.linux-64.sh; \
+    sh ./lilypond*.sh --batch ; \
+    rm ./lilypond*.sh
+
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
 
