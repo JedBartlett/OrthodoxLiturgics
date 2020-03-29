@@ -31,8 +31,12 @@ jobs:
          -u vscode \
          lyluatex-builder \
          latexmk -shell-escape -pdflatex=lualatex -pdf *.tex
+    - name: Move artifacts to build dir
+      run: | 
+        mkdir books
+        mv *.pdf books
     - name: Upload Artifacts
       uses: actions/upload-artifact@v1
       with: 
         name: books
-        path: ./*.pdf
+        path: books
