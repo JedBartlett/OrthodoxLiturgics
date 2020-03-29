@@ -24,10 +24,15 @@ jobs:
         docker build .devcontainer/ -t lyluatex-builder \
           --build-arg USER_UID=$(id -u) \
           --build-arg USER_GID=$(id -g) \
-    - name: Build 1-GreatVespers.tex
+    - name: Build all .tex documents in root
       run: |
         docker run --mount type=bind,source=$(pwd),target=/workspaces/OrthodoxLiturgics \
          -w /workspaces/OrthodoxLiturgics \
          -u vscode \
          lyluatex-builder \
-         latexmk -shell-escape -pdflatex=lualatex -pdf 1-GreatVespers.tex
+         latexmk -shell-escape -pdflatex=lualatex -pdf *.tex
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v1
+      with: 
+        name: books
+        path: ./*.pdf
