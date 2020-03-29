@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: ['build/**']
+  pull_request:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build-books:
+    name: build-books
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: Show checkout worked
+      run: ls -al .
+    - name: Build Dockerfile
+      run: |
+        docker build .devcontainer/ -t lyluatex-builder \
+          --build-arg USER_UID=$(id -u) \
+          --build-arg USER_GID=$(id -g) \
+    - name: Build 1-GreatVespers.tex
+      run: |
+        docker run --mount type=bind,source=$(pwd),target=/workspaces/OrthodoxLiturgics \
+         -w /workspaces/OrthodoxLiturgics \
+         -u vscode \
+         lyluatex-builder \
+         latexmk -shell-escape -pdflatex=lualatex -pdf 1-GreatVespers.tex
