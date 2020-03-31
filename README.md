@@ -26,7 +26,9 @@ Visual Studio Code and docker are technically all you need to work in this repos
 3. Install the [Remote-containers extension into VSCode](
       https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 4. Install [docker for your operating system](
-     https://code.visualstudio.com/docs/remote/containers) to host the development container. - (You may have to re-start after following those steps.)
+     https://code.visualstudio.com/docs/remote/containers) to host the development container.
+   - (You may have to re-start after following those steps.)
+   - *NOTE: Windows 10 Pro or Enterprise editions, not Home*
 5. Open the cloned folder from VSCode (checked out to the correct branch).
    you will be prompted if you want to open using remote containers, say yes.  It will take a while to clone and setup the container the first time.
 6. If you need to rebuild the container in VSCode, press `<Ctrl><Shift><P>`
@@ -34,6 +36,14 @@ Visual Studio Code and docker are technically all you need to work in this repos
    `Re-build and Reopen in Container` will purge the existing development
    environment and rebuild everything if you run into problems,
    (especially when switching branches if the development environment was changed).
+7. Open the `DemoBook.tex` file in the root of the repo and press `<Ctrl><s>`
+   to save the document, and automatically trigger the build system.
+   You should see a compilation begin, and produce a `DemoBook.pdf`.
+   This can be opened and previewed in the Visual Studio editor.
+8. Explore:
+   - Press `<Ctrl><Shift><P>` and type `LaTex` to filter to the latex
+     workshop commands (like `Clean up all auxillary files` and
+     `Build LaTeX Project`)
 
 ## Instructions for Creating PDFs on cmd line (Natively/Manual instructions)
 
@@ -47,6 +57,7 @@ look right, it can be embedded into a lualatex book
 ### Compiling a book
 
 ### TexLive
+
 Recommend use of the [TeXLive distribution of LaTeX](
     https://www.tug.org/texlive/) for all operating systems.
 
