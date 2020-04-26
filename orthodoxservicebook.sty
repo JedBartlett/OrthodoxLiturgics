@@ -24,7 +24,8 @@
 \RequirePackage{fancyhdr} % Used for page layout, including colored margins
 \RequirePackage[center]{titlesec} % Center the title headings in this doc
 \RequirePackage{verbatim} % For including the Lord's prayer etc.. as verse
-\RequirePackage{needspace} % Allow encouraging of page breaks
+\RequirePackage{needspace} % Allow encouraging of page breaksr
+\RequirePackage{xargs} % Advanced parsing of command/env args
 
 % Specify Additional Color Types that may be used
 \definecolor{timberwolf}{rgb}{0.86, 0.84, 0.82}
@@ -249,12 +250,24 @@ who art ever-blessed and all-blameless, and the mother of our God.
   Blessed be the name of the Lord, henceforth and forevermore.
 }
 
-% Can pass in \trisagionNeedsAmen[reader] to change the priestline
+% Can pass in 'reader' as an argument to change the priestline
 % at the end into the reader's line.
-\newcommand{\trisagionNeedsAmen}[1][]{%
+% can pass in prepentecost as a second argument.
+% Valid uses (examples):
+%  \trisagionNeedsAmen
+%  \trisagionNeedsAmen[priest] %- default, can be explicit
+%  \trisagionNeedsAmen[reader]
+%  \trisagionNeedsAmen[][prepentecost] %- can omit the first arg
+%  \trisagionNeedsAmen[reader][prepentecost]
+\newcommandx{\trisagionNeedsAmen}[2][1=priest,2=normal]{%
   \instruction{Recited together as a congregation}
 
-  Holy God, Holy Mighty, Holy Immortal: have mercy on us. \thrice
+  \ifthenelse{\equal{#2}{prepentecost}}{%
+    Christ is risen from the dead, trampling down Death by death,
+    an upon those in the tombs, bestowing life! \thrice{}
+  }{%
+    Holy God, Holy Mighty, Holy Immortal: have mercy on us. \thrice{}
+  }
 
   \vbox{}
   \emph{Glory to the Father, and to the Son, and to the Holy Spirit; both now and ever, and
