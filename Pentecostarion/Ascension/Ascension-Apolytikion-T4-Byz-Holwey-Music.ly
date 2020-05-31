@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+twobm= \set Timing.measureLength = #(ly:make-moment 2/4)
+threebm=\set Timing.measureLength = #(ly:make-moment 3/4)
 fourbm=\set Timing.measureLength = #(ly:make-moment 4/4)
 fivebm=\set Timing.measureLength = #(ly:make-moment 5/4)
 sixbm= \set Timing.measureLength = #(ly:make-moment 6/4)
@@ -10,30 +12,31 @@ global = {
 }
 
 lyricText = \lyricmode {
-  Hav -- ing learned the joy -- ful mes -- sage
-  of the res -- ur -- rec -- tion from the an -- gel
-  the wom -- en dis -- ci -- ples of the Lord cast from them
-  their pa -- ren -- tal con -- dem -- na -- tion,
-  and proud -- ly broke the news to the dis -- ci -- ples,
-  say -- ing: Death hath been spoiled.
-  Christ __ God is ris -- en, grant -- ing the world great __ mer -- cy.
+ Thou has as -- cend -- ed in glo -- ry, O Christ our God,
+ and glad -- dened Thy Dis -- ci -- ples with the prom -- ise of the Ho -- ly spir -- it,
+ mak -- ing them con -- fi -- dent through the bless -- ing that Thou art the Son of God,
+ and De -- liv -- er -- er of the world.
+ and De -- liv -- er -- er of the world.
 }
 
 melody = \relative g' { \global % Leave these here for key to display
-  \partial 2 e4 f | g2. e4 f g \fourbm b( a) g2
-  g4 f g g b a g f \sixbm g( f) e2.
-  d4 \fourbm e( f) g g g f e f g2) e4 f g2
-  b4 a g g g a \fivebm g( f) e2.
-  f4 g8( a b4) b2 \fourbm b4 b b a b c b( a) g2
-  g4 f g( a) g f e2. r4
-  g4( a) g f g8( a b4) b2 c8( d c4) b a g2 b4( a) g2( f) e1
+  \repeat volta 3 { e4 e f g g g |\threebm aes g f |\fourbm f e e2 |
+  \fivebm e4 g g f g |\fourbm aes g g aes | b aes g f |\sixbm aes g f2 e2
+  \threebm e4 e f |\fivebm g g g f g |\threebm aes g aes |\threebm b( aes) b |\fivebm aes aes g g2 |}
+   \alternative {
+        { \twobm g4 g |\fourbm b( aes) g f | f e e2 }
+        { \twobm g4 g |\fivebm b aes g g8( f) e4 | f2( g4 aes2 |\threebm g2.) \bar"|." }
+   }
 }
 
 ison = \relative c' { \global \tiny % Leave these here for key to
-  \partial 2 e2 e1. e\breve e1 d2 e1
-  e\breve e\breve e1 d2 e2.
-  f4 g1 g\breve g2 g4 f g a g f e2. s4
-  g4 a g f g\breve g2 g2 d1 e1
+  \repeat volta 3 { e4 e f g g g e\breve
+  g\breve s1 e1.
+  e4 e f g\breve g}
+   \alternative {
+        { g4 g e\breve }
+        { g4 g e1 s4 f1 s4 g2.}
+   }
 }
 
 \score {
@@ -64,7 +67,7 @@ ison = \relative c' { \global \tiny % Leave these here for key to
       \omit BarNumber
     }
   }
-  \midi { \tempo 4 = 200
+  \midi { \tempo 4 = 150
           \context {
             \Voice
             \remove "Dynamic_performer"
