@@ -10,12 +10,19 @@
     "cSpell.words": [
         "Akathist",
         "Apolytikion",
+        "Arimathaea",
         "Bestower",
         "Chaldees",
         "Climacus",
+        "Gergesenes",
+        "Joses",
         "Kontakion",
+        "Nicanor",
+        "Nicolaos",
         "Oikoi",
+        "Parmenas",
         "Pascha",
+        "Prochorus",
         "Prokeimenon",
         "Sabaoth",
         "Sadducees",
@@ -32,6 +39,7 @@
         "beareth",
         "belongeth",
         "callest",
+        "castest",
         "causest",
         "comest",
         "compassions",
@@ -94,5 +102,9 @@
         "vinedresser",
         "visitest",
         "workest"
-    ]
+    ],
+    "editor.formatOnPaste": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100
 }
