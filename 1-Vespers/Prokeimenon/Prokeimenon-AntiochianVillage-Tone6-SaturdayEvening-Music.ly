@@ -4,11 +4,11 @@
 % Byzantine Chant Tone 6
 % Antiochian Village version
 % Adapted by Rassem El Massih
-\defineBarLine "invisible" #'("" "" "")
+
 global = {
   \time 4/4
   \key c \major
-  \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
+  \set Timing.defaultBarType = "" %% Only put bar lines where I say
 }
 
 melodyRef = \relative g' {

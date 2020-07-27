@@ -4,7 +4,7 @@
 global = {
   \time 1/4 %no distinguishable regular rhythm
   \key g \major
-  \set Timing.defaultBarType = "i" %% Only put bar lines where I say
+  \set Timing.defaultBarType = "" %% Only put bar lines where I say
 }
 
 lyricText = \lyricmode {

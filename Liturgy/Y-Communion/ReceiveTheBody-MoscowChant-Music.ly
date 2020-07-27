@@ -1,10 +1,10 @@
 \version "2.18.2"
 
-\defineBarLine "invisible" #'("" "" "")
+
 global = {
   \time 14/4 % Not used, Time_signature_engraver is removed from layout
   \key f \major
-  \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
+  \set Timing.defaultBarType = "" %% Only put bar lines where I say
 }
 
 lyrtxt = \lyricmode {

@@ -16,7 +16,7 @@ recite = \once \override LyricText.self-alignment-X = #-1
 global = {
   \time 1/1 % Not used, Time_signature_engraver is removed from layout
   \key f \major
-  \set Timing.defaultBarType = "" % Only put bar lines where I say
+  \set Timing.defaultBarType = "" %% Only put bar lines where I say
 }
 
 verseOne = \lyricmode {

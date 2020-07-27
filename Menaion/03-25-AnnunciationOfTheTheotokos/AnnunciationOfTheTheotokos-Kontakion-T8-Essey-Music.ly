@@ -4,7 +4,7 @@
 global = {
   \time 9/4 % starts with
   \key c \major
-  \set Timing.defaultBarType = "invis" %% Only put bar lines where I say
+  \set Timing.defaultBarType = "" %% Only put bar lines where I say
 }
 
 lyricText = \lyricmode {
