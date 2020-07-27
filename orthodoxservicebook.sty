@@ -65,6 +65,11 @@
   \def\DefaultOpt{#2}%
   \subsection*{#2}%
 }
+\newcommand\squashedcenteredsubsubsection[2][\DefaultOpt]{%
+  \def\DefaultOpt{#2}%
+  \subsubsection*{#2}%
+}
+
 % and encourage page breaks before these sections.
 \newcommand\centeredsection[2][\DefaultOpt]{%
   \def\DefaultOpt{#2}%
@@ -76,6 +81,12 @@
   \def\DefaultOpt{#2}%
   \needspace{15\baselineskip}%
   \squashedcenteredsubsection[#1]{#2}%
+}
+
+\newcommand\centeredsubsubsection[2][\DefaultOpt]{%
+  \def\DefaultOpt{#2}%
+  \needspace{15\baselineskip}%
+  \squashedcenteredsubsubsection[#1]{#2}%
 }
 
 % Allow content to be in one column on narrower page layouts,
@@ -219,9 +230,20 @@
 \newcommand\lhmTwelve{Lord, have mercy.\twelve}
 \newcommand\lhmForty{Lord, have mercy.\forty}
 
+\newcommand{\blessedisthekingdom}{%
+  Blessed is the Kingdom: of the Father and of the Son and of the Holy Spirit;
+  now and ever, and unto ages of ages.
+}
+
+\newcommand{\comeletusworship}{%
+  Come, let us worship and fall down before God our King.\\
+  Come, let us worship and fall down before Christ, our King and our God.\\
+  Come, let us worship and fall down before Christ Himself, our King and our God\\
+}
+
 \newcommand{\itistrulymeettoblessthee}{%
-It is truly meet to bless thee, O Theotokos,
-who art ever-blessed and all-blameless, and the mother of our God.
+  It is truly meet to bless thee, O Theotokos,
+  who art ever-blessed and all-blameless, and the mother of our God.
 }
 
 \newcommand{\morehonorablethanthetherubim}{%
@@ -237,14 +259,22 @@ who art ever-blessed and all-blameless, and the mother of our God.
   have mercy on us, and save us
 }
 
+\newcommand\glory{Glory to the Father and to the Son and to the Holy Spirit,}
+\newcommand\nowandever{Both now and ever and unto ages of ages.  Amen.}
+
 \newcommand\gne{%
   Glory to the Father and to the Son and to the Holy Spirit,
   both now and ever, and unto ages of ages.  Amen.
 }
 
-\newcommand\glory{Glory to the Father and to the Son and to the Holy Spirit,}
-\newcommand\nowandever{Both now and ever and unto ages of ages.  Amen.}
+\newcommand{\alleluiathriceglorytotheethrice}{%
+  Alleluia, Alleluia, Alleluia. Glory to Thee, O God. \thrice\\
+  Lord, have mercy. \thrice
+}
 
+\newcommand{\oourgodandourhopeglorytothee}{%
+  O our God and our Hope, glory to Thee!
+}
 
 \newcommand{\blessedbethename}{%
   Blessed be the name of the Lord, henceforth and forevermore.

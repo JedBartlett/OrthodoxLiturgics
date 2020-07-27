@@ -1,0 +1,87 @@
+\ProvidesPackage{litanies}
+
+\RequirePackage{orthodoxservicebook}
+
+\newcommand{\callingtorememberance}[1]{
+  Calling to remembrance our all-holy, immaculate, most blessed and glorious Lady Theotokos
+  \instruction{(Recited quietly as the petitioner continues)}\\
+  #1 \\
+  and ever-virgin Mary, with all the Saints: let us commend ourselves and
+  each another, and all our life unto Christ our God.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Great Ektenia (Litany)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Provide the following arguments:
+% 1-5:  LHM responses,
+% 6: "Most Holy Theotokos save us"
+% 7: "To Thee O Lord"
+% 8: "Amen"
+\newcommand{\thegreatlitany}[8]{%
+\deaconline{In peace, let us pray to the Lord.}
+#1
+
+\deaconline{For the peace from above, and for the salvation of our souls,
+let us pray to the Lord.}
+#2
+
+\deaconline{For the peace of the whole world,
+for the good estate of the Holy Churches of God,
+and for the union of all men, let us pray to the Lord.}
+#3
+
+\deaconline{For this Holy House, and for those who with faith,
+reverence, and fear of God, enter therein, let us pray to the Lord.}
+#4
+
+\deaconline{For our father and Metropolitan N., (for our Archbishop N. or Bishop N.),
+for the venerable Priesthood, the Diaconate in Christ, for all the clergy and the people, let
+us pray to the Lord.}
+#5
+
+\begin{deacon}
+  \item For the President of the United States, for all civil authorities,
+  and for our Armed Forces everywhere, let us pray to the Lord.
+  \item For this city, and for every city and land, and for the faithful who dwell therein, let
+  us pray to the Lord.
+  \item For travelers by sea, by land, by air; for the sick and the suffering; for captives and
+  their salvation, let us pray to the Lord.
+  \item For our deliverance from all tribulation, wrath, danger, and necessity, let us pray to
+  the Lord.
+  \item Help us; save us; have mercy on us; and keep us, O God, by Thy grace.
+  \item \callingtorememberance{#6}
+\end{deacon}
+#7
+
+\priestline{
+  For unto Thee are due all glory, honor, and worship: to the Father, and to
+  the Son, and to the Holy Spirit; now and ever and unto ages of ages.}
+#8
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Little Ektenia (Litany)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Provide the following arguments:
+% 1-2:  LHM responses,
+% 3: "Most Holy Theotokos save us"
+% 4: "To Thee O Lord"
+% 5: "Amen"
+\newcommand{\thelittlelitany}[5]{%
+  \needspace{2\baselineskip}
+  \deaconline{Again and again, in peace, let us pray to the Lord.}
+  #1
+
+  \needspace{2\baselineskip}
+  \deaconline{Help us; save us; have mercy on us; and keep us, O God, by Thy grace.}
+  #2
+
+  \needspace{5\baselineskip}
+  \deaconline{\callingtorememberance{#3}}
+
+  \priestline{For Thine is the might, and Thine is the kingdom and the power and the
+  glory: of the Father, and of the Son, and of the Holy Spirit; now and ever, and unto
+  ages of ages.}
+  #4
+}

@@ -9,4 +9,4 @@
   copyright = "This arrangement is free to distribute for Liturgical use"
   tagline = ""
 }
-\include "./Ascension-Apolytikion-T6-Byz-Holwey-Music.ly"
+\include "./Ascension-Apolytikion-T4-Byz-Holwey-Music.ly"
