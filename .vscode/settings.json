@@ -1,111 +1,127 @@
 {
-    "spellright.language": [
-        "English (American)"
-    ],
-    "spellright.documentTypes": [
-        "markdown",
-        "latex",
-        "plaintext"
-    ],
-    "cSpell.words": [
-        "Akathist",
-        "Apolytikion",
-        "Arimathaea",
-        "Bestower",
-        "Chaldees",
-        "Climacus",
-        "Gergesenes",
-        "Joses",
-        "Kontakion",
-        "Nicanor",
-        "Nicolaos",
-        "Oikoi",
-        "Paraskeva",
-        "Parmenas",
-        "Pascha",
-        "Prochorus",
-        "Prokeimenon",
-        "Sabaoth",
-        "Sadducees",
-        "Theotokion",
-        "Trisagion",
-        "Typica",
-        "Uncircumscribed",
-        "Unwithering",
-        "administerest",
-        "allayest",
-        "almsgiving",
-        "appointedst",
-        "bearest",
-        "beareth",
-        "belongeth",
-        "callest",
-        "castest",
-        "causest",
-        "comest",
-        "compassions",
-        "deathknell",
-        "drawest",
-        "dwellest",
-        "endureth",
-        "engenderest",
-        "enlightenest",
-        "fainteth",
-        "fillest",
-        "hierodeacons",
-        "hieromonks",
-        "holdest",
-        "holpen",
-        "hopeth",
-        "joinest",
-        "knoweth",
-        "laborest",
-        "leadest",
-        "lettest",
-        "longeth",
-        "lovest",
-        "loveth",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "lualatex -> bibtex -> lualatex*2",
+      "tools": [
         "lualatex",
-        "lyluatex",
-        "makest",
-        "maybetwocolumns",
-        "mirrorest",
-        "mournest",
-        "orthodoxservicebook",
-        "provest",
-        "quenchest",
-        "redeemest",
-        "refutest",
-        "rejoiceth",
-        "rescuest",
-        "revivest",
-        "rideth",
-        "shouldest",
-        "showest",
-        "singeth",
-        "sittest",
-        "sitteth",
-        "soarest",
-        "sufferest",
-        "takest",
-        "tendest",
-        "tendeth",
-        "theotokos",
-        "therof",
-        "tramplest",
-        "uncontained",
-        "unhewn",
-        "unoriginate",
-        "unsetting",
-        "unwedded",
-        "upholdest",
-        "vanquishest",
-        "vinedresser",
-        "visitest",
-        "workest"
-    ],
-    "editor.formatOnPaste": true,
-    "editor.tabSize": 2,
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100
+        "bibtex",
+        "lualatex",
+        "lualatex"
+      ],
+    },
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-shell-escape",
+        "-pdflatex=lualatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-shell-escape",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": [
+        "-synctex=1",
+        "-shell-escape",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "spellright.language": [
+    "English (American)"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ],
+  
+  "cSpell.words": [
+    "Apolytikion",
+    "Kontakion",
+    "Orthros",
+    "Pascha",
+    "Prokeimenon",
+    "Sabaoth",
+    "Theotokion",
+    "Trisagion",
+    "Typica",
+    "appointedst",
+    "bearest",
+    "belongeth",
+    "callest",
+    "comest",
+    "compassions",
+    "endureth",
+    "fainteth",
+    "fillest",
+    "hierodeacons",
+    "hieromonks",
+    "holpen",
+    "hopeth",
+    "hyperref",
+    "knoweth",
+    "latexmk",
+    "lettest",
+    "lilypond",
+    "longeth",
+    "lovest",
+    "loveth",
+    "lualatex",
+    "lyluatex",
+    "maybetwocolumns",
+    "orthodoxservicebook",
+    "rejoiceth",
+    "showest",
+    "singeth",
+    "sitteth",
+    "sufferest",
+    "theotokos",
+    "therof",
+    "unoriginate",
+    "workest"
+  ]
 }
