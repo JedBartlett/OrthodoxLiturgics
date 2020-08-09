@@ -24,10 +24,17 @@
 \RequirePackage{fancyhdr} % Used for page layout, including colored margins
 \RequirePackage[center]{titlesec} % Center the title headings in this doc
 \RequirePackage{verbatim} % For including the Lord's prayer etc.. as verse
-\RequirePackage{needspace} % Allow encouraging of page breaks
+\RequirePackage{needspace} % Allow encouraging of page breaksr
+\RequirePackage{xargs} % Advanced parsing of command/env args
 
 % Specify Additional Color Types that may be used
 \definecolor{timberwolf}{rgb}{0.86, 0.84, 0.82}
+
+% Special shaded box for optional/variable sections:
+\newcommand{\shadedbox}[1]{%
+  \par\noindent\colorbox{timberwolf}
+  {\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}
+}
 
 % Remove indentation of first line in paragraph
 \setlength{\parindent}{0pt}
@@ -58,6 +65,11 @@
   \def\DefaultOpt{#2}%
   \subsection*{#2}%
 }
+\newcommand\squashedcenteredsubsubsection[2][\DefaultOpt]{%
+  \def\DefaultOpt{#2}%
+  \subsubsection*{#2}%
+}
+
 % and encourage page breaks before these sections.
 \newcommand\centeredsection[2][\DefaultOpt]{%
   \def\DefaultOpt{#2}%
@@ -69,6 +81,12 @@
   \def\DefaultOpt{#2}%
   \needspace{15\baselineskip}%
   \squashedcenteredsubsection[#1]{#2}%
+}
+
+\newcommand\centeredsubsubsection[2][\DefaultOpt]{%
+  \def\DefaultOpt{#2}%
+  \needspace{15\baselineskip}%
+  \squashedcenteredsubsubsection[#1]{#2}%
 }
 
 % Allow content to be in one column on narrower page layouts,
@@ -182,6 +200,22 @@
   \end{reader}
 }
 
+% Reader lines environment
+\newlist{people}{enumerate}{1}
+\raggedright
+\setlist[people]{%
+    label=People:,
+    leftmargin=1.6cm,
+    labelwidth=1.4cm,
+    align=left
+}
+% Quick Reader Line
+\newcommand{\peopleline}[1]{%
+  \begin{people}
+    \item{#1}
+  \end{people}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Commonly used liturgical phrases
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -196,10 +230,98 @@
 \newcommand\lhmTwelve{Lord, have mercy.\twelve}
 \newcommand\lhmForty{Lord, have mercy.\forty}
 
-\newcommand\throughtheprayers{Through the prayers of our holy fathers,
+\newcommand{\blessedisthekingdom}{%
+  Blessed is the Kingdom: of the Father and of the Son and of the Holy Spirit;
+  now and ever, and unto ages of ages.
+}
+
+\newcommand{\comeletusworship}{%
+  Come, let us worship and fall down before God our King.\\
+  Come, let us worship and fall down before Christ, our King and our God.\\
+  Come, let us worship and fall down before Christ Himself, our King and our God\\
+}
+
+\newcommand{\itistrulymeettoblessthee}{%
+  It is truly meet to bless thee, O Theotokos,
+  who art ever-blessed and all-blameless, and the mother of our God.
+}
+
+\newcommand{\morehonorablethanthetherubim}{%
+  More honorable than the cherubim
+  and more glorious beyond compare than the seraphim,
+  thou who without corruption bearest God the Word
+  and art truly Theotokos: We magnify thee.
+}
+
+\newcommand\throughtheprayers{%
+  Through the prayers of our holy fathers,
   Lord Jesus Christ our God,
-  have mercy on us, and save us}
-\newcommand\gne{Glory to the Father and to the Son and to the Holy Spirit,
-  both now and ever, and unto ages of ages.  Amen.}
+  have mercy on us, and save us
+}
+
 \newcommand\glory{Glory to the Father and to the Son and to the Holy Spirit,}
 \newcommand\nowandever{Both now and ever and unto ages of ages.  Amen.}
+
+\newcommand\gne{%
+  Glory to the Father and to the Son and to the Holy Spirit,
+  both now and ever, and unto ages of ages.  Amen.
+}
+
+\newcommand{\alleluiathriceglorytotheethrice}{%
+  Alleluia, Alleluia, Alleluia. Glory to Thee, O God. \thrice\\
+  Lord, have mercy. \thrice
+}
+
+\newcommand{\oourgodandourhopeglorytothee}{%
+  O our God and our Hope, glory to Thee!
+}
+
+\newcommand{\blessedbethename}{%
+  Blessed be the name of the Lord, henceforth and forevermore.
+}
+
+% Can pass in 'reader' as an argument to change the priestline
+% at the end into the reader's line.
+% can pass in prepentecost as a second argument.
+% Valid uses (examples):
+%  \trisagionNeedsAmen
+%  \trisagionNeedsAmen[priest] %- default, can be explicit
+%  \trisagionNeedsAmen[reader]
+%  \trisagionNeedsAmen[][prepentecost] %- can omit the first arg
+%  \trisagionNeedsAmen[reader][prepentecost]
+\newcommandx{\trisagionNeedsAmen}[2][1=priest,2=normal]{%
+  \instruction{Recited together as a congregation}
+
+  \ifthenelse{\equal{#2}{prepentecost}}{%
+    Christ is risen from the dead, trampling down Death by death,
+    an upon those in the tombs, bestowing life! \thrice{}
+  }{%
+    Holy God, Holy Mighty, Holy Immortal: have mercy on us. \thrice{}
+  }
+
+  \vbox{}
+  \emph{Glory to the Father, and to the Son, and to the Holy Spirit; both now and ever, and
+  unto ages of ages. Amen.}
+
+  \vbox{}
+  All-holy Trinity, have mercy on us. Lord, cleanse us from our sins. Master, pardon
+  our iniquities. Holy God, visit and heal our infirmities for Thy Name’s sake.
+
+  \vbox{}
+  \lhmThree
+
+  \vbox{}
+  \emph{Glory to the Father, and to the Son, and to the Holy Spirit; both now and ever, and
+  unto ages of ages. Amen.}
+
+  \vbox{}
+  \input{Common/LordsPrayer.txt}
+
+  \ifthenelse{\equal{#1}{reader}}{%
+    \readerline{\throughtheprayers{}}
+  }{%
+    \priestline{ For Thine is the kingdom, and the power, and the glory:
+    of the Father, and of the Son, and of the Holy Spirit;
+    now and ever, and unto ages of ages.}
+  }
+}

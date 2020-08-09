@@ -1,7 +1,7 @@
 # This file started life as:
 # https://github.com/microsoft/vscode-dev-containers/blob/v0.101.1/containers/ubuntu-18.04-git/.devcontainer/Dockerfile
 # as the basic Ubuntu+git VSCode remote container.
-FROM jedibart/latexlilypond:0.1.0
+FROM jedibart/latexlilypond:0.2.0
 
 # This Dockerfile adds a non-root user with sudo access. Use the "remoteUser"
 # property in devcontainer.json to use it. On Linux, the container user's GID/UIDs
@@ -59,6 +59,7 @@ RUN tlmgr install --repository ${TEXLIVE_MIRROR} \
       needspace \
       titlepic \
       titlesec \
+      xargs \
     \
 &&  rm -rf /install-tl-unx
 

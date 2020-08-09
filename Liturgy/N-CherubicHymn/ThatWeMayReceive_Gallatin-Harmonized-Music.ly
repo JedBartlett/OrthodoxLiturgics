@@ -4,7 +4,7 @@
 % http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
 recite = \once \override LyricText.self-alignment-X = #-1
 
-\defineBarLine "invisible" #'("" "" "")
+
 global = {
   \time 4/4 % Not used, Time_signature_engraver is removed from layout
   \key f \major

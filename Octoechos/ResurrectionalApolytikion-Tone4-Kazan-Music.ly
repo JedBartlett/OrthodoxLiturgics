@@ -19,8 +19,7 @@ lyricText = \lyricmode {
   Christ __ God is ris -- en, grant -- ing the world great __ mer -- cy.
 }
 
-melody = \relative g' {
-  \global % Leave these here for key to display
+melody = \relative g' { \global % Leave these here for key to display
   \partial 2 e4 f | g2. e4 f g \fourbm b( a) g2
   g4 f g g b a g f \sixbm g( f) e2.
   d4 \fourbm e( f) g g g f e f g2) e4 f g2
@@ -30,9 +29,7 @@ melody = \relative g' {
   g4( a) g f g8( a b4) b2 c8( d c4) b a g2 b4( a) g2( f) e1
 }
 
-ison = \relative c' {
-  \global % Leave these here for key to
-  \tiny
+ison = \relative c' { \global \tiny % Leave these here for key to
   \partial 2 e2 e1. e\breve e1 d2 e1
   e\breve e\breve e1 d2 e2.
   f4 g1 g\breve g2 g4 f g a g f e2. s4
@@ -42,6 +39,10 @@ ison = \relative c' {
 \score {
   \new ChoirStaff <<
     \new Staff \with {
+      % Setting the accidentalStyle to modern-voice-cautionary results in
+      % explicitly printing the cancellation of sharps/flats, even if
+      % a bar-line passes.  It prints these cancellations in brackets.
+      \accidentalStyle StaffGroup.modern-voice-cautionary
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { M I }
     } <<

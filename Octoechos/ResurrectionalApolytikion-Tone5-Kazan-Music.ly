@@ -40,6 +40,10 @@ ison = \relative g' {
 \score {
   \new ChoirStaff <<
     \new Staff \with {
+      % Setting the accidentalStyle to modern-voice-cautionary results in
+      % explicitly printing the cancellation of sharps/flats, even if
+      % a bar-line passes.  It prints these cancellations in brackets.
+      \accidentalStyle StaffGroup.modern-voice-cautionary
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { M I }
     } <<

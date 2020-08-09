@@ -4,11 +4,11 @@
 % http://lilypond.org/doc/v2.18/Documentation/notation/working-with-ancient-music_002d_002dscenarios-and-solutions
 recite = \once \override LyricText.self-alignment-X = #-1
 
-\defineBarLine "invisible" #'("" "" "")
+\defineBarLine "" #'("" "" "")
 global = {
   \time 1/4 % Not used, Time_signature_engraver is removed from layout
   \key g \major
-  \set Timing.defaultBarType = "invisible" %% Only put bar lines where I say
+  \set Timing.defaultBarType = "" %% Only put bar lines where I say
 }
 
 lyrtxt = \lyricmode {
@@ -41,6 +41,10 @@ bass = \relative c {
 \score {
   \new ChoirStaff <<
     \new Staff \with {
+      % Setting the accidentalStyle to modern-voice-cautionary results in
+      % explicitly printing the cancellation of sharps/flats, even if
+      % a bar-line passes.  It prints these cancellations in brackets.
+      \accidentalStyle StaffGroup.modern-voice-cautionary
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { S A }
     } <<
